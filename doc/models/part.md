@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `size` | `?int` | Optional | - | getSize(): ?int | setSize(?int size): void |
-| `inputStream` | `?array` | Optional | - | getInputStream(): ?array | setInputStream(?array inputStream): void |
-| `headerNames` | `?(string[])` | Optional | - | getHeaderNames(): ?array | setHeaderNames(?array headerNames): void |
-| `submittedFileName` | `?string` | Optional | - | getSubmittedFileName(): ?string | setSubmittedFileName(?string submittedFileName): void |
-| `contentType` | `?string` | Optional | - | getContentType(): ?string | setContentType(?string contentType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `name` | `string` | Optional | - |
+| `size` | `long\|int` | Optional | - |
+| `input_stream` | `object` | Optional | - |
+| `header_names` | `List of string` | Optional | - |
+| `submitted_file_name` | `string` | Optional | - |
+| `content_type` | `string` | Optional | - |
 
 ## Example (as JSON)
 

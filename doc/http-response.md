@@ -3,11 +3,13 @@
 
 Http response received.
 
-## Methods
+## Parameters
 
 | Name | Type | Description |
 |  --- | --- | --- |
-| getStatusCode() | int | The status code of the response. |
-| getHeaders() | array | Response headers. |
-| getRawBody() | string | Raw body of the response. |
+| status_code | int | The status code returned by the server. |
+| reason_phrase | str | The reason phrase returned by the server. |
+| headers | dict | Response headers. |
+| text | str | Response body. |
+| request | HttpRequest | The request that resulted in this response. |
 

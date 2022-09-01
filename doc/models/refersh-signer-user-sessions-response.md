@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `responseId` | `?int` | Optional | - | getResponseId(): ?int | setResponseId(?int responseId): void |
-| `error` | `?string` | Optional | Will contain message if unable to process the request | getError(): ?string | setError(?string error): void |
-| `signers` | [`SignerResponse[]`](../../doc/models/signer-response.md) | Required | List of signer and there URL whos session was refreshed | getSigners(): array | setSigners(array signers): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `response_id` | `int` | Optional | - |
+| `error` | `string` | Optional | Will contain message if unable to process the request |
+| `signers` | [`List of SignerResponse`](../../doc/models/signer-response.md) | Required | List of signer and there URL whos session was refreshed |
 
 ## Example (as JSON)
 

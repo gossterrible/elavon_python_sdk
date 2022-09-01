@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `previousProcessorDescription` | `?string` | Optional | Additional description of customer's previous payment processor | getPreviousProcessorDescription(): ?string | setPreviousProcessorDescription(?string previousProcessorDescription): void |
-| `monetaryPricingProgramDescription` | `?string` | Optional | Additional description of application's monetary pricing program (MPP) | getMonetaryPricingProgramDescription(): ?string | setMonetaryPricingProgramDescription(?string monetaryPricingProgramDescription): void |
-| `referrerReferenceDescription` | `?string` | Optional | Additional description of referrer reference | getReferrerReferenceDescription(): ?string | setReferrerReferenceDescription(?string referrerReferenceDescription): void |
-| `notes` | `?string` | Optional | Free text notes for additional information | getNotes(): ?string | setNotes(?string notes): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `previous_processor_description` | `string` | Optional | Additional description of customer's previous payment processor |
+| `monetary_pricing_program_description` | `string` | Optional | Additional description of application's monetary pricing program (MPP) |
+| `referrer_reference_description` | `string` | Optional | Additional description of referrer reference |
+| `notes` | `string` | Optional | Free text notes for additional information |
 
 ## Example (as JSON)
 

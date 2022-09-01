@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `pricingMethod` | [`string (PricingMethod1Enum)`](../../doc/models/pricing-method-1-enum.md) | Required | Debit network pricing method | getPricingMethod(): string | setPricingMethod(string pricingMethod): void |
-| `authorizationMethod` | [`string (AuthorizationMethodEnum)`](../../doc/models/authorization-method-enum.md) | Required | Debit network authorization method | getAuthorizationMethod(): string | setAuthorizationMethod(string authorizationMethod): void |
-| `surchargeAmount` | `?float` | Optional | Debit surcharge amount | getSurchargeAmount(): ?float | setSurchargeAmount(?float surchargeAmount): void |
-| `surchargePercent` | `?string` | Optional | Debit surcharge percentage | getSurchargePercent(): ?string | setSurchargePercent(?string surchargePercent): void |
-| `debitNetworkCharges` | [`DebitNetworkCharge[]`](../../doc/models/debit-network-charge.md) | Required | Debit network charges listing | getDebitNetworkCharges(): array | setDebitNetworkCharges(array debitNetworkCharges): void |
-| `pinlessSetup` | `?bool` | Optional | Debit pinless setup | getPinlessSetup(): ?bool | setPinlessSetup(?bool pinlessSetup): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `pricing_method` | [`PricingMethod1Enum`](../../doc/models/pricing-method-1-enum.md) | Required | Debit network pricing method |
+| `authorization_method` | [`AuthorizationMethodEnum`](../../doc/models/authorization-method-enum.md) | Required | Debit network authorization method |
+| `surcharge_amount` | `float` | Optional | Debit surcharge amount |
+| `surcharge_percent` | `string` | Optional | Debit surcharge percentage |
+| `debit_network_charges` | [`List of DebitNetworkCharge`](../../doc/models/debit-network-charge.md) | Required | Debit network charges listing |
+| `pinless_setup` | `bool` | Optional | Debit pinless setup |
 
 ## Example (as JSON)
 

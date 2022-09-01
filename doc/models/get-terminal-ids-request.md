@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `mid` | `?string` | Optional | Merchant Id | getMid(): ?string | setMid(?string mid): void |
-| `uniqueId` | `?string` | Optional | unique Id | getUniqueId(): ?string | setUniqueId(?string uniqueId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `mid` | `string` | Optional | Merchant Id |
+| `unique_id` | `string` | Optional | unique Id |
 
 ## Example (as JSON)
 

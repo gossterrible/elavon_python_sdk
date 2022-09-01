@@ -7,22 +7,22 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `language` | `string` | Required | Language of document to be generated,  ISO 639-1 standard applies | getLanguage(): string | setLanguage(string language): void |
-| `documentId` | `string` | Required | Unique id of document | getDocumentId(): string | setDocumentId(string documentId): void |
-| `agreementId` | `?string` | Optional | Merchant id (MID) | getAgreementId(): ?string | setAgreementId(?string agreementId): void |
-| `documentPacketId` | `?string` | Optional | Document packet id | getDocumentPacketId(): ?string | setDocumentPacketId(?string documentPacketId): void |
-| `signed` | `?bool` | Optional | Boolean flag indicating if document has been signed, true if  YES, false if NO | getSigned(): ?bool | setSigned(?bool signed): void |
-| `groupedApplication` | `?bool` | Optional | Boolean flag indicating if document is of a group of applications, true if  YES, false if NO | getGroupedApplication(): ?bool | setGroupedApplication(?bool groupedApplication): void |
-| `wetSigned` | `?bool` | Optional | Boolean flag indicating if document is to be wet signed, true if  YES, false if NO | getWetSigned(): ?bool | setWetSigned(?bool wetSigned): void |
-| `cardPricing` | [`CardPricing`](../../doc/models/card-pricing.md) | Required | - | getCardPricing(): CardPricing | setCardPricing(CardPricing cardPricing): void |
-| `businessInfo` | [`BusinessInfo`](../../doc/models/business-info.md) | Required | - | getBusinessInfo(): BusinessInfo | setBusinessInfo(BusinessInfo businessInfo): void |
-| `monetaryPricingProgram` | `?string` | Optional | Application's monetary pricing program (MPP) | getMonetaryPricingProgram(): ?string | setMonetaryPricingProgram(?string monetaryPricingProgram): void |
-| `bankAccounts` | [`array<string,BankingInfo>`](../../doc/models/banking-info.md) | Required | Application's banking information. The valid keys are as follows: BILLING, DEPOSIT, LEASE, CHARGEBACK | getBankAccounts(): array | setBankAccounts(array bankAccounts): void |
-| `applicantEmail` | `string` | Required | Email address of applicant | getApplicantEmail(): string | setApplicantEmail(string applicantEmail): void |
-| `principal` | [`Person`](../../doc/models/person.md) | Required | - | getPrincipal(): Person | setPrincipal(Person principal): void |
-| `additionalShareholders` | [`?(Person[])`](../../doc/models/person.md) | Optional | Application's additional shareholders | getAdditionalShareholders(): ?array | setAdditionalShareholders(?array additionalShareholders): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `language` | `string` | Required | Language of document to be generated,  ISO 639-1 standard applies |
+| `document_id` | `string` | Required | Unique id of document |
+| `agreement_id` | `string` | Optional | Merchant id (MID) |
+| `document_packet_id` | `string` | Optional | Document packet id |
+| `signed` | `bool` | Optional | Boolean flag indicating if document has been signed, true if  YES, false if NO |
+| `grouped_application` | `bool` | Optional | Boolean flag indicating if document is of a group of applications, true if  YES, false if NO |
+| `wet_signed` | `bool` | Optional | Boolean flag indicating if document is to be wet signed, true if  YES, false if NO |
+| `card_pricing` | [`CardPricing`](../../doc/models/card-pricing.md) | Required | - |
+| `business_info` | [`BusinessInfo`](../../doc/models/business-info.md) | Required | - |
+| `monetary_pricing_program` | `string` | Optional | Application's monetary pricing program (MPP) |
+| `bank_accounts` | [`dict`](../../doc/models/banking-info.md) | Required | Application's banking information. The valid keys are as follows: BILLING, DEPOSIT, LEASE, CHARGEBACK |
+| `applicant_email` | `string` | Required | Email address of applicant |
+| `principal` | [`Person`](../../doc/models/person.md) | Required | - |
+| `additional_shareholders` | [`List of Person`](../../doc/models/person.md) | Optional | Application's additional shareholders |
 
 ## Example (as JSON)
 

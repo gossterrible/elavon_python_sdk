@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `open` | `?bool` | Optional | - | getOpen(): ?bool | setOpen(?bool open): void |
-| `automatic` | `?bool` | Optional | - | getAutomatic(): ?bool | setAutomatic(?bool automatic): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `open` | `bool` | Optional | - |
+| `automatic` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

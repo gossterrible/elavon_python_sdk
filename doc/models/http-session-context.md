@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `ids` | `?array` | Optional | - | getIds(): ?array | setIds(?array ids): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `ids` | `object` | Optional | - |
 
 ## Example (as JSON)
 

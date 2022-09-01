@@ -7,16 +7,16 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `taxType` | `?string` | Optional | - | getTaxType(): ?string | setTaxType(?string taxType): void |
-| `taxIdNumber` | `?string` | Optional | - | getTaxIdNumber(): ?string | setTaxIdNumber(?string taxIdNumber): void |
-| `ssn` | `?string` | Optional | - | getSsn(): ?string | setSsn(?string ssn): void |
-| `sid` | `?string` | Optional | - | getSid(): ?string | setSid(?string sid): void |
-| `mid` | `?string` | Optional | - | getMid(): ?string | setMid(?string mid): void |
-| `depositAccountNumber` | `?string` | Optional | - | getDepositAccountNumber(): ?string | setDepositAccountNumber(?string depositAccountNumber): void |
-| `ownershipIsSoleEstate` | `?bool` | Optional | - | getOwnershipIsSoleEstate(): ?bool | setOwnershipIsSoleEstate(?bool ownershipIsSoleEstate): void |
-| `companyId` | `?string` | Optional | - | getCompanyId(): ?string | setCompanyId(?string companyId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `tax_type` | `string` | Optional | - |
+| `tax_id_number` | `string` | Optional | - |
+| `ssn` | `string` | Optional | - |
+| `sid` | `string` | Optional | - |
+| `mid` | `string` | Optional | - |
+| `deposit_account_number` | `string` | Optional | - |
+| `ownership_is_sole_estate` | `bool` | Optional | - |
+| `company_id` | `string` | Optional | - |
 
 ## Example (as JSON)
 

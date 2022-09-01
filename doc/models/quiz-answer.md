@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `questionNumber` | `int` | Required | Quiz question number | getQuestionNumber(): int | setQuestionNumber(int questionNumber): void |
-| `answerNumber` | `int` | Required | The correct answer to the given question number | getAnswerNumber(): int | setAnswerNumber(int answerNumber): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `question_number` | `int` | Required | Quiz question number |
+| `answer_number` | `int` | Required | The correct answer to the given question number |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `alternatePrice` | `?float` | Optional | - | getAlternatePrice(): ?float | setAlternatePrice(?float alternatePrice): void |
-| `pricingPlan` | `?string` | Optional | - | getPricingPlan(): ?string | setPricingPlan(?string pricingPlan): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `alternate_price` | `float` | Optional | - |
+| `pricing_plan` | `string` | Optional | - |
 
 ## Example (as JSON)
 

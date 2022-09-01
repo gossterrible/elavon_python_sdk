@@ -7,18 +7,18 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `specificationTitle` | `?string` | Optional | - | getSpecificationTitle(): ?string | setSpecificationTitle(?string specificationTitle): void |
-| `specificationVersion` | `?string` | Optional | - | getSpecificationVersion(): ?string | setSpecificationVersion(?string specificationVersion): void |
-| `specificationVendor` | `?string` | Optional | - | getSpecificationVendor(): ?string | setSpecificationVendor(?string specificationVendor): void |
-| `implementationTitle` | `?string` | Optional | - | getImplementationTitle(): ?string | setImplementationTitle(?string implementationTitle): void |
-| `implementationVersion` | `?string` | Optional | - | getImplementationVersion(): ?string | setImplementationVersion(?string implementationVersion): void |
-| `implementationVendor` | `?string` | Optional | - | getImplementationVendor(): ?string | setImplementationVendor(?string implementationVendor): void |
-| `annotations` | `?(array[])` | Optional | - | getAnnotations(): ?array | setAnnotations(?array annotations): void |
-| `declaredAnnotations` | `?(array[])` | Optional | - | getDeclaredAnnotations(): ?array | setDeclaredAnnotations(?array declaredAnnotations): void |
-| `sealed` | `?bool` | Optional | - | getSealed(): ?bool | setSealed(?bool sealed): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `name` | `string` | Optional | - |
+| `specification_title` | `string` | Optional | - |
+| `specification_version` | `string` | Optional | - |
+| `specification_vendor` | `string` | Optional | - |
+| `implementation_title` | `string` | Optional | - |
+| `implementation_version` | `string` | Optional | - |
+| `implementation_vendor` | `string` | Optional | - |
+| `annotations` | `List of object` | Optional | - |
+| `declared_annotations` | `List of object` | Optional | - |
+| `sealed` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

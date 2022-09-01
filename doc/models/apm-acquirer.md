@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `acquirerCode` | `string` | Required | Acquirer Code of the Alternative Payment Method | getAcquirerCode(): string | setAcquirerCode(string acquirerCode): void |
-| `acquirerTypes` | [`ApmAcquirerType[]`](../../doc/models/apm-acquirer-type.md) | Required | Acquirer Type of the Alternative Payment Method | getAcquirerTypes(): array | setAcquirerTypes(array acquirerTypes): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `acquirer_code` | `string` | Required | Acquirer Code of the Alternative Payment Method |
+| `acquirer_types` | [`List of ApmAcquirerType`](../../doc/models/apm-acquirer-type.md) | Required | Acquirer Type of the Alternative Payment Method |
 
 ## Example (as JSON)
 

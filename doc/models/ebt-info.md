@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `seNumber` | `string` | Required | EBT Service Establishment number | getSeNumber(): string | setSeNumber(string seNumber): void |
-| `authorizationFee` | `?float` | Optional | EBT authorization fee to apply | getAuthorizationFee(): ?float | setAuthorizationFee(?float authorizationFee): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `se_number` | `string` | Required | EBT Service Establishment number |
+| `authorization_fee` | `float` | Optional | EBT authorization fee to apply |
 
 ## Example (as JSON)
 

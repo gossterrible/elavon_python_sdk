@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `startTime` | `?int` | Optional | - | getStartTime(): ?int | setStartTime(?int startTime): void |
-| `requestSendTime` | `?int` | Optional | - | getRequestSendTime(): ?int | setRequestSendTime(?int requestSendTime): void |
-| `responseRecvTime` | `?int` | Optional | - | getResponseRecvTime(): ?int | setResponseRecvTime(?int responseRecvTime): void |
-| `endTime` | `?int` | Optional | - | getEndTime(): ?int | setEndTime(?int endTime): void |
-| `totalTime` | `?int` | Optional | - | getTotalTime(): ?int | setTotalTime(?int totalTime): void |
-| `responseTime` | `?int` | Optional | - | getResponseTime(): ?int | setResponseTime(?int responseTime): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `start_time` | `long\|int` | Optional | - |
+| `request_send_time` | `long\|int` | Optional | - |
+| `response_recv_time` | `long\|int` | Optional | - |
+| `end_time` | `long\|int` | Optional | - |
+| `total_time` | `long\|int` | Optional | - |
+| `response_time` | `long\|int` | Optional | - |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `value` | `?string` | Optional | - | getValue(): ?string | setValue(?string value): void |
-| `weak` | `?bool` | Optional | - | getWeak(): ?bool | setWeak(?bool weak): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `value` | `string` | Optional | - |
+| `weak` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

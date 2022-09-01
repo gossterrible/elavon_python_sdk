@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `incompleteSurveyReasonType` | [`?string (IncompleteSurveyReasonTypeEnum)`](../../doc/models/incomplete-survey-reason-type-enum.md) | Optional | - | getIncompleteSurveyReasonType(): ?string | setIncompleteSurveyReasonType(?string incompleteSurveyReasonType): void |
-| `siteSurveyDate` | [`?DateComponents`](../../doc/models/date-components.md) | Optional | A container that holds the date (day, month, and year) | getSiteSurveyDate(): ?DateComponents | setSiteSurveyDate(?DateComponents siteSurveyDate): void |
-| `siteSurveyConductedBy` | `?string` | Optional | - | getSiteSurveyConductedBy(): ?string | setSiteSurveyConductedBy(?string siteSurveyConductedBy): void |
-| `descriptionOfNoSiteSurvey` | `?string` | Optional | - | getDescriptionOfNoSiteSurvey(): ?string | setDescriptionOfNoSiteSurvey(?string descriptionOfNoSiteSurvey): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `incomplete_survey_reason_type` | [`IncompleteSurveyReasonTypeEnum`](../../doc/models/incomplete-survey-reason-type-enum.md) | Optional | - |
+| `site_survey_date` | [`DateComponents`](../../doc/models/date-components.md) | Optional | A container that holds the date (day, month, and year) |
+| `site_survey_conducted_by` | `string` | Optional | - |
+| `description_of_no_site_survey` | `string` | Optional | - |
 
 ## Example (as JSON)
 

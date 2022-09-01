@@ -7,20 +7,20 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `id` | `?string` | Optional | The app request ID | getId(): ?string | setId(?string id): void |
-| `mid` | `?string` | Optional | The Merchant ID | getMid(): ?string | setMid(?string mid): void |
-| `email` | `?string` | Optional | The email address | getEmail(): ?string | setEmail(?string email): void |
-| `legalName` | `?string` | Optional | The legal name | getLegalName(): ?string | setLegalName(?string legalName): void |
-| `vatId` | `?string` | Optional | The VAT ID | getVatId(): ?string | setVatId(?string vatId): void |
-| `ccEmail` | `?string` | Optional | The CC email address | getCcEmail(): ?string | setCcEmail(?string ccEmail): void |
-| `optOut` | `?bool` | Optional | OptOut | getOptOut(): ?bool | setOptOut(?bool optOut): void |
-| `marketingDataConsentMap` | `?array<string,bool>` | Optional | The Marketing Consent | getMarketingDataConsentMap(): ?array | setMarketingDataConsentMap(?array marketingDataConsentMap): void |
-| `quizId` | `int` | Required | Unique identifier of quiz, returned in successful get quiz response | getQuizId(): int | setQuizId(int quizId): void |
-| `transactionKey` | `string` | Required | Unique identifier of quiz response, returned in get quiz response | getTransactionKey(): string | setTransactionKey(string transactionKey): void |
-| `quizAnswers` | [`QuizAnswer[]`](../../doc/models/quiz-answer.md) | Required | Answers to quiz | getQuizAnswers(): array | setQuizAnswers(array quizAnswers): void |
-| `country` | `?string` | Optional | - | getCountry(): ?string | setCountry(?string country): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `id` | `string` | Optional | The app request ID |
+| `mid` | `string` | Optional | The Merchant ID |
+| `email` | `string` | Optional | The email address |
+| `legal_name` | `string` | Optional | The legal name |
+| `vat_id` | `string` | Optional | The VAT ID |
+| `cc_email` | `string` | Optional | The CC email address |
+| `opt_out` | `bool` | Optional | OptOut |
+| `marketing_data_consent_map` | `dict` | Optional | The Marketing Consent |
+| `quiz_id` | `int` | Required | Unique identifier of quiz, returned in successful get quiz response |
+| `transaction_key` | `string` | Required | Unique identifier of quiz response, returned in get quiz response |
+| `quiz_answers` | [`List of QuizAnswer`](../../doc/models/quiz-answer.md) | Required | Answers to quiz |
+| `country` | `string` | Optional | - |
 
 ## Example (as JSON)
 

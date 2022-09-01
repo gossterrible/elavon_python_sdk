@@ -9,11 +9,11 @@ A container that holds the date (day, month, and year)
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `year` | `?int` | Optional | - | getYear(): ?int | setYear(?int year): void |
-| `month` | [`?string (MonthEnum)`](../../doc/models/month-enum.md) | Optional | - | getMonth(): ?string | setMonth(?string month): void |
-| `day` | `?int` | Optional | - | getDay(): ?int | setDay(?int day): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `year` | `int` | Optional | - |
+| `month` | [`MonthEnum`](../../doc/models/month-enum.md) | Optional | - |
+| `day` | `int` | Optional | - |
 
 ## Example (as JSON)
 

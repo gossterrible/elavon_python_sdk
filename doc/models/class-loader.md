@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `parent` | [`?ClassLoader`](../../doc/models/class-loader.md) | Optional | - | getParent(): ?ClassLoader | setParent(?ClassLoader parent): void |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `unnamedModule` | [`?Module`](../../doc/models/module.md) | Optional | - | getUnnamedModule(): ?Module | setUnnamedModule(?Module unnamedModule): void |
-| `registeredAsParallelCapable` | `?bool` | Optional | - | getRegisteredAsParallelCapable(): ?bool | setRegisteredAsParallelCapable(?bool registeredAsParallelCapable): void |
-| `definedPackages` | [`?(Package[])`](../../doc/models/package.md) | Optional | - | getDefinedPackages(): ?array | setDefinedPackages(?array definedPackages): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `parent` | [`ClassLoader`](../../doc/models/class-loader.md) | Optional | - |
+| `name` | `string` | Optional | - |
+| `unnamed_module` | [`Module`](../../doc/models/module.md) | Optional | - |
+| `registered_as_parallel_capable` | `bool` | Optional | - |
+| `defined_packages` | [`List of Package`](../../doc/models/package.md) | Optional | - |
 
 ## Example (as JSON)
 

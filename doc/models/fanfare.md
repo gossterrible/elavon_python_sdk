@@ -7,24 +7,24 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `setupFee` | `?float` | Optional | - | getSetupFee(): ?float | setSetupFee(?float setupFee): void |
-| `monthlyFee` | `?float` | Optional | - | getMonthlyFee(): ?float | setMonthlyFee(?float monthlyFee): void |
-| `annualFee` | `?float` | Optional | - | getAnnualFee(): ?float | setAnnualFee(?float annualFee): void |
-| `customCardUpgradeFee` | `?float` | Optional | - | getCustomCardUpgradeFee(): ?float | setCustomCardUpgradeFee(?float customCardUpgradeFee): void |
-| `includedCards` | [`?FanfareCardSplits`](../../doc/models/fanfare-card-splits.md) | Optional | - | getIncludedCards(): ?FanfareCardSplits | setIncludedCards(?FanfareCardSplits includedCards): void |
-| `additionalCardsType` | [`?string (AdditionalCardsTypeEnum)`](../../doc/models/additional-cards-type-enum.md) | Optional | - | getAdditionalCardsType(): ?string | setAdditionalCardsType(?string additionalCardsType): void |
-| `additionalCards` | [`?FanfareCardSplits`](../../doc/models/fanfare-card-splits.md) | Optional | - | getAdditionalCards(): ?FanfareCardSplits | setAdditionalCards(?FanfareCardSplits additionalCards): void |
-| `additionalCardPrice` | `?float` | Optional | - | getAdditionalCardPrice(): ?float | setAdditionalCardPrice(?float additionalCardPrice): void |
-| `programCheckup` | `?float` | Optional | - | getProgramCheckup(): ?float | setProgramCheckup(?float programCheckup): void |
-| `cardStyle` | `?string` | Optional | - | getCardStyle(): ?string | setCardStyle(?string cardStyle): void |
-| `justificationType` | [`?string (JustificationTypeEnum)`](../../doc/models/justification-type-enum.md) | Optional | - | getJustificationType(): ?string | setJustificationType(?string justificationType): void |
-| `cardIsText` | `?bool` | Optional | - | getCardIsText(): ?bool | setCardIsText(?bool cardIsText): void |
-| `cardText` | `?string` | Optional | - | getCardText(): ?string | setCardText(?string cardText): void |
-| `textCaseType` | [`?string (TextCaseTypeEnum)`](../../doc/models/text-case-type-enum.md) | Optional | - | getTextCaseType(): ?string | setTextCaseType(?string textCaseType): void |
-| `textColor` | `?string` | Optional | - | getTextColor(): ?string | setTextColor(?string textColor): void |
-| `textFont` | `?string` | Optional | - | getTextFont(): ?string | setTextFont(?string textFont): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `setup_fee` | `float` | Optional | - |
+| `monthly_fee` | `float` | Optional | - |
+| `annual_fee` | `float` | Optional | - |
+| `custom_card_upgrade_fee` | `float` | Optional | - |
+| `included_cards` | [`FanfareCardSplits`](../../doc/models/fanfare-card-splits.md) | Optional | - |
+| `additional_cards_type` | [`AdditionalCardsTypeEnum`](../../doc/models/additional-cards-type-enum.md) | Optional | - |
+| `additional_cards` | [`FanfareCardSplits`](../../doc/models/fanfare-card-splits.md) | Optional | - |
+| `additional_card_price` | `float` | Optional | - |
+| `program_checkup` | `float` | Optional | - |
+| `card_style` | `string` | Optional | - |
+| `justification_type` | [`JustificationTypeEnum`](../../doc/models/justification-type-enum.md) | Optional | - |
+| `card_is_text` | `bool` | Optional | - |
+| `card_text` | `string` | Optional | - |
+| `text_case_type` | [`TextCaseTypeEnum`](../../doc/models/text-case-type-enum.md) | Optional | - |
+| `text_color` | `string` | Optional | - |
+| `text_font` | `string` | Optional | - |
 
 ## Example (as JSON)
 

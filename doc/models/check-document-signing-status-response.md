@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `responseId` | `?int` | Optional | - | getResponseId(): ?int | setResponseId(?int responseId): void |
-| `packetStatus` | [`string (PacketStatusEnum)`](../../doc/models/packet-status-enum.md) | Required | The document packet's status | getPacketStatus(): string | setPacketStatus(string packetStatus): void |
-| `signers` | [`SignerStatusResponse[]`](../../doc/models/signer-status-response.md) | Required | Signers and their status for a document status | getSigners(): array | setSigners(array signers): void |
-| `error` | `?string` | Optional | Any error that resulted from the request | getError(): ?string | setError(?string error): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `response_id` | `int` | Optional | - |
+| `packet_status` | [`PacketStatusEnum`](../../doc/models/packet-status-enum.md) | Required | The document packet's status |
+| `signers` | [`List of SignerStatusResponse`](../../doc/models/signer-status-response.md) | Required | Signers and their status for a document status |
+| `error` | `string` | Optional | Any error that resulted from the request |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `answerNumber` | `?int` | Optional | Question answer number | getAnswerNumber(): ?int | setAnswerNumber(?int answerNumber): void |
-| `answerText` | `?string` | Optional | Answer text | getAnswerText(): ?string | setAnswerText(?string answerText): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `answer_number` | `int` | Optional | Question answer number |
+| `answer_text` | `string` | Optional | Answer text |
 
 ## Example (as JSON)
 

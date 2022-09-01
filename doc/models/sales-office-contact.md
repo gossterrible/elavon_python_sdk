@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `address` | [`Address`](../../doc/models/address.md) | Required | - | getAddress(): Address | setAddress(Address address): void |
-| `phone` | [`PhoneNumber`](../../doc/models/phone-number.md) | Required | - | getPhone(): PhoneNumber | setPhone(PhoneNumber phone): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `address` | [`Address`](../../doc/models/address.md) | Required | - |
+| `phone` | [`PhoneNumber`](../../doc/models/phone-number.md) | Required | - |
 
 ## Example (as JSON)
 

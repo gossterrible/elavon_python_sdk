@@ -7,15 +7,15 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `comment` | `?string` | Optional | - | getComment(): ?string | setComment(?string comment): void |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `path` | `?string` | Optional | - | getPath(): ?string | setPath(?string path): void |
-| `secure` | `?bool` | Optional | - | getSecure(): ?bool | setSecure(?bool secure): void |
-| `httpOnly` | `?bool` | Optional | - | getHttpOnly(): ?bool | setHttpOnly(?bool httpOnly): void |
-| `domain` | `?string` | Optional | - | getDomain(): ?string | setDomain(?string domain): void |
-| `maxAge` | `?int` | Optional | - | getMaxAge(): ?int | setMaxAge(?int maxAge): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `comment` | `string` | Optional | - |
+| `name` | `string` | Optional | - |
+| `path` | `string` | Optional | - |
+| `secure` | `bool` | Optional | - |
+| `http_only` | `bool` | Optional | - |
+| `domain` | `string` | Optional | - |
+| `max_age` | `int` | Optional | - |
 
 ## Example (as JSON)
 

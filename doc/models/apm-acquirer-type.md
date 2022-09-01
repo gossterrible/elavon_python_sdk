@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `typeCode` | `string` | Required | Acquirer Type Code of the Alternative Payment Method Type | getTypeCode(): string | setTypeCode(string typeCode): void |
-| `perItemAmount` | `string` | Required | Default Per Item Amount of the Alternative Payment Method Type | getPerItemAmount(): string | setPerItemAmount(string perItemAmount): void |
-| `ratePercentage` | `string` | Required | Default Rate Percentage of the Alternative Payment Method Type | getRatePercentage(): string | setRatePercentage(string ratePercentage): void |
-| `pricingTiers` | [`ApmPricingTier[]`](../../doc/models/apm-pricing-tier.md) | Required | Pricing of the Alternative Payment Method | getPricingTiers(): array | setPricingTiers(array pricingTiers): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `type_code` | `string` | Required | Acquirer Type Code of the Alternative Payment Method Type |
+| `per_item_amount` | `string` | Required | Default Per Item Amount of the Alternative Payment Method Type |
+| `rate_percentage` | `string` | Required | Default Rate Percentage of the Alternative Payment Method Type |
+| `pricing_tiers` | [`List of ApmPricingTier`](../../doc/models/apm-pricing-tier.md) | Required | Pricing of the Alternative Payment Method |
 
 ## Example (as JSON)
 

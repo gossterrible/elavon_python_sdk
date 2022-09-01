@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `documentPacketId` | `?string` | Optional | The unique identifier for document packet | getDocumentPacketId(): ?string | setDocumentPacketId(?string documentPacketId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `document_packet_id` | `string` | Optional | The unique identifier for document packet |
 
 ## Example (as JSON)
 

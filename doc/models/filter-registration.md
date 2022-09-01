@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `servletNameMappings` | `?(string[])` | Optional | - | getServletNameMappings(): ?array | setServletNameMappings(?array servletNameMappings): void |
-| `urlPatternMappings` | `?(string[])` | Optional | - | getUrlPatternMappings(): ?array | setUrlPatternMappings(?array urlPatternMappings): void |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `className` | `?string` | Optional | - | getClassName(): ?string | setClassName(?string className): void |
-| `initParameters` | `?array<string,string>` | Optional | - | getInitParameters(): ?array | setInitParameters(?array initParameters): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `servlet_name_mappings` | `List of string` | Optional | - |
+| `url_pattern_mappings` | `List of string` | Optional | - |
+| `name` | `string` | Optional | - |
+| `class_name` | `string` | Optional | - |
+| `init_parameters` | `dict` | Optional | - |
 
 ## Example (as JSON)
 

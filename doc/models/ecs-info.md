@@ -7,22 +7,22 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `processingAcceptanceType` | [`string (ProcessingAcceptanceTypeEnum)`](../../doc/models/processing-acceptance-type-enum.md) | Required | ECS processing acceptance | getProcessingAcceptanceType(): string | setProcessingAcceptanceType(string processingAcceptanceType): void |
-| `serviceLevelType` | [`?string (ServiceLevelTypeEnum)`](../../doc/models/service-level-type-enum.md) | Optional | ECS service level | getServiceLevelType(): ?string | setServiceLevelType(?string serviceLevelType): void |
-| `annualCheckVolume` | `?float` | Optional | Predicted annual check volume to be given though service | getAnnualCheckVolume(): ?float | setAnnualCheckVolume(?float annualCheckVolume): void |
-| `averageCheckAmount` | `?float` | Optional | Predicted average check amount to be given though service | getAverageCheckAmount(): ?float | setAverageCheckAmount(?float averageCheckAmount): void |
-| `maxCheckAmount` | `?int` | Optional | Max checks allowed though service | getMaxCheckAmount(): ?int | setMaxCheckAmount(?int maxCheckAmount): void |
-| `perTransaction` | `?float` | Optional | Per transaction fee applied to service | getPerTransaction(): ?float | setPerTransaction(?float perTransaction): void |
-| `discountRate` | `?float` | Optional | Fee percentage to be applied to service | getDiscountRate(): ?float | setDiscountRate(?float discountRate): void |
-| `monthlyMinimum` | `?float` | Optional | Per transaction fee applied to service | getMonthlyMinimum(): ?float | setMonthlyMinimum(?float monthlyMinimum): void |
-| `perReturnFee` | `?float` | Optional | Per returns fee applied to service | getPerReturnFee(): ?float | setPerReturnFee(?float perReturnFee): void |
-| `nsfServiceProcessingFee` | `?float` | Optional | Processing fee for addtional NSF service | getNsfServiceProcessingFee(): ?float | setNsfServiceProcessingFee(?float nsfServiceProcessingFee): void |
-| `nsfServiceFee` | `?float` | Optional | Up front fee for addtional NSF service | getNsfServiceFee(): ?float | setNsfServiceFee(?float nsfServiceFee): void |
-| `collection` | `?bool` | Optional | Boolean indicating if ECS collection service is desired, true if YES, false if NO | getCollection(): ?bool | setCollection(?bool collection): void |
-| `enquireReporting` | `?bool` | Optional | Boolean indicating if ECS Enquire reporting service is desired, true if YES, false if NO | getEnquireReporting(): ?bool | setEnquireReporting(?bool enquireReporting): void |
-| `serviceProviderType` | [`?string (ServiceProviderTypeEnum)`](../../doc/models/service-provider-type-enum.md) | Optional | ECS service provider. If not provided, will board as ENCIRCLE DIRECT | getServiceProviderType(): ?string | setServiceProviderType(?string serviceProviderType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `processing_acceptance_type` | [`ProcessingAcceptanceTypeEnum`](../../doc/models/processing-acceptance-type-enum.md) | Required | ECS processing acceptance |
+| `service_level_type` | [`ServiceLevelTypeEnum`](../../doc/models/service-level-type-enum.md) | Optional | ECS service level |
+| `annual_check_volume` | `float` | Optional | Predicted annual check volume to be given though service |
+| `average_check_amount` | `float` | Optional | Predicted average check amount to be given though service |
+| `max_check_amount` | `int` | Optional | Max checks allowed though service |
+| `per_transaction` | `float` | Optional | Per transaction fee applied to service |
+| `discount_rate` | `float` | Optional | Fee percentage to be applied to service |
+| `monthly_minimum` | `float` | Optional | Per transaction fee applied to service |
+| `per_return_fee` | `float` | Optional | Per returns fee applied to service |
+| `nsf_service_processing_fee` | `float` | Optional | Processing fee for addtional NSF service |
+| `nsf_service_fee` | `float` | Optional | Up front fee for addtional NSF service |
+| `collection` | `bool` | Optional | Boolean indicating if ECS collection service is desired, true if YES, false if NO |
+| `enquire_reporting` | `bool` | Optional | Boolean indicating if ECS Enquire reporting service is desired, true if YES, false if NO |
+| `service_provider_type` | [`ServiceProviderTypeEnum`](../../doc/models/service-provider-type-enum.md) | Optional | ECS service provider. If not provided, will board as ENCIRCLE DIRECT |
 
 ## Example (as JSON)
 

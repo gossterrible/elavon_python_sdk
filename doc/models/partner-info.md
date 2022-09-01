@@ -7,15 +7,15 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `partnerName` | `?string` | Optional | - | getPartnerName(): ?string | setPartnerName(?string partnerName): void |
-| `associateId` | `?string` | Optional | - | getAssociateId(): ?string | setAssociateId(?string associateId): void |
-| `bookOfBusiness` | `?string` | Optional | - | getBookOfBusiness(): ?string | setBookOfBusiness(?string bookOfBusiness): void |
-| `correlationId` | `?string` | Optional | - | getCorrelationId(): ?string | setCorrelationId(?string correlationId): void |
-| `partnerSource` | `?string` | Optional | - | getPartnerSource(): ?string | setPartnerSource(?string partnerSource): void |
-| `merchantUserId` | `string` | Required | Client End User Id | getMerchantUserId(): string | setMerchantUserId(string merchantUserId): void |
-| `sessionId` | `string` | Required | Fraudnet Id for tracking, required if merchantUserId is provided | getSessionId(): string | setSessionId(string sessionId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `partner_name` | `string` | Optional | - |
+| `associate_id` | `string` | Optional | - |
+| `book_of_business` | `string` | Optional | - |
+| `correlation_id` | `string` | Optional | - |
+| `partner_source` | `string` | Optional | - |
+| `merchant_user_id` | `string` | Required | Client End User Id |
+| `session_id` | `string` | Required | Fraudnet Id for tracking, required if merchantUserId is provided |
 
 ## Example (as JSON)
 

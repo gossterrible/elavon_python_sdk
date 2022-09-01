@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `bankName` | `?string` | Optional | - | getBankName(): ?string | setBankName(?string bankName): void |
-| `bankBranch` | `?string` | Optional | - | getBankBranch(): ?string | setBankBranch(?string bankBranch): void |
-| `directDebitAuthorized` | `?bool` | Optional | - | getDirectDebitAuthorized(): ?bool | setDirectDebitAuthorized(?bool directDebitAuthorized): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `bank_name` | `string` | Optional | - |
+| `bank_branch` | `string` | Optional | - |
+| `direct_debit_authorized` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

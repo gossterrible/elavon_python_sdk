@@ -10,7 +10,7 @@
 | Name |
 |  --- |
 | `FORWARD` |
-| `INCLUDE_` |
+| `INCLUDE` |
 | `REQUEST` |
 | `ASYNC` |
 | `ERROR` |

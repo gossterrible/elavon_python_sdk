@@ -7,24 +7,24 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `lastModified` | `?\DateTime` | Optional | - | getLastModified(): ?\DateTime | setLastModified(?\DateTime lastModified): void |
-| `date` | `?\DateTime` | Optional | - | getDate(): ?\DateTime | setDate(?\DateTime date): void |
-| `length` | `?int` | Optional | - | getLength(): ?int | setLength(?int length): void |
-| `location` | `?string` | Optional | - | getLocation(): ?string | setLocation(?string location): void |
-| `language` | [`?Locale`](../../doc/models/locale.md) | Optional | - | getLanguage(): ?Locale | setLanguage(?Locale language): void |
-| `cookies` | [`?array<string,NewCookie>`](../../doc/models/new-cookie.md) | Optional | - | getCookies(): ?array | setCookies(?array cookies): void |
-| `mediaType` | [`?MediaType`](../../doc/models/media-type.md) | Optional | - | getMediaType(): ?MediaType | setMediaType(?MediaType mediaType): void |
-| `entity` | `?array` | Optional | - | getEntity(): ?array | setEntity(?array entity): void |
-| `links` | [`?(Link[])`](../../doc/models/link.md) | Optional | **Constraints**: *Unique Items Required* | getLinks(): ?array | setLinks(?array links): void |
-| `status` | `?int` | Optional | - | getStatus(): ?int | setStatus(?int status): void |
-| `entityTag` | [`?EntityTag`](../../doc/models/entity-tag.md) | Optional | - | getEntityTag(): ?EntityTag | setEntityTag(?EntityTag entityTag): void |
-| `stringHeaders` | `?array` | Optional | - | getStringHeaders(): ?array | setStringHeaders(?array stringHeaders): void |
-| `metadata` | `?array` | Optional | - | getMetadata(): ?array | setMetadata(?array metadata): void |
-| `statusInfo` | [`?StatusType`](../../doc/models/status-type.md) | Optional | - | getStatusInfo(): ?StatusType | setStatusInfo(?StatusType statusInfo): void |
-| `allowedMethods` | `?(string[])` | Optional | **Constraints**: *Unique Items Required* | getAllowedMethods(): ?array | setAllowedMethods(?array allowedMethods): void |
-| `headers` | `?array` | Optional | - | getHeaders(): ?array | setHeaders(?array headers): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `last_modified` | `datetime` | Optional | - |
+| `date` | `datetime` | Optional | - |
+| `length` | `int` | Optional | - |
+| `location` | `string` | Optional | - |
+| `language` | [`Locale`](../../doc/models/locale.md) | Optional | - |
+| `cookies` | [`dict`](../../doc/models/new-cookie.md) | Optional | - |
+| `media_type` | [`MediaType`](../../doc/models/media-type.md) | Optional | - |
+| `entity` | `object` | Optional | - |
+| `links` | [`List of Link`](../../doc/models/link.md) | Optional | **Constraints**: *Unique Items Required* |
+| `status` | `int` | Optional | - |
+| `entity_tag` | [`EntityTag`](../../doc/models/entity-tag.md) | Optional | - |
+| `string_headers` | `dict` | Optional | - |
+| `metadata` | `dict` | Optional | - |
+| `status_info` | [`StatusType`](../../doc/models/status-type.md) | Optional | - |
+| `allowed_methods` | `List of string` | Optional | **Constraints**: *Unique Items Required* |
+| `headers` | `dict` | Optional | - |
 
 ## Example (as JSON)
 

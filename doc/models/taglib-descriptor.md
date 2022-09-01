@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `taglibLocation` | `?string` | Optional | - | getTaglibLocation(): ?string | setTaglibLocation(?string taglibLocation): void |
-| `taglibURI` | `?string` | Optional | - | getTaglibURI(): ?string | setTaglibURI(?string taglibURI): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `taglib_location` | `string` | Optional | - |
+| `taglib_uri` | `string` | Optional | - |
 
 ## Example (as JSON)
 

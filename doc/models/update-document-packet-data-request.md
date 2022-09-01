@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `signers` | [`?(Signer[])`](../../doc/models/signer.md) | Optional | The document signers | getSigners(): ?array | setSigners(?array signers): void |
-| `documentPacketId` | `string` | Required | The unique id for the document packet | getDocumentPacketId(): string | setDocumentPacketId(string documentPacketId): void |
-| `documentPacketData` | [`DocumentPacketData`](../../doc/models/document-packet-data.md) | Required | - | getDocumentPacketData(): DocumentPacketData | setDocumentPacketData(DocumentPacketData documentPacketData): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `signers` | [`List of Signer`](../../doc/models/signer.md) | Optional | The document signers |
+| `document_packet_id` | `string` | Required | The unique id for the document packet |
+| `document_packet_data` | [`DocumentPacketData`](../../doc/models/document-packet-data.md) | Required | - |
 
 ## Example (as JSON)
 

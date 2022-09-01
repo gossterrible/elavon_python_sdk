@@ -7,23 +7,23 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `simpleValue` | `?string` | Optional | - | getSimpleValue(): ?string | setSimpleValue(?string simpleValue): void |
-| `houseNumber` | `?string` | Optional | - | getHouseNumber(): ?string | setHouseNumber(?string houseNumber): void |
-| `street` | `?string` | Optional | - | getStreet(): ?string | setStreet(?string street): void |
-| `street2` | `?string` | Optional | - | getStreet2(): ?string | setStreet2(?string street2): void |
-| `city` | `?string` | Optional | - | getCity(): ?string | setCity(?string city): void |
-| `county` | `?string` | Optional | - | getCounty(): ?string | setCounty(?string county): void |
-| `province` | `?string` | Optional | - | getProvince(): ?string | setProvince(?string province): void |
-| `postCode` | `?string` | Optional | - | getPostCode(): ?string | setPostCode(?string postCode): void |
-| `country` | `?string` | Optional | - | getCountry(): ?string | setCountry(?string country): void |
-| `countryCode` | `?string` | Optional | - | getCountryCode(): ?string | setCountryCode(?string countryCode): void |
-| `addressClassification` | `?string` | Optional | - | getAddressClassification(): ?string | setAddressClassification(?string addressClassification): void |
-| `telephone` | `?string` | Optional | - | getTelephone(): ?string | setTelephone(?string telephone): void |
-| `phoneFields` | [`?PhoneFields`](../../doc/models/phone-fields.md) | Optional | - | getPhoneFields(): ?PhoneFields | setPhoneFields(?PhoneFields phoneFields): void |
-| `locationId` | `?string` | Optional | - | getLocationId(): ?string | setLocationId(?string locationId): void |
-| `addressType` | `?string` | Optional | - | getAddressType(): ?string | setAddressType(?string addressType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `simple_value` | `string` | Optional | - |
+| `house_number` | `string` | Optional | - |
+| `street` | `string` | Optional | - |
+| `street_2` | `string` | Optional | - |
+| `city` | `string` | Optional | - |
+| `county` | `string` | Optional | - |
+| `province` | `string` | Optional | - |
+| `post_code` | `string` | Optional | - |
+| `country` | `string` | Optional | - |
+| `country_code` | `string` | Optional | - |
+| `address_classification` | `string` | Optional | - |
+| `telephone` | `string` | Optional | - |
+| `phone_fields` | [`PhoneFields`](../../doc/models/phone-fields.md) | Optional | - |
+| `location_id` | `string` | Optional | - |
+| `address_type` | `string` | Optional | - |
 
 ## Example (as JSON)
 

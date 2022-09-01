@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `simplifyQuantity` | `int` | Required | Simplify Quantity | getSimplifyQuantity(): int | setSimplifyQuantity(int simplifyQuantity): void |
-| `directQuantity` | `int` | Required | Direct Quantity | getDirectQuantity(): int | setDirectQuantity(int directQuantity): void |
-| `simplifyLocation` | `string` | Required | Simplify Location Quantity | getSimplifyLocation(): string | setSimplifyLocation(string simplifyLocation): void |
-| `directToFuseboxLocation` | `string` | Required | Direct to Fusebox Location | getDirectToFuseboxLocation(): string | setDirectToFuseboxLocation(string directToFuseboxLocation): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `simplify_quantity` | `int` | Required | Simplify Quantity |
+| `direct_quantity` | `int` | Required | Direct Quantity |
+| `simplify_location` | `string` | Required | Simplify Location Quantity |
+| `direct_to_fusebox_location` | `string` | Required | Direct to Fusebox Location |
 
 ## Example (as JSON)
 

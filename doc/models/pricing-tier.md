@@ -9,10 +9,10 @@ The pricing tier describes any discount rates or discounts per item that should 
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `discountRate` | `float` | Required | Card discount rate/fee percentage | getDiscountRate(): float | setDiscountRate(float discountRate): void |
-| `discountPerItem` | `float` | Required | Card discount per item/per transaction fee | getDiscountPerItem(): float | setDiscountPerItem(float discountPerItem): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `discount_rate` | `float` | Required | Card discount rate/fee percentage |
+| `discount_per_item` | `float` | Required | Card discount per item/per transaction fee |
 
 ## Example (as JSON)
 

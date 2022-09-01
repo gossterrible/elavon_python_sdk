@@ -7,15 +7,15 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `pricingMethod` | [`string (PricingMethodEnum)`](../../doc/models/pricing-method-enum.md) | Required | Method of card pricing to be applied | getPricingMethod(): string | setPricingMethod(string pricingMethod): void |
-| `pricingCategory` | [`string (PricingCategoryEnum)`](../../doc/models/pricing-category-enum.md) | Required | Business card pricing category | getPricingCategory(): string | setPricingCategory(string pricingCategory): void |
-| `amexAcceptingInfo` | [`?AmexAcceptingInfo`](../../doc/models/amex-accepting-info.md) | Optional | - | getAmexAcceptingInfo(): ?AmexAcceptingInfo | setAmexAcceptingInfo(?AmexAcceptingInfo amexAcceptingInfo): void |
-| `paymentFacilitatorInfo` | [`?PaymentFacilitatorInfo`](../../doc/models/payment-facilitator-info.md) | Optional | - | getPaymentFacilitatorInfo(): ?PaymentFacilitatorInfo | setPaymentFacilitatorInfo(?PaymentFacilitatorInfo paymentFacilitatorInfo): void |
-| `cardCharges` | [`CardCharge[]`](../../doc/models/card-charge.md) | Required | Card charge listing | getCardCharges(): array | setCardCharges(array cardCharges): void |
-| `exceptionCharges` | [`?(ExceptionCharge[])`](../../doc/models/exception-charge.md) | Optional | [EU] Card exception charge listing | getExceptionCharges(): ?array | setExceptionCharges(?array exceptionCharges): void |
-| `debitPricing` | [`?DebitPricing`](../../doc/models/debit-pricing.md) | Optional | - | getDebitPricing(): ?DebitPricing | setDebitPricing(?DebitPricing debitPricing): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `pricing_method` | [`PricingMethodEnum`](../../doc/models/pricing-method-enum.md) | Required | Method of card pricing to be applied |
+| `pricing_category` | [`PricingCategoryEnum`](../../doc/models/pricing-category-enum.md) | Required | Business card pricing category |
+| `amex_accepting_info` | [`AmexAcceptingInfo`](../../doc/models/amex-accepting-info.md) | Optional | - |
+| `payment_facilitator_info` | [`PaymentFacilitatorInfo`](../../doc/models/payment-facilitator-info.md) | Optional | - |
+| `card_charges` | [`List of CardCharge`](../../doc/models/card-charge.md) | Required | Card charge listing |
+| `exception_charges` | [`List of ExceptionCharge`](../../doc/models/exception-charge.md) | Optional | [EU] Card exception charge listing |
+| `debit_pricing` | [`DebitPricing`](../../doc/models/debit-pricing.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `salutation` | [`?string (SalutationEnum)`](../../doc/models/salutation-enum.md) | Optional | - | getSalutation(): ?string | setSalutation(?string salutation): void |
-| `firstName` | `string` | Required | **Constraints**: *Minimum Length*: `0`, *Maximum Length*: `255` | getFirstName(): string | setFirstName(string firstName): void |
-| `middleName` | `?string` | Optional | **Constraints**: *Minimum Length*: `0`, *Maximum Length*: `255` | getMiddleName(): ?string | setMiddleName(?string middleName): void |
-| `lastName` | `string` | Required | **Constraints**: *Minimum Length*: `0`, *Maximum Length*: `255` | getLastName(): string | setLastName(string lastName): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `salutation` | [`SalutationEnum`](../../doc/models/salutation-enum.md) | Optional | - |
+| `first_name` | `string` | Required | **Constraints**: *Minimum Length*: `0`, *Maximum Length*: `255` |
+| `middle_name` | `string` | Optional | **Constraints**: *Minimum Length*: `0`, *Maximum Length*: `255` |
+| `last_name` | `string` | Required | **Constraints**: *Minimum Length*: `0`, *Maximum Length*: `255` |
 
 ## Example (as JSON)
 

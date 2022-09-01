@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `ready` | `?bool` | Optional | - | getReady(): ?bool | setReady(?bool ready): void |
-| `finished` | `?bool` | Optional | - | getFinished(): ?bool | setFinished(?bool finished): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `ready` | `bool` | Optional | - |
+| `finished` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

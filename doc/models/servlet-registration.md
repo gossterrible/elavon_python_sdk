@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `mappings` | `?(string[])` | Optional | - | getMappings(): ?array | setMappings(?array mappings): void |
-| `runAsRole` | `?string` | Optional | - | getRunAsRole(): ?string | setRunAsRole(?string runAsRole): void |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `className` | `?string` | Optional | - | getClassName(): ?string | setClassName(?string className): void |
-| `initParameters` | `?array<string,string>` | Optional | - | getInitParameters(): ?array | setInitParameters(?array initParameters): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `mappings` | `List of string` | Optional | - |
+| `run_as_role` | `string` | Optional | - |
+| `name` | `string` | Optional | - |
+| `class_name` | `string` | Optional | - |
+| `init_parameters` | `dict` | Optional | - |
 
 ## Example (as JSON)
 

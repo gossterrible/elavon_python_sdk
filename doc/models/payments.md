@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `pmsVendorPas` | `?string` | Optional | - | getPmsVendorPas(): ?string | setPmsVendorPas(?string pmsVendorPas): void |
-| `numberOfProviders` | `?string` | Optional | - | getNumberOfProviders(): ?string | setNumberOfProviders(?string numberOfProviders): void |
-| `salesRepPhoneNumber` | `?string` | Optional | - | getSalesRepPhoneNumber(): ?string | setSalesRepPhoneNumber(?string salesRepPhoneNumber): void |
-| `integratorNotes` | `?string` | Optional | - | getIntegratorNotes(): ?string | setIntegratorNotes(?string integratorNotes): void |
-| `hasPaymentPlans` | `?bool` | Optional | - | getHasPaymentPlans(): ?bool | setHasPaymentPlans(?bool hasPaymentPlans): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `pms_vendor_pas` | `string` | Optional | - |
+| `number_of_providers` | `string` | Optional | - |
+| `sales_rep_phone_number` | `string` | Optional | - |
+| `integrator_notes` | `string` | Optional | - |
+| `has_payment_plans` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

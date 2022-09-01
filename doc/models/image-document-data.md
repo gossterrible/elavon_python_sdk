@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `docReferenceNumber` | `string` | Required | Unique identifier of document data, alphanumeric | getDocReferenceNumber(): string | setDocReferenceNumber(string docReferenceNumber): void |
-| `imageDocuments` | [`ImageDocument[]`](../../doc/models/image-document.md) | Required | Listing of documents to be uploaded | getImageDocuments(): array | setImageDocuments(array imageDocuments): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `doc_reference_number` | `string` | Required | Unique identifier of document data, alphanumeric |
+| `image_documents` | [`List of ImageDocument`](../../doc/models/image-document.md) | Required | Listing of documents to be uploaded |
 
 ## Example (as JSON)
 

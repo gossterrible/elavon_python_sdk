@@ -7,24 +7,24 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `documentDescription` | `?string` | Optional | - | getDocumentDescription(): ?string | setDocumentDescription(?string documentDescription): void |
-| `documentNumber` | `?string` | Optional | - | getDocumentNumber(): ?string | setDocumentNumber(?string documentNumber): void |
-| `documentType` | `?string` | Optional | - | getDocumentType(): ?string | setDocumentType(?string documentType): void |
-| `expiryDate` | `?\DateTime` | Optional | - | getExpiryDate(): ?\DateTime | setExpiryDate(?\DateTime expiryDate): void |
-| `issueDate` | `?\DateTime` | Optional | - | getIssueDate(): ?\DateTime | setIssueDate(?\DateTime issueDate): void |
-| `issuingAgency` | `?string` | Optional | - | getIssuingAgency(): ?string | setIssuingAgency(?string issuingAgency): void |
-| `issuingCountry` | `?string` | Optional | - | getIssuingCountry(): ?string | setIssuingCountry(?string issuingCountry): void |
-| `issuingState` | `?string` | Optional | - | getIssuingState(): ?string | setIssuingState(?string issuingState): void |
-| `metWith` | `?string` | Optional | - | getMetWith(): ?string | setMetWith(?string metWith): void |
-| `locationType` | `?string` | Optional | - | getLocationType(): ?string | setLocationType(?string locationType): void |
-| `evidenceOfLegalStatus` | `?string` | Optional | - | getEvidenceOfLegalStatus(): ?string | setEvidenceOfLegalStatus(?string evidenceOfLegalStatus): void |
-| `primary` | `?bool` | Optional | - | getPrimary(): ?bool | setPrimary(?bool primary): void |
-| `verificationMethodRaw` | `?string` | Optional | - | getVerificationMethodRaw(): ?string | setVerificationMethodRaw(?string verificationMethodRaw): void |
-| `siteVisitDate` | `?\DateTime` | Optional | - | getSiteVisitDate(): ?\DateTime | setSiteVisitDate(?\DateTime siteVisitDate): void |
-| `docValidationType` | `?string` | Optional | - | getDocValidationType(): ?string | setDocValidationType(?string docValidationType): void |
-| `nonDocValidationType` | `?string` | Optional | - | getNonDocValidationType(): ?string | setNonDocValidationType(?string nonDocValidationType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `document_description` | `string` | Optional | - |
+| `document_number` | `string` | Optional | - |
+| `document_type` | `string` | Optional | - |
+| `expiry_date` | `datetime` | Optional | - |
+| `issue_date` | `datetime` | Optional | - |
+| `issuing_agency` | `string` | Optional | - |
+| `issuing_country` | `string` | Optional | - |
+| `issuing_state` | `string` | Optional | - |
+| `met_with` | `string` | Optional | - |
+| `location_type` | `string` | Optional | - |
+| `evidence_of_legal_status` | `string` | Optional | - |
+| `primary` | `bool` | Optional | - |
+| `verification_method_raw` | `string` | Optional | - |
+| `site_visit_date` | `datetime` | Optional | - |
+| `doc_validation_type` | `string` | Optional | - |
+| `non_doc_validation_type` | `string` | Optional | - |
 
 ## Example (as JSON)
 

@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `typeCode` | [`?string (TypeCodeEnum)`](../../doc/models/type-code-enum.md) | Optional | Type of message presented | getTypeCode(): ?string | setTypeCode(?string typeCode): void |
-| `code` | `?string` | Optional | Number representing the status message | getCode(): ?string | setCode(?string code): void |
-| `description` | `?string` | Optional | Description of message | getDescription(): ?string | setDescription(?string description): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `type_code` | [`TypeCodeEnum`](../../doc/models/type-code-enum.md) | Optional | Type of message presented |
+| `code` | `string` | Optional | Number representing the status message |
+| `description` | `string` | Optional | Description of message |
 
 ## Example (as JSON)
 

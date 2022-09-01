@@ -7,16 +7,16 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `simpleValue` | `?string` | Optional | - | getSimpleValue(): ?string | setSimpleValue(?string simpleValue): void |
-| `countryDialCode` | `?string` | Optional | - | getCountryDialCode(): ?string | setCountryDialCode(?string countryDialCode): void |
-| `areaCode` | `?string` | Optional | - | getAreaCode(): ?string | setAreaCode(?string areaCode): void |
-| `prefix` | `?string` | Optional | - | getPrefix(): ?string | setPrefix(?string prefix): void |
-| `lineNumber` | `?string` | Optional | - | getLineNumber(): ?string | setLineNumber(?string lineNumber): void |
-| `prefixAndNumber` | `?string` | Optional | - | getPrefixAndNumber(): ?string | setPrefixAndNumber(?string prefixAndNumber): void |
-| `extension` | `?string` | Optional | - | getExtension(): ?string | setExtension(?string extension): void |
-| `phonetype` | `?string` | Optional | - | getPhonetype(): ?string | setPhonetype(?string phonetype): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `simple_value` | `string` | Optional | - |
+| `country_dial_code` | `string` | Optional | - |
+| `area_code` | `string` | Optional | - |
+| `prefix` | `string` | Optional | - |
+| `line_number` | `string` | Optional | - |
+| `prefix_and_number` | `string` | Optional | - |
+| `extension` | `string` | Optional | - |
+| `phonetype` | `string` | Optional | - |
 
 ## Example (as JSON)
 

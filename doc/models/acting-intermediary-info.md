@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `actingIntermediaryName` | `?string` | Optional | - | getActingIntermediaryName(): ?string | setActingIntermediaryName(?string actingIntermediaryName): void |
-| `actingIntermediaryType` | [`?string (ActingIntermediaryTypeEnum)`](../../doc/models/acting-intermediary-type-enum.md) | Optional | - | getActingIntermediaryType(): ?string | setActingIntermediaryType(?string actingIntermediaryType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `acting_intermediary_name` | `string` | Optional | - |
+| `acting_intermediary_type` | [`ActingIntermediaryTypeEnum`](../../doc/models/acting-intermediary-type-enum.md) | Optional | - |
 
 ## Example (as JSON)
 

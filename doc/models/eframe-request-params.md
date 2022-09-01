@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `uniqueId` | `string` | Required | Unique identifier of application submission, alphanumeric. Provided by the client.The uniqueId must be wholly original and never repeated. The client's name followed by a millisecond timestamp would work well.<br>**Constraints**: *Minimum Length*: `0`, *Maximum Length*: `32` | getUniqueId(): string | setUniqueId(string uniqueId): void |
-| `boardingId` | `string` | Required | AWB (NA) or ApplicationID/MID (EU) | getBoardingId(): string | setBoardingId(string boardingId): void |
-| `scarecrowApplication` | [`ScarecrowApplication`](../../doc/models/scarecrow-application.md) | Required | - | getScarecrowApplication(): ScarecrowApplication | setScarecrowApplication(ScarecrowApplication scarecrowApplication): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `unique_id` | `string` | Required | Unique identifier of application submission, alphanumeric. Provided by the client.The uniqueId must be wholly original and never repeated. The client's name followed by a millisecond timestamp would work well.<br>**Constraints**: *Minimum Length*: `0`, *Maximum Length*: `32` |
+| `boarding_id` | `string` | Required | AWB (NA) or ApplicationID/MID (EU) |
+| `scarecrow_application` | [`ScarecrowApplication`](../../doc/models/scarecrow-application.md) | Required | - |
 
 ## Example (as JSON)
 

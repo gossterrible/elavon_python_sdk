@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `ownershipYearsOverRange` | `?string` | Optional | Years over max allowed ownership length | getOwnershipYearsOverRange(): ?string | setOwnershipYearsOverRange(?string ownershipYearsOverRange): void |
-| `isMaxEstablishmentYear` | `?bool` | Optional | True if business establishment year is older than 1906 | getIsMaxEstablishmentYear(): ?bool | setIsMaxEstablishmentYear(?bool isMaxEstablishmentYear): void |
-| `hasGovernmentIncentive` | `?bool` | Optional | True if business has a government incentive | getHasGovernmentIncentive(): ?bool | setHasGovernmentIncentive(?bool hasGovernmentIncentive): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `ownership_years_over_range` | `string` | Optional | Years over max allowed ownership length |
+| `is_max_establishment_year` | `bool` | Optional | True if business establishment year is older than 1906 |
+| `has_government_incentive` | `bool` | Optional | True if business has a government incentive |
 
 ## Example (as JSON)
 

@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `reportingId` | `string` | Required | ACS reporting product id | getReportingId(): string | setReportingId(string reportingId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `reporting_id` | `string` | Required | ACS reporting product id |
 
 ## Example (as JSON)
 

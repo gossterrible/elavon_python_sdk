@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `creditCheckToken` | `?string` | Optional | [EU] Token provided by credit check response | getCreditCheckToken(): ?string | setCreditCheckToken(?string creditCheckToken): void |
-| `groupInfo` | [`?GroupInfo`](../../doc/models/group-info.md) | Optional | - | getGroupInfo(): ?GroupInfo | setGroupInfo(?GroupInfo groupInfo): void |
-| `scarecrowApplication` | [`ScarecrowApplication`](../../doc/models/scarecrow-application.md) | Required | - | getScarecrowApplication(): ScarecrowApplication | setScarecrowApplication(ScarecrowApplication scarecrowApplication): void |
-| `profileCode` | `?string` | Optional | The partner's profile code | getProfileCode(): ?string | setProfileCode(?string profileCode): void |
-| `documentPacketId` | `?string` | Optional | The unique identifier for the document packet. For use with createdocumentpacket | getDocumentPacketId(): ?string | setDocumentPacketId(?string documentPacketId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `credit_check_token` | `string` | Optional | [EU] Token provided by credit check response |
+| `group_info` | [`GroupInfo`](../../doc/models/group-info.md) | Optional | - |
+| `scarecrow_application` | [`ScarecrowApplication`](../../doc/models/scarecrow-application.md) | Required | - |
+| `profile_code` | `string` | Optional | The partner's profile code |
+| `document_packet_id` | `string` | Optional | The unique identifier for the document packet. For use with createdocumentpacket |
 
 ## Example (as JSON)
 

@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `type` | [`?string (Type1Enum)`](../../doc/models/type-1-enum.md) | Optional | Type of debit network | getType(): ?string | setType(?string type): void |
-| `discountRate` | `?float` | Optional | Network discount rate/fee percent | getDiscountRate(): ?float | setDiscountRate(?float discountRate): void |
-| `discountPerItem` | `?float` | Optional | Network discount per item amount/per transaction fee | getDiscountPerItem(): ?float | setDiscountPerItem(?float discountPerItem): void |
-| `perAuth` | `?float` | Optional | Network per authorization amount | getPerAuth(): ?float | setPerAuth(?float perAuth): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `mtype` | [`Type1Enum`](../../doc/models/type-1-enum.md) | Optional | Type of debit network |
+| `discount_rate` | `float` | Optional | Network discount rate/fee percent |
+| `discount_per_item` | `float` | Optional | Network discount per item amount/per transaction fee |
+| `per_auth` | `float` | Optional | Network per authorization amount |
 
 ## Example (as JSON)
 

@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `responseId` | `?int` | Optional | - | getResponseId(): ?int | setResponseId(?int responseId): void |
-| `error` | `?string` | Optional | If processing error occurs, will contain information, else will be empty or null | getError(): ?string | setError(?string error): void |
-| `welcomeUrl` | `?string` | Optional | Welcome to Converge URL, typically provided to costomer via email | getWelcomeUrl(): ?string | setWelcomeUrl(?string welcomeUrl): void |
-| `virtualId` | `?string` | Optional | Virtual Id, for Converge | getVirtualId(): ?string | setVirtualId(?string virtualId): void |
-| `terminalBin` | `?string` | Optional | Terminal BIN | getTerminalBin(): ?string | setTerminalBin(?string terminalBin): void |
-| `terminalIdDataMap` | `?array` | Optional | Map of item code to various Converge data properties | getTerminalIdDataMap(): ?array | setTerminalIdDataMap(?array terminalIdDataMap): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `response_id` | `int` | Optional | - |
+| `error` | `string` | Optional | If processing error occurs, will contain information, else will be empty or null |
+| `welcome_url` | `string` | Optional | Welcome to Converge URL, typically provided to costomer via email |
+| `virtual_id` | `string` | Optional | Virtual Id, for Converge |
+| `terminal_bin` | `string` | Optional | Terminal BIN |
+| `terminal_id_data_map` | `dict` | Optional | Map of item code to various Converge data properties |
 
 ## Example (as JSON)
 

@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `groupId` | `?string` | Optional | - | getGroupId(): ?string | setGroupId(?string groupId): void |
-| `sequenceNumber` | `?int` | Optional | - | getSequenceNumber(): ?int | setSequenceNumber(?int sequenceNumber): void |
-| `totalNumber` | `?int` | Optional | - | getTotalNumber(): ?int | setTotalNumber(?int totalNumber): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `group_id` | `string` | Optional | - |
+| `sequence_number` | `int` | Optional | - |
+| `total_number` | `int` | Optional | - |
 
 ## Example (as JSON)
 

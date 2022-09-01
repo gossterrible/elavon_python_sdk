@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `billingPerItemFee` | `?float` | Optional | Per item fee applied to service | getBillingPerItemFee(): ?float | setBillingPerItemFee(?float billingPerItemFee): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `billing_per_item_fee` | `float` | Optional | Per item fee applied to service |
 
 ## Example (as JSON)
 

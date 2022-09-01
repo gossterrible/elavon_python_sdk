@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `responseId` | `?int` | Optional | - | getResponseId(): ?int | setResponseId(?int responseId): void |
-| `error` | `?string` | Optional | Error message from service | getError(): ?string | setError(?string error): void |
-| `successfulExecution` | `?bool` | Optional | Boolean flag indicating , true if execution successful, false if not | getSuccessfulExecution(): ?bool | setSuccessfulExecution(?bool successfulExecution): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `response_id` | `int` | Optional | - |
+| `error` | `string` | Optional | Error message from service |
+| `successful_execution` | `bool` | Optional | Boolean flag indicating , true if execution successful, false if not |
 
 ## Example (as JSON)
 

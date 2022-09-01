@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `responseId` | `?int` | Optional | - | getResponseId(): ?int | setResponseId(?int responseId): void |
-| `companyInfoBundle` | [`?CompanyInfoBundle`](../../doc/models/company-info-bundle.md) | Optional | - | getCompanyInfoBundle(): ?CompanyInfoBundle | setCompanyInfoBundle(?CompanyInfoBundle companyInfoBundle): void |
-| `error` | `?string` | Optional | - | getError(): ?string | setError(?string error): void |
-| `statusCode` | `?string` | Optional | - | getStatusCode(): ?string | setStatusCode(?string statusCode): void |
-| `timings` | [`?Timings`](../../doc/models/timings.md) | Optional | - | getTimings(): ?Timings | setTimings(?Timings timings): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `response_id` | `int` | Optional | - |
+| `company_info_bundle` | [`CompanyInfoBundle`](../../doc/models/company-info-bundle.md) | Optional | - |
+| `error` | `string` | Optional | - |
+| `status_code` | `string` | Optional | - |
+| `timings` | [`Timings`](../../doc/models/timings.md) | Optional | - |
 
 ## Example (as JSON)
 

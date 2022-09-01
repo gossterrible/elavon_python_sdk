@@ -9,10 +9,10 @@ A container used to hold additional documents associated with the application
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `labelCode` | `?string` | Optional | - | getLabelCode(): ?string | setLabelCode(?string labelCode): void |
-| `labelValue` | `?string` | Optional | - | getLabelValue(): ?string | setLabelValue(?string labelValue): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `label_code` | `string` | Optional | - |
+| `label_value` | `string` | Optional | - |
 
 ## Example (as JSON)
 

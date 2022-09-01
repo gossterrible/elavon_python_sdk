@@ -7,17 +7,17 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `percentSharesHeld` | `?string` | Optional | - | getPercentSharesHeld(): ?string | setPercentSharesHeld(?string percentSharesHeld): void |
-| `shareHolderType` | `?string` | Optional | - | getShareHolderType(): ?string | setShareHolderType(?string shareHolderType): void |
-| `address` | [`?AddressFields`](../../doc/models/address-fields.md) | Optional | - | getAddress(): ?AddressFields | setAddress(?AddressFields address): void |
-| `personNameFields` | [`?PersonNameFields`](../../doc/models/person-name-fields.md) | Optional | - | getPersonNameFields(): ?PersonNameFields | setPersonNameFields(?PersonNameFields personNameFields): void |
-| `phoneFields` | [`?PhoneFields`](../../doc/models/phone-fields.md) | Optional | - | getPhoneFields(): ?PhoneFields | setPhoneFields(?PhoneFields phoneFields): void |
-| `shareHolderIdentifier` | `?string` | Optional | - | getShareHolderIdentifier(): ?string | setShareHolderIdentifier(?string shareHolderIdentifier): void |
-| `pesel` | `?string` | Optional | - | getPesel(): ?string | setPesel(?string pesel): void |
-| `principalOwnerDetail` | [`?PrincipalOwnerDetail`](../../doc/models/principal-owner-detail.md) | Optional | - | getPrincipalOwnerDetail(): ?PrincipalOwnerDetail | setPrincipalOwnerDetail(?PrincipalOwnerDetail principalOwnerDetail): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `name` | `string` | Optional | - |
+| `percent_shares_held` | `string` | Optional | - |
+| `share_holder_type` | `string` | Optional | - |
+| `address` | [`AddressFields`](../../doc/models/address-fields.md) | Optional | - |
+| `person_name_fields` | [`PersonNameFields`](../../doc/models/person-name-fields.md) | Optional | - |
+| `phone_fields` | [`PhoneFields`](../../doc/models/phone-fields.md) | Optional | - |
+| `share_holder_identifier` | `string` | Optional | - |
+| `pesel` | `string` | Optional | - |
+| `principal_owner_detail` | [`PrincipalOwnerDetail`](../../doc/models/principal-owner-detail.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `infoId` | `?string` | Optional | - | getInfoId(): ?string | setInfoId(?string infoId): void |
-| `value` | `?string` | Optional | - | getValue(): ?string | setValue(?string value): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `info_id` | `string` | Optional | - |
+| `value` | `string` | Optional | - |
 
 ## Example (as JSON)
 

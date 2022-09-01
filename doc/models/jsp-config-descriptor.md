@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `taglibs` | [`?(TaglibDescriptor[])`](../../doc/models/taglib-descriptor.md) | Optional | - | getTaglibs(): ?array | setTaglibs(?array taglibs): void |
-| `jspPropertyGroups` | [`?(JspPropertyGroupDescriptor[])`](../../doc/models/jsp-property-group-descriptor.md) | Optional | - | getJspPropertyGroups(): ?array | setJspPropertyGroups(?array jspPropertyGroups): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `taglibs` | [`List of TaglibDescriptor`](../../doc/models/taglib-descriptor.md) | Optional | - |
+| `jsp_property_groups` | [`List of JspPropertyGroupDescriptor`](../../doc/models/jsp-property-group-descriptor.md) | Optional | - |
 
 ## Example (as JSON)
 

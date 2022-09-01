@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `visaPercentage` | `string` | Required | Percentage of Visa transactions as a percentage of Annual Revenue | getVisaPercentage(): string | setVisaPercentage(string visaPercentage): void |
-| `masterCardPercentage` | `string` | Required | Percentage of MasterCard transactions as a percentage of Annual Revenue | getMasterCardPercentage(): string | setMasterCardPercentage(string masterCardPercentage): void |
-| `amexPercentage` | `string` | Required | Percentage of Amex OptBlue transactions as a percentage of Annual Revenue | getAmexPercentage(): string | setAmexPercentage(string amexPercentage): void |
-| `amexAverageTransaction` | `string` | Required | Average transaction amount for an Amercian Express OptBlue transaction | getAmexAverageTransaction(): string | setAmexAverageTransaction(string amexAverageTransaction): void |
-| `interacAverageTransaction` | `string` | Required | Average transaction amount for an Interac debit transaction | getInteracAverageTransaction(): string | setInteracAverageTransaction(string interacAverageTransaction): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `visa_percentage` | `string` | Required | Percentage of Visa transactions as a percentage of Annual Revenue |
+| `master_card_percentage` | `string` | Required | Percentage of MasterCard transactions as a percentage of Annual Revenue |
+| `amex_percentage` | `string` | Required | Percentage of Amex OptBlue transactions as a percentage of Annual Revenue |
+| `amex_average_transaction` | `string` | Required | Average transaction amount for an Amercian Express OptBlue transaction |
+| `interac_average_transaction` | `string` | Required | Average transaction amount for an Interac debit transaction |
 
 ## Example (as JSON)
 

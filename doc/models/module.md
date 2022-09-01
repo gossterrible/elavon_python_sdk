@@ -7,16 +7,16 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `layer` | `?array` | Optional | - | getLayer(): ?array | setLayer(?array layer): void |
-| `name` | `?string` | Optional | - | getName(): ?string | setName(?string name): void |
-| `descriptor` | [`?ModuleDescriptor`](../../doc/models/module-descriptor.md) | Optional | - | getDescriptor(): ?ModuleDescriptor | setDescriptor(?ModuleDescriptor descriptor): void |
-| `classLoader` | [`?ClassLoader`](../../doc/models/class-loader.md) | Optional | - | getClassLoader(): ?ClassLoader | setClassLoader(?ClassLoader classLoader): void |
-| `annotations` | `?(array[])` | Optional | - | getAnnotations(): ?array | setAnnotations(?array annotations): void |
-| `declaredAnnotations` | `?(array[])` | Optional | - | getDeclaredAnnotations(): ?array | setDeclaredAnnotations(?array declaredAnnotations): void |
-| `named` | `?bool` | Optional | - | getNamed(): ?bool | setNamed(?bool named): void |
-| `packages` | `?(string[])` | Optional | **Constraints**: *Unique Items Required* | getPackages(): ?array | setPackages(?array packages): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `layer` | `object` | Optional | - |
+| `name` | `string` | Optional | - |
+| `descriptor` | [`ModuleDescriptor`](../../doc/models/module-descriptor.md) | Optional | - |
+| `class_loader` | [`ClassLoader`](../../doc/models/class-loader.md) | Optional | - |
+| `annotations` | `List of object` | Optional | - |
+| `declared_annotations` | `List of object` | Optional | - |
+| `named` | `bool` | Optional | - |
+| `packages` | `List of string` | Optional | **Constraints**: *Unique Items Required* |
 
 ## Example (as JSON)
 

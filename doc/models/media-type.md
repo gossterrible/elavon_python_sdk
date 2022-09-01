@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `type` | `?string` | Optional | - | getType(): ?string | setType(?string type): void |
-| `subtype` | `?string` | Optional | - | getSubtype(): ?string | setSubtype(?string subtype): void |
-| `parameters` | `?array<string,string>` | Optional | - | getParameters(): ?array | setParameters(?array parameters): void |
-| `wildcardType` | `?bool` | Optional | - | getWildcardType(): ?bool | setWildcardType(?bool wildcardType): void |
-| `wildcardSubtype` | `?bool` | Optional | - | getWildcardSubtype(): ?bool | setWildcardSubtype(?bool wildcardSubtype): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `mtype` | `string` | Optional | - |
+| `subtype` | `string` | Optional | - |
+| `parameters` | `dict` | Optional | - |
+| `wildcard_type` | `bool` | Optional | - |
+| `wildcard_subtype` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

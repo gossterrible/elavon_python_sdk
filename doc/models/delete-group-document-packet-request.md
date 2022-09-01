@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `groupDocumentPacketId` | `?string` | Optional | The unique identifier for group document packet | getGroupDocumentPacketId(): ?string | setGroupDocumentPacketId(?string groupDocumentPacketId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `group_document_packet_id` | `string` | Optional | The unique identifier for group document packet |
 
 ## Example (as JSON)
 

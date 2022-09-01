@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `minimumCardFee` | `?float` | Optional | Minimum charge fee to be applied to card | getMinimumCardFee(): ?float | setMinimumCardFee(?float minimumCardFee): void |
-| `clearAndSimpleType` | `?string` | Optional | The type of the clear and simple plan | getClearAndSimpleType(): ?string | setClearAndSimpleType(?string clearAndSimpleType): void |
-| `c4PricingType` | `?string` | Optional | The type of the C4 pricing plan | getC4PricingType(): ?string | setC4PricingType(?string c4PricingType): void |
-| `highRiskCostAdditionalLoading` | `?string` | Optional | Risk loading percentage as it relates to Simplified MSC | getHighRiskCostAdditionalLoading(): ?string | setHighRiskCostAdditionalLoading(?string highRiskCostAdditionalLoading): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `minimum_card_fee` | `float` | Optional | Minimum charge fee to be applied to card |
+| `clear_and_simple_type` | `string` | Optional | The type of the clear and simple plan |
+| `c_4_pricing_type` | `string` | Optional | The type of the C4 pricing plan |
+| `high_risk_cost_additional_loading` | `string` | Optional | Risk loading percentage as it relates to Simplified MSC |
 
 ## Example (as JSON)
 

@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `amexMonthlyCardSales` | `?float` | Optional | - | getAmexMonthlyCardSales(): ?float | setAmexMonthlyCardSales(?float amexMonthlyCardSales): void |
-| `isExisting` | `?bool` | Optional | Flag indicating if AMEX account already present for customer | getIsExisting(): ?bool | setIsExisting(?bool isExisting): void |
-| `amexMid` | `?string` | Optional | [EU] Field for Girocard + International Schemes and International Schemes Only | getAmexMid(): ?string | setAmexMid(?string amexMid): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `amex_monthly_card_sales` | `float` | Optional | - |
+| `is_existing` | `bool` | Optional | Flag indicating if AMEX account already present for customer |
+| `amex_mid` | `string` | Optional | [EU] Field for Girocard + International Schemes and International Schemes Only |
 
 ## Example (as JSON)
 

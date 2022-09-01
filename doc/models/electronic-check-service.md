@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `reportingFee` | `?float` | Optional | - | getReportingFee(): ?float | setReportingFee(?float reportingFee): void |
-| `reportingNumUsers` | `?string` | Optional | - | getReportingNumUsers(): ?string | setReportingNumUsers(?string reportingNumUsers): void |
-| `achCheckQuestions` | [`?AchCheckQuestions`](../../doc/models/ach-check-questions.md) | Optional | - | getAchCheckQuestions(): ?AchCheckQuestions | setAchCheckQuestions(?AchCheckQuestions achCheckQuestions): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `reporting_fee` | `float` | Optional | - |
+| `reporting_num_users` | `string` | Optional | - |
+| `ach_check_questions` | [`AchCheckQuestions`](../../doc/models/ach-check-questions.md) | Optional | - |
 
 ## Example (as JSON)
 

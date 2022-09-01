@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `type` | [`string (Type2Enum)`](../../doc/models/type-2-enum.md) | Required | Billing statement format type | getType(): string | setType(string type): void |
-| `media` | [`string (MediaEnum)`](../../doc/models/media-enum.md) | Required | Billing statement media type | getMedia(): string | setMedia(string media): void |
-| `addressType` | [`?string (AddressTypeEnum)`](../../doc/models/address-type-enum.md) | Optional | [NA] Billing statement address, required should type and media indicate a mailed form | getAddressType(): ?string | setAddressType(?string addressType): void |
-| `emailAddress` | `?string` | Optional | [EU] Billing statement email address, required should type and media indicate an emailed form | getEmailAddress(): ?string | setEmailAddress(?string emailAddress): void |
-| `frequency` | [`?string (Frequency1Enum)`](../../doc/models/frequency-1-enum.md) | Optional | [EU] Frequency at which statement is provided | getFrequency(): ?string | setFrequency(?string frequency): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `mtype` | [`Type2Enum`](../../doc/models/type-2-enum.md) | Required | Billing statement format type |
+| `media` | [`MediaEnum`](../../doc/models/media-enum.md) | Required | Billing statement media type |
+| `address_type` | [`AddressTypeEnum`](../../doc/models/address-type-enum.md) | Optional | [NA] Billing statement address, required should type and media indicate a mailed form |
+| `email_address` | `string` | Optional | [EU] Billing statement email address, required should type and media indicate an emailed form |
+| `frequency` | [`Frequency1Enum`](../../doc/models/frequency-1-enum.md) | Optional | [EU] Frequency at which statement is provided |
 
 ## Example (as JSON)
 

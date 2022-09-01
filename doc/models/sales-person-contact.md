@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `name` | [`Name`](../../doc/models/name.md) | Required | - | getName(): Name | setName(Name name): void |
-| `phone` | [`PhoneNumber`](../../doc/models/phone-number.md) | Required | - | getPhone(): PhoneNumber | setPhone(PhoneNumber phone): void |
-| `emailAddress` | `string` | Required | Contact email address of sales person | getEmailAddress(): string | setEmailAddress(string emailAddress): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `name` | [`Name`](../../doc/models/name.md) | Required | - |
+| `phone` | [`PhoneNumber`](../../doc/models/phone-number.md) | Required | - |
+| `email_address` | `string` | Required | Contact email address of sales person |
 
 ## Example (as JSON)
 

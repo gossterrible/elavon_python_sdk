@@ -10,7 +10,7 @@
 | Name |
 |  --- |
 | `CONTEXT_ROOT` |
-| `DEFAULT_` |
+| `DEFAULT` |
 | `EXACT` |
 | `EXTENSION` |
 | `PATH` |

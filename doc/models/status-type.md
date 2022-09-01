@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `family` | [`?string (FamilyEnum)`](../../doc/models/family-enum.md) | Optional | - | getFamily(): ?string | setFamily(?string family): void |
-| `statusCode` | `?int` | Optional | - | getStatusCode(): ?int | setStatusCode(?int statusCode): void |
-| `reasonPhrase` | `?string` | Optional | - | getReasonPhrase(): ?string | setReasonPhrase(?string reasonPhrase): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `family` | [`FamilyEnum`](../../doc/models/family-enum.md) | Optional | - |
+| `status_code` | `int` | Optional | - |
+| `reason_phrase` | `string` | Optional | - |
 
 ## Example (as JSON)
 

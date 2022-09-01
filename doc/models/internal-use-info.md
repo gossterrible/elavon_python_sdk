@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `fieldAutoInfo` | [`?FieldAutoInfo`](../../doc/models/field-auto-info.md) | Optional | - | getFieldAutoInfo(): ?FieldAutoInfo | setFieldAutoInfo(?FieldAutoInfo fieldAutoInfo): void |
-| `salesRepInfo` | [`?SalesRepInfo`](../../doc/models/sales-rep-info.md) | Optional | - | getSalesRepInfo(): ?SalesRepInfo | setSalesRepInfo(?SalesRepInfo salesRepInfo): void |
-| `tinAppliedToAll` | `?bool` | Optional | Flag for GBAPI for if this app might have business level mappings.  If null assume business level map mode is true | getTinAppliedToAll(): ?bool | setTinAppliedToAll(?bool tinAppliedToAll): void |
-| `ipAddress` | `?string` | Optional | [NA] IP Address of the customer who signed the application | getIpAddress(): ?string | setIpAddress(?string ipAddress): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `field_auto_info` | [`FieldAutoInfo`](../../doc/models/field-auto-info.md) | Optional | - |
+| `sales_rep_info` | [`SalesRepInfo`](../../doc/models/sales-rep-info.md) | Optional | - |
+| `tin_applied_to_all` | `bool` | Optional | Flag for GBAPI for if this app might have business level mappings.  If null assume business level map mode is true |
+| `ip_address` | `string` | Optional | [NA] IP Address of the customer who signed the application |
 
 ## Example (as JSON)
 

@@ -10,5 +10,5 @@
 | Name |
 |  --- |
 | `EXISTING` |
-| `NEW_` |
+| `NEW` |
 

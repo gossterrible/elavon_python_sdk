@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `documentId` | `?string` | Optional | Identifier of document passed in prior upload document request | getDocumentId(): ?string | setDocumentId(?string documentId): void |
-| `documentStatus` | `?string` | Optional | Status of uploaded document | getDocumentStatus(): ?string | setDocumentStatus(?string documentStatus): void |
-| `messages` | [`?BoardingStatusMessage`](../../doc/models/boarding-status-message.md) | Optional | - | getMessages(): ?BoardingStatusMessage | setMessages(?BoardingStatusMessage messages): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `document_id` | `string` | Optional | Identifier of document passed in prior upload document request |
+| `document_status` | `string` | Optional | Status of uploaded document |
+| `messages` | [`BoardingStatusMessage`](../../doc/models/boarding-status-message.md) | Optional | - |
 
 ## Example (as JSON)
 

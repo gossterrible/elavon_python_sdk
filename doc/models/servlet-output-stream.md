@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `ready` | `?bool` | Optional | - | getReady(): ?bool | setReady(?bool ready): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `ready` | `bool` | Optional | - |
 
 ## Example (as JSON)
 

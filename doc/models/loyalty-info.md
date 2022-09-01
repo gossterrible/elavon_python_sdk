@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `visits` | `?int` | Optional | - | getVisits(): ?int | setVisits(?int visits): void |
-| `amountSpent` | `?float` | Optional | - | getAmountSpent(): ?float | setAmountSpent(?float amountSpent): void |
-| `discountRate` | `?float` | Optional | - | getDiscountRate(): ?float | setDiscountRate(?float discountRate): void |
-| `discountAmount` | `?float` | Optional | - | getDiscountAmount(): ?float | setDiscountAmount(?float discountAmount): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `visits` | `int` | Optional | - |
+| `amount_spent` | `float` | Optional | - |
+| `discount_rate` | `float` | Optional | - |
+| `discount_amount` | `float` | Optional | - |
 
 ## Example (as JSON)
 

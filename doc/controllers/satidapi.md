@@ -1,7 +1,7 @@
 # SATIDAPI
 
-```php
-$sATIDAPIController = $client->getSATIDAPIController();
+```python
+satidapi_controller = client.satidapi
 ```
 
 ## Class Name
@@ -51,15 +51,17 @@ $sATIDAPIController = $client->getSATIDAPIController();
 
 Upload Documents
 
-```php
-function uploadDocuments(int $versionNumber, UploadDocumentsRequestParams $body): UploadDocumentResponse
+```python
+def upload_documents(self,
+                    version_number,
+                    body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 | `body` | [`UploadDocumentsRequestParams`](../../doc/models/upload-documents-request-params.md) | Body, Required | - |
 
 ## Response Type
@@ -68,91 +70,65 @@ function uploadDocuments(int $versionNumber, UploadDocumentsRequestParams $body)
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_boardingId = '2101491576';
-$body_clientId = 'IDNA';
-$body_uniqueId = 'AcmeCorp1572566399123';
-$body_country = 'country0';
-$body_salesRepNumber = '12345';
-$body_imageDocumentData_docReferenceNumber = 'docReferenceNumber4';
-$body_imageDocumentData_imageDocuments = [];
+```python
+version_number = 66
+body = UploadDocumentsRequestParams()
+body.boarding_id = '2101491576'
+body.client_id = 'IDNA'
+body.unique_id = 'AcmeCorp1572566399123'
+body.country = 'country0'
+body.sales_rep_number = '12345'
+body.image_document_data = ImageDocumentData()
+body.image_document_data.doc_reference_number = 'docReferenceNumber4'
+body.image_document_data.image_documents = []
 
-$body_imageDocumentData_imageDocuments_0_imageId = 208;
-$body_imageDocumentData_imageDocuments_0_imageTypeCode = 'APPLI';
-$body_imageDocumentData_imageDocuments_0_dbaName = 'Grimm\'s Bookstore';
-$body_imageDocumentData_imageDocuments_0_mimeTypeCode = Models\MimeTypeCodeEnum::JPG;
-$body_imageDocumentData_imageDocuments_0_imageContent = ['imageContent4', 'imageContent5', 'imageContent6'];
-$body_imageDocumentData_imageDocuments[0] = new Models\ImageDocument(
-    $body_imageDocumentData_imageDocuments_0_imageId,
-    $body_imageDocumentData_imageDocuments_0_imageTypeCode,
-    $body_imageDocumentData_imageDocuments_0_dbaName,
-    $body_imageDocumentData_imageDocuments_0_mimeTypeCode,
-    $body_imageDocumentData_imageDocuments_0_imageContent
-);
+body.image_document_data.image_documents.append(ImageDocument())
+body.image_document_data.image_documents[0].image_id = 208
+body.image_document_data.image_documents[0].image_type_code = 'APPLI'
+body.image_document_data.image_documents[0].dba_name = 'Grimm\'s Bookstore'
+body.image_document_data.image_documents[0].mime_type_code = MimeTypeCodeEnum.JPG
+body.image_document_data.image_documents[0].image_content = ['imageContent4', 'imageContent5', 'imageContent6']
 
-$body_imageDocumentData_imageDocuments_1_imageId = 209;
-$body_imageDocumentData_imageDocuments_1_imageTypeCode = 'APPLI';
-$body_imageDocumentData_imageDocuments_1_dbaName = 'Grimm\'s Bookstore';
-$body_imageDocumentData_imageDocuments_1_mimeTypeCode = Models\MimeTypeCodeEnum::PDF;
-$body_imageDocumentData_imageDocuments_1_imageContent = ['imageContent5'];
-$body_imageDocumentData_imageDocuments[1] = new Models\ImageDocument(
-    $body_imageDocumentData_imageDocuments_1_imageId,
-    $body_imageDocumentData_imageDocuments_1_imageTypeCode,
-    $body_imageDocumentData_imageDocuments_1_dbaName,
-    $body_imageDocumentData_imageDocuments_1_mimeTypeCode,
-    $body_imageDocumentData_imageDocuments_1_imageContent
-);
+body.image_document_data.image_documents.append(ImageDocument())
+body.image_document_data.image_documents[1].image_id = 209
+body.image_document_data.image_documents[1].image_type_code = 'APPLI'
+body.image_document_data.image_documents[1].dba_name = 'Grimm\'s Bookstore'
+body.image_document_data.image_documents[1].mime_type_code = MimeTypeCodeEnum.PDF
+body.image_document_data.image_documents[1].image_content = ['imageContent5']
 
-$body_imageDocumentData_imageDocuments_2_imageId = 210;
-$body_imageDocumentData_imageDocuments_2_imageTypeCode = 'APPLI';
-$body_imageDocumentData_imageDocuments_2_dbaName = 'Grimm\'s Bookstore';
-$body_imageDocumentData_imageDocuments_2_mimeTypeCode = Models\MimeTypeCodeEnum::SVG;
-$body_imageDocumentData_imageDocuments_2_imageContent = ['imageContent6', 'imageContent7'];
-$body_imageDocumentData_imageDocuments[2] = new Models\ImageDocument(
-    $body_imageDocumentData_imageDocuments_2_imageId,
-    $body_imageDocumentData_imageDocuments_2_imageTypeCode,
-    $body_imageDocumentData_imageDocuments_2_dbaName,
-    $body_imageDocumentData_imageDocuments_2_mimeTypeCode,
-    $body_imageDocumentData_imageDocuments_2_imageContent
-);
+body.image_document_data.image_documents.append(ImageDocument())
+body.image_document_data.image_documents[2].image_id = 210
+body.image_document_data.image_documents[2].image_type_code = 'APPLI'
+body.image_document_data.image_documents[2].dba_name = 'Grimm\'s Bookstore'
+body.image_document_data.image_documents[2].mime_type_code = MimeTypeCodeEnum.SVG
+body.image_document_data.image_documents[2].image_content = ['imageContent6', 'imageContent7']
 
-$body_imageDocumentData = new Models\ImageDocumentData(
-    $body_imageDocumentData_docReferenceNumber,
-    $body_imageDocumentData_imageDocuments
-);
-$body = new Models\UploadDocumentsRequestParams(
-    $body_boardingId,
-    $body_clientId,
-    $body_uniqueId,
-    $body_country,
-    $body_salesRepNumber,
-    $body_imageDocumentData
-);
 
-$result = $sATIDAPIController->uploadDocuments($versionNumber, $body);
+result = satid_api_controller.upload_documents(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Board
 
 Boarding
 
-```php
-function board(int $versionNumber, BoardingRequestParams $body): BoardingResponse
+```python
+def board(self,
+         version_number,
+         body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
 | `body` | [`BoardingRequestParams`](../../doc/models/boarding-request-params.md) | Body, Required | - |
 
 ## Response Type
@@ -161,177 +137,90 @@ function board(int $versionNumber, BoardingRequestParams $body): BoardingRespons
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_scarecrowApplication_clientId = 'IDNA';
-$body_scarecrowApplication_uniqueId = 'AcmeCorp1572566399123';
-$body_scarecrowApplication_country = 'USA';
-$body_scarecrowApplication_principal_name_firstName = 'John';
-$body_scarecrowApplication_principal_name_lastName = 'Doe';
-$body_scarecrowApplication_principal_name = new Models\Name(
-    $body_scarecrowApplication_principal_name_firstName,
-    $body_scarecrowApplication_principal_name_lastName
-);
-$body_scarecrowApplication_principal_positions = ['key0' => false, 'key1' => true, 'key2' => false];
-$body_scarecrowApplication_principal = new Models\Person(
-    $body_scarecrowApplication_principal_name,
-    $body_scarecrowApplication_principal_positions
-);
-$body_scarecrowApplication_businessInfo_dbaName = 'Grimm\'s Bookstore';
-$body_scarecrowApplication_businessInfo_dbaNameExtended = 'Grimm\'s Fairytales and Other Stories Bookstore';
-$body_scarecrowApplication_businessInfo_businessAddress_streetName = 'Baker Street';
-$body_scarecrowApplication_businessInfo_businessAddress_city = 'Atlanta';
-$body_scarecrowApplication_businessInfo_businessAddress_country = 'USA';
-$body_scarecrowApplication_businessInfo_businessAddress = new Models\Address(
-    $body_scarecrowApplication_businessInfo_businessAddress_streetName,
-    $body_scarecrowApplication_businessInfo_businessAddress_city,
-    $body_scarecrowApplication_businessInfo_businessAddress_country
-);
-$body_scarecrowApplication_businessInfo_legalName = 'Barkers Dog Bakery';
-$body_scarecrowApplication_businessInfo_legalNameExtended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC';
-$body_scarecrowApplication_businessInfo_additionalAddresses = [];
+```python
+version_number = 66
+body = BoardingRequestParams()
+body.scarecrow_application = ScarecrowApplication()
+body.scarecrow_application.client_id = 'IDNA'
+body.scarecrow_application.unique_id = 'AcmeCorp1572566399123'
+body.scarecrow_application.country = 'USA'
+body.scarecrow_application.principal = Person()
+body.scarecrow_application.principal.name = Name()
+body.scarecrow_application.principal.name.first_name = 'John'
+body.scarecrow_application.principal.name.last_name = 'Doe'
+body.scarecrow_application.principal.positions = {'key0' : False, 'key1' : True, 'key2' : False } 
+body.scarecrow_application.business_info = BusinessInfo()
+body.scarecrow_application.business_info.dba_name = 'Grimm\'s Bookstore'
+body.scarecrow_application.business_info.dba_name_extended = 'Grimm\'s Fairytales and Other Stories Bookstore'
+body.scarecrow_application.business_info.business_address = Address()
+body.scarecrow_application.business_info.business_address.street_name = 'Baker Street'
+body.scarecrow_application.business_info.business_address.city = 'Atlanta'
+body.scarecrow_application.business_info.business_address.country = 'USA'
+body.scarecrow_application.business_info.legal_name = 'Barkers Dog Bakery'
+body.scarecrow_application.business_info.legal_name_extended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC'
+body.scarecrow_application.business_info.additional_addresses = Address()
+body.scarecrow_application.business_info.additional_addresses.street_name = None
+body.scarecrow_application.business_info.additional_addresses.city = None
+body.scarecrow_application.business_info.additional_addresses.country = None
+body.scarecrow_application.business_info.ownership_type = OwnershipTypeEnum.PARTNERSHIP_LIMITED_BY_SHARES
+body.scarecrow_application.business_info.product_description = 'Bakeries'
+body.scarecrow_application.business_info.mcc_code = '7399E'
+body.scarecrow_application.business_info.establishment_year = '2005'
+body.scarecrow_application.business_info.current_ownership_years = '3'
+body.scarecrow_application.business_info.current_ownership_months = '6'
+body.scarecrow_application.business_info.communication_language = 'en'
+body.scarecrow_application.business_info.pos_language = 'en'
+body.scarecrow_application.financial_info = FinancialInfo()
+body.scarecrow_application.financial_info.avg_sale_amount = '125'
+body.scarecrow_application.financial_info.monthly_card_sales = '1000'
+body.scarecrow_application.financial_info.card_present_acceptance_percent = '100'
+body.scarecrow_application.financial_info.internet_acceptance_percent = '0'
+body.scarecrow_application.financial_info.moto_acceptance_percent = '0'
+body.scarecrow_application.sales_rep_code = '12345'
+body.scarecrow_application.contact = Person()
+body.scarecrow_application.contact.name = Name()
+body.scarecrow_application.contact.name.first_name = 'John'
+body.scarecrow_application.contact.name.last_name = 'Doe'
+body.scarecrow_application.contact.positions = {'key0' : False, 'key1' : True } 
+body.scarecrow_application.bank_accounts = BankingInfo()
+body.scarecrow_application.bank_accounts.funding_method = envrr
+body.scarecrow_application.bank_accounts.account_number = None
+body.scarecrow_application.bank_accounts.sort_code = None
+body.scarecrow_application.card_pricing = CardPricing()
+body.scarecrow_application.card_pricing.pricing_method = PricingMethodEnum.ASSOCIATION
+body.scarecrow_application.card_pricing.pricing_category = PricingCategoryEnum.MOTO
+body.scarecrow_application.card_pricing.card_charges = []
 
-$body_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.scarecrow_application.card_pricing.card_charges.append(CardCharge())
+body.scarecrow_application.card_pricing.card_charges[0].card_type = CardTypeEnum.VISA_DEBIT
 
-$body_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.scarecrow_application.parent_entity = 'parentEntity8'
 
-$body_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_scarecrowApplication_businessInfo_additionalAddresses__country
-);
-
-$body_scarecrowApplication_businessInfo_ownershipType = Models\OwnershipTypeEnum::PARTNERSHIP_LIMITED_BY_SHARES;
-$body_scarecrowApplication_businessInfo_productDescription = 'Bakeries';
-$body_scarecrowApplication_businessInfo_mccCode = '7399E';
-$body_scarecrowApplication_businessInfo_establishmentYear = '2005';
-$body_scarecrowApplication_businessInfo_currentOwnershipYears = '3';
-$body_scarecrowApplication_businessInfo_currentOwnershipMonths = '6';
-$body_scarecrowApplication_businessInfo_communicationLanguage = 'en';
-$body_scarecrowApplication_businessInfo_posLanguage = 'en';
-$body_scarecrowApplication_businessInfo = new Models\BusinessInfo(
-    $body_scarecrowApplication_businessInfo_dbaName,
-    $body_scarecrowApplication_businessInfo_dbaNameExtended,
-    $body_scarecrowApplication_businessInfo_businessAddress,
-    $body_scarecrowApplication_businessInfo_legalName,
-    $body_scarecrowApplication_businessInfo_legalNameExtended,
-    $body_scarecrowApplication_businessInfo_additionalAddresses,
-    $body_scarecrowApplication_businessInfo_ownershipType,
-    $body_scarecrowApplication_businessInfo_productDescription,
-    $body_scarecrowApplication_businessInfo_mccCode,
-    $body_scarecrowApplication_businessInfo_establishmentYear,
-    $body_scarecrowApplication_businessInfo_currentOwnershipYears,
-    $body_scarecrowApplication_businessInfo_currentOwnershipMonths,
-    $body_scarecrowApplication_businessInfo_communicationLanguage,
-    $body_scarecrowApplication_businessInfo_posLanguage
-);
-$body_scarecrowApplication_financialInfo_avgSaleAmount = '125';
-$body_scarecrowApplication_financialInfo_monthlyCardSales = '1000';
-$body_scarecrowApplication_financialInfo_cardPresentAcceptancePercent = '100';
-$body_scarecrowApplication_financialInfo_internetAcceptancePercent = '0';
-$body_scarecrowApplication_financialInfo_motoAcceptancePercent = '0';
-$body_scarecrowApplication_financialInfo = new Models\FinancialInfo(
-    $body_scarecrowApplication_financialInfo_avgSaleAmount,
-    $body_scarecrowApplication_financialInfo_monthlyCardSales,
-    $body_scarecrowApplication_financialInfo_cardPresentAcceptancePercent,
-    $body_scarecrowApplication_financialInfo_internetAcceptancePercent,
-    $body_scarecrowApplication_financialInfo_motoAcceptancePercent
-);
-$body_scarecrowApplication_salesRepCode = '12345';
-$body_scarecrowApplication_contact_name_firstName = 'John';
-$body_scarecrowApplication_contact_name_lastName = 'Doe';
-$body_scarecrowApplication_contact_name = new Models\Name(
-    $body_scarecrowApplication_contact_name_firstName,
-    $body_scarecrowApplication_contact_name_lastName
-);
-$body_scarecrowApplication_contact_positions = ['key0' => false, 'key1' => true];
-$body_scarecrowApplication_contact = new Models\Person(
-    $body_scarecrowApplication_contact_name,
-    $body_scarecrowApplication_contact_positions
-);
-$body_scarecrowApplication_bankAccounts = [];
-
-$body_scarecrowApplication_bankAccounts__fundingMethod = envrr;
-$body_scarecrowApplication_bankAccounts__accountNumber = null;
-$body_scarecrowApplication_bankAccounts__sortCode = null;
-$body_scarecrowApplication_bankAccounts[''] = new Models\BankingInfo(
-    $body_scarecrowApplication_bankAccounts__fundingMethod,
-    $body_scarecrowApplication_bankAccounts__accountNumber,
-    $body_scarecrowApplication_bankAccounts__sortCode
-);
-
-$body_scarecrowApplication_cardPricing_pricingMethod = Models\PricingMethodEnum::ASSOCIATION;
-$body_scarecrowApplication_cardPricing_pricingCategory = Models\PricingCategoryEnum::MOTO;
-$body_scarecrowApplication_cardPricing_cardCharges = [];
-
-$body_scarecrowApplication_cardPricing_cardCharges_0_cardType = Models\CardTypeEnum::VISA_DEBIT;
-$body_scarecrowApplication_cardPricing_cardCharges[0] = new Models\CardCharge(
-    $body_scarecrowApplication_cardPricing_cardCharges_0_cardType
-);
-
-$body_scarecrowApplication_cardPricing = new Models\CardPricing(
-    $body_scarecrowApplication_cardPricing_pricingMethod,
-    $body_scarecrowApplication_cardPricing_pricingCategory,
-    $body_scarecrowApplication_cardPricing_cardCharges
-);
-$body_scarecrowApplication_parentEntity = 'parentEntity8';
-$body_scarecrowApplication = new Models\ScarecrowApplication(
-    $body_scarecrowApplication_clientId,
-    $body_scarecrowApplication_uniqueId,
-    $body_scarecrowApplication_country,
-    $body_scarecrowApplication_principal,
-    $body_scarecrowApplication_businessInfo,
-    $body_scarecrowApplication_financialInfo,
-    $body_scarecrowApplication_salesRepCode,
-    $body_scarecrowApplication_contact,
-    $body_scarecrowApplication_bankAccounts,
-    $body_scarecrowApplication_cardPricing,
-    $body_scarecrowApplication_parentEntity
-);
-$body = new Models\BoardingRequestParams(
-    $body_scarecrowApplication
-);
-
-$result = $sATIDAPIController->board($versionNumber, $body);
+result = satid_api_controller.board(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Postal Validate
 
 Validate Postal Code
 
-```php
-function postalValidate(int $versionNumber, ValidateZipCodeRequest $body): ValidateZipCodeRequest
+```python
+def postal_validate(self,
+                   version_number,
+                   body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 | `body` | [`ValidateZipCodeRequest`](../../doc/models/validate-zip-code-request.md) | Body, Required | - |
 
 ## Response Type
@@ -340,38 +229,37 @@ function postalValidate(int $versionNumber, ValidateZipCodeRequest $body): Valid
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_zipCode = '20330';
-$body_country = 'USA';
-$body = new Models\ValidateZipCodeRequest(
-    $body_zipCode,
-    $body_country
-);
+```python
+version_number = 66
+body = ValidateZipCodeRequest()
+body.zip_code = '20330'
+body.country = 'USA'
 
-$result = $sATIDAPIController->postalValidate($versionNumber, $body);
+result = satid_api_controller.postal_validate(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Bank Validate
 
 Validate Bank Account
 
-```php
-function bankValidate(int $versionNumber, BankingInfo $body): VerifyBankAccountResponse
+```python
+def bank_validate(self,
+                 version_number,
+                 body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 | `body` | [`BankingInfo`](../../doc/models/banking-info.md) | Body, Required | - |
 
 ## Response Type
@@ -380,33 +268,30 @@ function bankValidate(int $versionNumber, BankingInfo $body): VerifyBankAccountR
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_fundingMethod = Models\FundingMethodEnum::NETCREDIT;
-$body_accountNumber = '20581687';
-$body_sortCode = '121000248';
-$body = new Models\BankingInfo(
-    $body_fundingMethod,
-    $body_accountNumber,
-    $body_sortCode
-);
+```python
+version_number = 66
+body = BankingInfo()
+body.funding_method = FundingMethodEnum.NETCREDIT
+body.account_number = '20581687'
+body.sort_code = '121000248'
 
-$result = $sATIDAPIController->bankValidate($versionNumber, $body);
+result = satid_api_controller.bank_validate(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Refresh Signer User Sessions
 
 Refresh the session for signers of a document packet
 
-```php
-function refreshSignerUserSessions(RefreshSignerUsersSessionsRequest $body): RefershSignerUserSessionsResponse
+```python
+def refresh_signer_user_sessions(self,
+                                body)
 ```
 
 ## Parameters
@@ -421,30 +306,28 @@ function refreshSignerUserSessions(RefreshSignerUsersSessionsRequest $body): Ref
 
 ## Example Usage
 
-```php
-$body_documentPacketId = '42f441d0-0c23-468d-8319-f1e2af17dc15';
-$body_signerIds = ['signerIds5', 'signerIds6', 'signerIds7'];
-$body = new Models\RefreshSignerUsersSessionsRequest(
-    $body_documentPacketId,
-    $body_signerIds
-);
+```python
+body = RefreshSignerUsersSessionsRequest()
+body.document_packet_id = '42f441d0-0c23-468d-8319-f1e2af17dc15'
+body.signer_ids = ['signerIds5', 'signerIds6', 'signerIds7']
 
-$result = $sATIDAPIController->refreshSignerUserSessions($body);
+result = satid_api_controller.refresh_signer_user_sessions(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Regenerate Packet Documents
 
 Regenerate signed Packet Content in event of failure
 
-```php
-function regeneratePacketDocuments(RegenerateDocumentPacketRequest $body): Response
+```python
+def regenerate_packet_documents(self,
+                               body)
 ```
 
 ## Parameters
@@ -459,28 +342,27 @@ function regeneratePacketDocuments(RegenerateDocumentPacketRequest $body): Respo
 
 ## Example Usage
 
-```php
-$body_documentPacketId = 'documentPacketId2';
-$body = new Models\RegenerateDocumentPacketRequest(
-    $body_documentPacketId
-);
+```python
+body = RegenerateDocumentPacketRequest()
+body.document_packet_id = 'documentPacketId2'
 
-$result = $sATIDAPIController->regeneratePacketDocuments($body);
+result = satid_api_controller.regenerate_packet_documents(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # List Packet Presented Documents
 
 List Packet Documents to present to the user
 
-```php
-function listPacketPresentedDocuments(ListPacketDocumentsRequest $body): ListDocumentsResponse
+```python
+def list_packet_presented_documents(self,
+                                   body)
 ```
 
 ## Parameters
@@ -495,25 +377,26 @@ function listPacketPresentedDocuments(ListPacketDocumentsRequest $body): ListDoc
 
 ## Example Usage
 
-```php
-$body = new Models\ListPacketDocumentsRequest;
+```python
+body = ListPacketDocumentsRequest()
 
-$result = $sATIDAPIController->listPacketPresentedDocuments($body);
+result = satid_api_controller.list_packet_presented_documents(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Get Signed Document Packet Content
 
 Get signed document packet content
 
-```php
-function getSignedDocumentPacketContent(GetSignedDocumentPacketRequest $body): GetDocumentsResponse
+```python
+def get_signed_document_packet_content(self,
+                                      body)
 ```
 
 ## Parameters
@@ -528,25 +411,26 @@ function getSignedDocumentPacketContent(GetSignedDocumentPacketRequest $body): G
 
 ## Example Usage
 
-```php
-$body = new Models\GetSignedDocumentPacketRequest;
+```python
+body = GetSignedDocumentPacketRequest()
 
-$result = $sATIDAPIController->getSignedDocumentPacketContent($body);
+result = satid_api_controller.get_signed_document_packet_content(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Generate Packet Documents
 
 Trigger generation of document in packet for submission
 
-```php
-function generatePacketDocuments(GeneratePacketDocumentsRequest $body): GeneratePacketDocumentsResponse
+```python
+def generate_packet_documents(self,
+                             body)
 ```
 
 ## Parameters
@@ -561,33 +445,35 @@ function generatePacketDocuments(GeneratePacketDocumentsRequest $body): Generate
 
 ## Example Usage
 
-```php
-$body = new Models\GeneratePacketDocumentsRequest;
+```python
+body = GeneratePacketDocumentsRequest()
 
-$result = $sATIDAPIController->generatePacketDocuments($body);
+result = satid_api_controller.generate_packet_documents(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Board Xsd Schema
 
 Get Boarding Schema
 
-```php
-function boardXsdSchema(int $versionNumber, string $iso3Country): void
+```python
+def board_xsd_schema(self,
+                    version_number,
+                    iso_3_country)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
-| `iso3Country` | `string` | Template, Required | - |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
+| `iso_3_country` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -595,34 +481,36 @@ function boardXsdSchema(int $versionNumber, string $iso3Country): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$iso3Country = 'iso3Country6';
+```python
+version_number = 66
+iso_3_country = 'iso3Country6'
 
-$sATIDAPIController->boardXsdSchema($versionNumber, $iso3Country);
+result = satid_api_controller.board_xsd_schema(version_number, iso_3_country)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Credit Check Xsd Schema
 
 Get Credit Check Schema
 
-```php
-function creditCheckXsdSchema(int $versionNumber, string $iso3Country): void
+```python
+def credit_check_xsd_schema(self,
+                           version_number,
+                           iso_3_country)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
-| `iso3Country` | `string` | Template, Required | - |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
+| `iso_3_country` | `string` | Template, Required | - |
 
 ## Response Type
 
@@ -630,33 +518,34 @@ function creditCheckXsdSchema(int $versionNumber, string $iso3Country): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$iso3Country = 'iso3Country6';
+```python
+version_number = 66
+iso_3_country = 'iso3Country6'
 
-$sATIDAPIController->creditCheckXsdSchema($versionNumber, $iso3Country);
+result = satid_api_controller.credit_check_xsd_schema(version_number, iso_3_country)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Board Status Xsd Schema
 
 Get Boarding Status Schema
 
-```php
-function boardStatusXsdSchema(int $versionNumber): void
+```python
+def board_status_xsd_schema(self,
+                           version_number)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 
 ## Response Type
 
@@ -664,32 +553,33 @@ function boardStatusXsdSchema(int $versionNumber): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
+```python
+version_number = 66
 
-$sATIDAPIController->boardStatusXsdSchema($versionNumber);
+result = satid_api_controller.board_status_xsd_schema(version_number)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Upload Document Xsd Schema
 
 Get Upload Documents Schema
 
-```php
-function uploadDocumentXsdSchema(int $versionNumber): void
+```python
+def upload_document_xsd_schema(self,
+                              version_number)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 
 ## Response Type
 
@@ -697,32 +587,33 @@ function uploadDocumentXsdSchema(int $versionNumber): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
+```python
+version_number = 66
 
-$sATIDAPIController->uploadDocumentXsdSchema($versionNumber);
+result = satid_api_controller.upload_document_xsd_schema(version_number)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Post Code Xsd Schema
 
 Get Postal Code Validation Schema
 
-```php
-function postCodeXsdSchema(int $versionNumber): void
+```python
+def post_code_xsd_schema(self,
+                        version_number)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 
 ## Response Type
 
@@ -730,32 +621,33 @@ function postCodeXsdSchema(int $versionNumber): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
+```python
+version_number = 66
 
-$sATIDAPIController->postCodeXsdSchema($versionNumber);
+result = satid_api_controller.post_code_xsd_schema(version_number)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Bank Xsd Schema
 
 Get Bank Account Validation Schema
 
-```php
-function bankXsdSchema(int $versionNumber): void
+```python
+def bank_xsd_schema(self,
+                   version_number)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 
 ## Response Type
 
@@ -763,32 +655,33 @@ function bankXsdSchema(int $versionNumber): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
+```python
+version_number = 66
 
-$sATIDAPIController->bankXsdSchema($versionNumber);
+result = satid_api_controller.bank_xsd_schema(version_number)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Get Quiz Xsd Schema
 
 Get Quiz Request Schema
 
-```php
-function getQuizXsdSchema(int $versionNumber): void
+```python
+def get_quiz_xsd_schema(self,
+                       version_number)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 
 ## Response Type
 
@@ -796,32 +689,33 @@ function getQuizXsdSchema(int $versionNumber): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
+```python
+version_number = 66
 
-$sATIDAPIController->getQuizXsdSchema($versionNumber);
+result = satid_api_controller.get_quiz_xsd_schema(version_number)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Answer Quiz Xsd Schema
 
 Get Quiz Answer Schema
 
-```php
-function answerQuizXsdSchema(int $versionNumber): void
+```python
+def answer_quiz_xsd_schema(self,
+                          version_number)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 
 ## Response Type
 
@@ -829,32 +723,34 @@ function answerQuizXsdSchema(int $versionNumber): void
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
+```python
+version_number = 66
 
-$sATIDAPIController->answerQuizXsdSchema($versionNumber);
+result = satid_api_controller.answer_quiz_xsd_schema(version_number)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| Default | successful operation | `ApiException` |
+| Default | successful operation | `APIException` |
 
 
 # Get Quiz
 
 Request KYC Quiz
 
-```php
-function getQuiz(int $versionNumber, GetQuizRequest $body): GetQuizResponse
+```python
+def get_quiz(self,
+            version_number,
+            body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 | `body` | [`GetQuizRequest`](../../doc/models/get-quiz-request.md) | Body, Required | - |
 
 ## Response Type
@@ -863,57 +759,45 @@ function getQuiz(int $versionNumber, GetQuizRequest $body): GetQuizResponse
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_principal_name_firstName = 'John';
-$body_principal_name_lastName = 'Doe';
-$body_principal_name = new Models\Name(
-    $body_principal_name_firstName,
-    $body_principal_name_lastName
-);
-$body_principal_positions = ['key0' => false];
-$body_principal = new Models\Person(
-    $body_principal_name,
-    $body_principal_positions
-);
-$body_businessAddress_streetName = 'Baker Street';
-$body_businessAddress_city = 'Atlanta';
-$body_businessAddress_country = 'USA';
-$body_businessAddress = new Models\Address(
-    $body_businessAddress_streetName,
-    $body_businessAddress_city,
-    $body_businessAddress_country
-);
-$body_language = 'en';
-$body = new Models\GetQuizRequest(
-    $body_principal,
-    $body_businessAddress,
-    $body_language
-);
+```python
+version_number = 66
+body = GetQuizRequest()
+body.principal = Person()
+body.principal.name = Name()
+body.principal.name.first_name = 'John'
+body.principal.name.last_name = 'Doe'
+body.principal.positions = {'key0' : False } 
+body.business_address = Address()
+body.business_address.street_name = 'Baker Street'
+body.business_address.city = 'Atlanta'
+body.business_address.country = 'USA'
+body.language = 'en'
 
-$result = $sATIDAPIController->getQuiz($versionNumber, $body);
+result = satid_api_controller.get_quiz(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Answer Quiz
 
 Answer KYC Quiz
 
-```php
-function answerQuiz(int $versionNumber, AnswerQuizRequest $body): AnswerQuizResponse
+```python
+def answer_quiz(self,
+               version_number,
+               body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 | `body` | [`AnswerQuizRequest`](../../doc/models/answer-quiz-request.md) | Body, Required | - |
 
 ## Response Type
@@ -922,48 +806,39 @@ function answerQuiz(int $versionNumber, AnswerQuizRequest $body): AnswerQuizResp
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_quizId = 162;
-$body_transactionKey = 'transactionKey8';
-$body_quizAnswers = [];
+```python
+version_number = 66
+body = AnswerQuizRequest()
+body.quiz_id = 162
+body.transaction_key = 'transactionKey8'
+body.quiz_answers = []
 
-$body_quizAnswers_0_questionNumber = 30;
-$body_quizAnswers_0_answerNumber = 20;
-$body_quizAnswers[0] = new Models\QuizAnswer(
-    $body_quizAnswers_0_questionNumber,
-    $body_quizAnswers_0_answerNumber
-);
+body.quiz_answers.append(QuizAnswer())
+body.quiz_answers[0].question_number = 30
+body.quiz_answers[0].answer_number = 20
 
-$body_quizAnswers_1_questionNumber = 31;
-$body_quizAnswers_1_answerNumber = 21;
-$body_quizAnswers[1] = new Models\QuizAnswer(
-    $body_quizAnswers_1_questionNumber,
-    $body_quizAnswers_1_answerNumber
-);
+body.quiz_answers.append(QuizAnswer())
+body.quiz_answers[1].question_number = 31
+body.quiz_answers[1].answer_number = 21
 
-$body = new Models\AnswerQuizRequest(
-    $body_quizId,
-    $body_transactionKey,
-    $body_quizAnswers
-);
 
-$result = $sATIDAPIController->answerQuiz($versionNumber, $body);
+result = satid_api_controller.answer_quiz(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # List Presented Documents
 
 List Documents to present to the user
 
-```php
-function listPresentedDocuments(ListDocumentsRequest $body): ListDocumentsResponse
+```python
+def list_presented_documents(self,
+                            body)
 ```
 
 ## Parameters
@@ -978,25 +853,26 @@ function listPresentedDocuments(ListDocumentsRequest $body): ListDocumentsRespon
 
 ## Example Usage
 
-```php
-$body = new Models\ListDocumentsRequest;
+```python
+body = ListDocumentsRequest()
 
-$result = $sATIDAPIController->listPresentedDocuments($body);
+result = satid_api_controller.list_presented_documents(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Get Presented Documents
 
 Get all documents to present to the user
 
-```php
-function getPresentedDocuments(GetDocumentsRequest $body): GetDocumentsResponse
+```python
+def get_presented_documents(self,
+                           body)
 ```
 
 ## Parameters
@@ -1011,32 +887,34 @@ function getPresentedDocuments(GetDocumentsRequest $body): GetDocumentsResponse
 
 ## Example Usage
 
-```php
-$body = new Models\GetDocumentsRequest;
+```python
+body = GetDocumentsRequest()
 
-$result = $sATIDAPIController->getPresentedDocuments($body);
+result = satid_api_controller.get_presented_documents(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Board Status
 
 Boarding Status
 
-```php
-function boardStatus(int $versionNumber, BoardingStatusRequestParams $body): BoardingStatusResponse
+```python
+def board_status(self,
+                version_number,
+                body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-2]` |
 | `body` | [`BoardingStatusRequestParams`](../../doc/models/boarding-status-request-params.md) | Body, Required | - |
 
 ## Response Type
@@ -1045,35 +923,31 @@ function boardStatus(int $versionNumber, BoardingStatusRequestParams $body): Boa
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_clientId = 'IDNA';
-$body_uniqueId = 'AcmeCorp1572566399123';
-$body_country = 'USA';
-$body_salesRepCode = 'salesRepCode2';
-$body = new Models\BoardingStatusRequestParams(
-    $body_clientId,
-    $body_uniqueId,
-    $body_country,
-    $body_salesRepCode
-);
+```python
+version_number = 66
+body = BoardingStatusRequestParams()
+body.client_id = 'IDNA'
+body.unique_id = 'AcmeCorp1572566399123'
+body.country = 'USA'
+body.sales_rep_code = 'salesRepCode2'
 
-$result = $sATIDAPIController->boardStatus($versionNumber, $body);
+result = satid_api_controller.board_status(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Get Terminal Ids
 
 Get terminal ids and related information for MID
 
-```php
-function getTerminalIds(GetTerminalIdsRequest $body): GetTerminalIdsResponse
+```python
+def get_terminal_ids(self,
+                    body)
 ```
 
 ## Parameters
@@ -1088,25 +962,26 @@ function getTerminalIds(GetTerminalIdsRequest $body): GetTerminalIdsResponse
 
 ## Example Usage
 
-```php
-$body = new Models\GetTerminalIdsRequest;
+```python
+body = GetTerminalIdsRequest()
 
-$result = $sATIDAPIController->getTerminalIds($body);
+result = satid_api_controller.get_terminal_ids(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Create Group Document Packet
 
 Create Group Document Packet
 
-```php
-function createGroupDocumentPacket(CreateGroupDocumentPacketRequest $body): CreateGroupDocumentPacketResponse
+```python
+def create_group_document_packet(self,
+                                body)
 ```
 
 ## Parameters
@@ -1121,25 +996,26 @@ function createGroupDocumentPacket(CreateGroupDocumentPacketRequest $body): Crea
 
 ## Example Usage
 
-```php
-$body = new Models\CreateGroupDocumentPacketRequest;
+```python
+body = CreateGroupDocumentPacketRequest()
 
-$result = $sATIDAPIController->createGroupDocumentPacket($body);
+result = satid_api_controller.create_group_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Append Group Document Packet
 
 Append to Group Document Packet
 
-```php
-function appendGroupDocumentPacket(AppendGroupDocumentPacketRequest $body): AppendGroupDocumentPacketResponse
+```python
+def append_group_document_packet(self,
+                                body)
 ```
 
 ## Parameters
@@ -1154,225 +1030,111 @@ function appendGroupDocumentPacket(AppendGroupDocumentPacketRequest $body): Appe
 
 ## Example Usage
 
-```php
-$body_groupDocumentPacketId = 'groupDocumentPacketId4';
-$body_profileCode = 'profileCode8';
-$body_signers = [];
+```python
+body = AppendGroupDocumentPacketRequest()
+body.group_document_packet_id = 'groupDocumentPacketId4'
+body.profile_code = 'profileCode8'
+body.signers = []
 
-$body_signers_0_signerId = 'signerId4';
-$body_signers_0_signer_firstName = 'John';
-$body_signers_0_signer_lastName = 'Doe';
-$body_signers_0_signer = new Models\Name(
-    $body_signers_0_signer_firstName,
-    $body_signers_0_signer_lastName
-);
-$body_signers_0_principal = false;
-$body_signers[0] = new Models\Signer(
-    $body_signers_0_signerId,
-    $body_signers_0_signer,
-    $body_signers_0_principal
-);
+body.signers.append(Signer())
+body.signers[0].signer_id = 'signerId4'
+body.signers[0].signer = Name()
+body.signers[0].signer.first_name = 'John'
+body.signers[0].signer.last_name = 'Doe'
+body.signers[0].principal = False
 
-$body_signers_1_signerId = 'signerId5';
-$body_signers_1_signer_firstName = 'John';
-$body_signers_1_signer_lastName = 'Doe';
-$body_signers_1_signer = new Models\Name(
-    $body_signers_1_signer_firstName,
-    $body_signers_1_signer_lastName
-);
-$body_signers_1_principal = true;
-$body_signers[1] = new Models\Signer(
-    $body_signers_1_signerId,
-    $body_signers_1_signer,
-    $body_signers_1_principal
-);
+body.signers.append(Signer())
+body.signers[1].signer_id = 'signerId5'
+body.signers[1].signer = Name()
+body.signers[1].signer.first_name = 'John'
+body.signers[1].signer.last_name = 'Doe'
+body.signers[1].principal = True
 
-$body_signers_2_signerId = 'signerId6';
-$body_signers_2_signer_firstName = 'John';
-$body_signers_2_signer_lastName = 'Doe';
-$body_signers_2_signer = new Models\Name(
-    $body_signers_2_signer_firstName,
-    $body_signers_2_signer_lastName
-);
-$body_signers_2_principal = false;
-$body_signers[2] = new Models\Signer(
-    $body_signers_2_signerId,
-    $body_signers_2_signer,
-    $body_signers_2_principal
-);
+body.signers.append(Signer())
+body.signers[2].signer_id = 'signerId6'
+body.signers[2].signer = Name()
+body.signers[2].signer.first_name = 'John'
+body.signers[2].signer.last_name = 'Doe'
+body.signers[2].principal = False
 
-$body_documentPacketData_scarecrowApplication_clientId = 'IDNA';
-$body_documentPacketData_scarecrowApplication_uniqueId = 'AcmeCorp1572566399123';
-$body_documentPacketData_scarecrowApplication_country = 'USA';
-$body_documentPacketData_scarecrowApplication_principal_name_firstName = 'John';
-$body_documentPacketData_scarecrowApplication_principal_name_lastName = 'Doe';
-$body_documentPacketData_scarecrowApplication_principal_name = new Models\Name(
-    $body_documentPacketData_scarecrowApplication_principal_name_firstName,
-    $body_documentPacketData_scarecrowApplication_principal_name_lastName
-);
-$body_documentPacketData_scarecrowApplication_principal_positions = ['key0' => false, 'key1' => true, 'key2' => false];
-$body_documentPacketData_scarecrowApplication_principal = new Models\Person(
-    $body_documentPacketData_scarecrowApplication_principal_name,
-    $body_documentPacketData_scarecrowApplication_principal_positions
-);
-$body_documentPacketData_scarecrowApplication_businessInfo_dbaName = 'Grimm\'s Bookstore';
-$body_documentPacketData_scarecrowApplication_businessInfo_dbaNameExtended = 'Grimm\'s Fairytales and Other Stories Bookstore';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_streetName = 'Baker Street';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_city = 'Atlanta';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_country = 'USA';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_country
-);
-$body_documentPacketData_scarecrowApplication_businessInfo_legalName = 'Barkers Dog Bakery';
-$body_documentPacketData_scarecrowApplication_businessInfo_legalNameExtended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC';
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses = [];
+body.document_packet_data = DocumentPacketData()
+body.document_packet_data.scarecrow_application = ScarecrowApplication()
+body.document_packet_data.scarecrow_application.client_id = 'IDNA'
+body.document_packet_data.scarecrow_application.unique_id = 'AcmeCorp1572566399123'
+body.document_packet_data.scarecrow_application.country = 'USA'
+body.document_packet_data.scarecrow_application.principal = Person()
+body.document_packet_data.scarecrow_application.principal.name = Name()
+body.document_packet_data.scarecrow_application.principal.name.first_name = 'John'
+body.document_packet_data.scarecrow_application.principal.name.last_name = 'Doe'
+body.document_packet_data.scarecrow_application.principal.positions = {'key0' : False, 'key1' : True, 'key2' : False } 
+body.document_packet_data.scarecrow_application.business_info = BusinessInfo()
+body.document_packet_data.scarecrow_application.business_info.dba_name = 'Grimm\'s Bookstore'
+body.document_packet_data.scarecrow_application.business_info.dba_name_extended = 'Grimm\'s Fairytales and Other Stories Bookstore'
+body.document_packet_data.scarecrow_application.business_info.business_address = Address()
+body.document_packet_data.scarecrow_application.business_info.business_address.street_name = 'Baker Street'
+body.document_packet_data.scarecrow_application.business_info.business_address.city = 'Atlanta'
+body.document_packet_data.scarecrow_application.business_info.business_address.country = 'USA'
+body.document_packet_data.scarecrow_application.business_info.legal_name = 'Barkers Dog Bakery'
+body.document_packet_data.scarecrow_application.business_info.legal_name_extended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC'
+body.document_packet_data.scarecrow_application.business_info.additional_addresses = Address()
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.street_name = None
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.city = None
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.country = None
+body.document_packet_data.scarecrow_application.business_info.ownership_type = OwnershipTypeEnum.LIMITED_PARTNERSHIP
+body.document_packet_data.scarecrow_application.business_info.product_description = 'Bakeries'
+body.document_packet_data.scarecrow_application.business_info.mcc_code = '7399E'
+body.document_packet_data.scarecrow_application.business_info.establishment_year = '2005'
+body.document_packet_data.scarecrow_application.business_info.current_ownership_years = '3'
+body.document_packet_data.scarecrow_application.business_info.current_ownership_months = '6'
+body.document_packet_data.scarecrow_application.business_info.communication_language = 'en'
+body.document_packet_data.scarecrow_application.business_info.pos_language = 'en'
+body.document_packet_data.scarecrow_application.financial_info = FinancialInfo()
+body.document_packet_data.scarecrow_application.financial_info.avg_sale_amount = '125'
+body.document_packet_data.scarecrow_application.financial_info.monthly_card_sales = '1000'
+body.document_packet_data.scarecrow_application.financial_info.card_present_acceptance_percent = '100'
+body.document_packet_data.scarecrow_application.financial_info.internet_acceptance_percent = '0'
+body.document_packet_data.scarecrow_application.financial_info.moto_acceptance_percent = '0'
+body.document_packet_data.scarecrow_application.sales_rep_code = '12345'
+body.document_packet_data.scarecrow_application.contact = Person()
+body.document_packet_data.scarecrow_application.contact.name = Name()
+body.document_packet_data.scarecrow_application.contact.name.first_name = 'John'
+body.document_packet_data.scarecrow_application.contact.name.last_name = 'Doe'
+body.document_packet_data.scarecrow_application.contact.positions = {'key0' : False, 'key1' : True } 
+body.document_packet_data.scarecrow_application.bank_accounts = BankingInfo()
+body.document_packet_data.scarecrow_application.bank_accounts.funding_method = envrr
+body.document_packet_data.scarecrow_application.bank_accounts.account_number = None
+body.document_packet_data.scarecrow_application.bank_accounts.sort_code = None
+body.document_packet_data.scarecrow_application.card_pricing = CardPricing()
+body.document_packet_data.scarecrow_application.card_pricing.pricing_method = PricingMethodEnum.TIERED_PRICING
+body.document_packet_data.scarecrow_application.card_pricing.pricing_category = PricingCategoryEnum.INTERNET
+body.document_packet_data.scarecrow_application.card_pricing.card_charges = []
 
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.document_packet_data.scarecrow_application.card_pricing.card_charges.append(CardCharge())
+body.document_packet_data.scarecrow_application.card_pricing.card_charges[0].card_type = CardTypeEnum.UK_DOMESTIC_MAESTRO
 
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.document_packet_data.scarecrow_application.parent_entity = 'parentEntity4'
+body.document_packet_data.language = 'language2'
+body.document_packet_data.vendor_info = ProviderInfo()
+body.document_packet_data.bank_account_details_map = BankAccountAdditionalInfo()
+body.document_packet_data.displayed_currency = 'displayedCurrency8'
 
-$body_documentPacketData_scarecrowApplication_businessInfo_ownershipType = Models\OwnershipTypeEnum::LIMITED_PARTNERSHIP;
-$body_documentPacketData_scarecrowApplication_businessInfo_productDescription = 'Bakeries';
-$body_documentPacketData_scarecrowApplication_businessInfo_mccCode = '7399E';
-$body_documentPacketData_scarecrowApplication_businessInfo_establishmentYear = '2005';
-$body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipYears = '3';
-$body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipMonths = '6';
-$body_documentPacketData_scarecrowApplication_businessInfo_communicationLanguage = 'en';
-$body_documentPacketData_scarecrowApplication_businessInfo_posLanguage = 'en';
-$body_documentPacketData_scarecrowApplication_businessInfo = new Models\BusinessInfo(
-    $body_documentPacketData_scarecrowApplication_businessInfo_dbaName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_dbaNameExtended,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress,
-    $body_documentPacketData_scarecrowApplication_businessInfo_legalName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_legalNameExtended,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses,
-    $body_documentPacketData_scarecrowApplication_businessInfo_ownershipType,
-    $body_documentPacketData_scarecrowApplication_businessInfo_productDescription,
-    $body_documentPacketData_scarecrowApplication_businessInfo_mccCode,
-    $body_documentPacketData_scarecrowApplication_businessInfo_establishmentYear,
-    $body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipYears,
-    $body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipMonths,
-    $body_documentPacketData_scarecrowApplication_businessInfo_communicationLanguage,
-    $body_documentPacketData_scarecrowApplication_businessInfo_posLanguage
-);
-$body_documentPacketData_scarecrowApplication_financialInfo_avgSaleAmount = '125';
-$body_documentPacketData_scarecrowApplication_financialInfo_monthlyCardSales = '1000';
-$body_documentPacketData_scarecrowApplication_financialInfo_cardPresentAcceptancePercent = '100';
-$body_documentPacketData_scarecrowApplication_financialInfo_internetAcceptancePercent = '0';
-$body_documentPacketData_scarecrowApplication_financialInfo_motoAcceptancePercent = '0';
-$body_documentPacketData_scarecrowApplication_financialInfo = new Models\FinancialInfo(
-    $body_documentPacketData_scarecrowApplication_financialInfo_avgSaleAmount,
-    $body_documentPacketData_scarecrowApplication_financialInfo_monthlyCardSales,
-    $body_documentPacketData_scarecrowApplication_financialInfo_cardPresentAcceptancePercent,
-    $body_documentPacketData_scarecrowApplication_financialInfo_internetAcceptancePercent,
-    $body_documentPacketData_scarecrowApplication_financialInfo_motoAcceptancePercent
-);
-$body_documentPacketData_scarecrowApplication_salesRepCode = '12345';
-$body_documentPacketData_scarecrowApplication_contact_name_firstName = 'John';
-$body_documentPacketData_scarecrowApplication_contact_name_lastName = 'Doe';
-$body_documentPacketData_scarecrowApplication_contact_name = new Models\Name(
-    $body_documentPacketData_scarecrowApplication_contact_name_firstName,
-    $body_documentPacketData_scarecrowApplication_contact_name_lastName
-);
-$body_documentPacketData_scarecrowApplication_contact_positions = ['key0' => false, 'key1' => true];
-$body_documentPacketData_scarecrowApplication_contact = new Models\Person(
-    $body_documentPacketData_scarecrowApplication_contact_name,
-    $body_documentPacketData_scarecrowApplication_contact_positions
-);
-$body_documentPacketData_scarecrowApplication_bankAccounts = [];
-
-$body_documentPacketData_scarecrowApplication_bankAccounts__fundingMethod = envrr;
-$body_documentPacketData_scarecrowApplication_bankAccounts__accountNumber = null;
-$body_documentPacketData_scarecrowApplication_bankAccounts__sortCode = null;
-$body_documentPacketData_scarecrowApplication_bankAccounts[''] = new Models\BankingInfo(
-    $body_documentPacketData_scarecrowApplication_bankAccounts__fundingMethod,
-    $body_documentPacketData_scarecrowApplication_bankAccounts__accountNumber,
-    $body_documentPacketData_scarecrowApplication_bankAccounts__sortCode
-);
-
-$body_documentPacketData_scarecrowApplication_cardPricing_pricingMethod = Models\PricingMethodEnum::TIERED_PRICING;
-$body_documentPacketData_scarecrowApplication_cardPricing_pricingCategory = Models\PricingCategoryEnum::INTERNET;
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges = [];
-
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges_0_cardType = Models\CardTypeEnum::UK_DOMESTIC_MAESTRO;
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges[0] = new Models\CardCharge(
-    $body_documentPacketData_scarecrowApplication_cardPricing_cardCharges_0_cardType
-);
-
-$body_documentPacketData_scarecrowApplication_cardPricing = new Models\CardPricing(
-    $body_documentPacketData_scarecrowApplication_cardPricing_pricingMethod,
-    $body_documentPacketData_scarecrowApplication_cardPricing_pricingCategory,
-    $body_documentPacketData_scarecrowApplication_cardPricing_cardCharges
-);
-$body_documentPacketData_scarecrowApplication_parentEntity = 'parentEntity4';
-$body_documentPacketData_scarecrowApplication = new Models\ScarecrowApplication(
-    $body_documentPacketData_scarecrowApplication_clientId,
-    $body_documentPacketData_scarecrowApplication_uniqueId,
-    $body_documentPacketData_scarecrowApplication_country,
-    $body_documentPacketData_scarecrowApplication_principal,
-    $body_documentPacketData_scarecrowApplication_businessInfo,
-    $body_documentPacketData_scarecrowApplication_financialInfo,
-    $body_documentPacketData_scarecrowApplication_salesRepCode,
-    $body_documentPacketData_scarecrowApplication_contact,
-    $body_documentPacketData_scarecrowApplication_bankAccounts,
-    $body_documentPacketData_scarecrowApplication_cardPricing,
-    $body_documentPacketData_scarecrowApplication_parentEntity
-);
-$body_documentPacketData_language = 'language2';
-$body_documentPacketData_vendorInfo = new Models\ProviderInfo;
-$body_documentPacketData_bankAccountDetailsMap = [];
-
-$body_documentPacketData_bankAccountDetailsMap[''] = new Models\BankAccountAdditionalInfo;
-
-$body_documentPacketData_bankAccountDetailsMap[''] = new Models\BankAccountAdditionalInfo;
-
-$body_documentPacketData_displayedCurrency = 'displayedCurrency8';
-$body_documentPacketData = new Models\DocumentPacketData(
-    $body_documentPacketData_scarecrowApplication,
-    $body_documentPacketData_language,
-    $body_documentPacketData_vendorInfo,
-    $body_documentPacketData_bankAccountDetailsMap,
-    $body_documentPacketData_displayedCurrency
-);
-$body = new Models\AppendGroupDocumentPacketRequest(
-    $body_groupDocumentPacketId,
-    $body_profileCode,
-    $body_signers,
-    $body_documentPacketData
-);
-
-$result = $sATIDAPIController->appendGroupDocumentPacket($body);
+result = satid_api_controller.append_group_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Create Document Packet
 
 Create a document packet
 
-```php
-function createDocumentPacket(CreateDocumentPacketRequest $body): CreateDocumentPacketResponse
+```python
+def create_document_packet(self,
+                          body)
 ```
 
 ## Parameters
@@ -1387,230 +1149,118 @@ function createDocumentPacket(CreateDocumentPacketRequest $body): CreateDocument
 
 ## Example Usage
 
-```php
-$body_profileCode = 'TEST';
-$body_signers = [];
+```python
+body = CreateDocumentPacketRequest()
+body.profile_code = 'TEST'
+body.signers = []
 
-$body_signers_0_signerId = 'signerId4';
-$body_signers_0_signer_firstName = 'John';
-$body_signers_0_signer_lastName = 'Doe';
-$body_signers_0_signer = new Models\Name(
-    $body_signers_0_signer_firstName,
-    $body_signers_0_signer_lastName
-);
-$body_signers_0_principal = false;
-$body_signers[0] = new Models\Signer(
-    $body_signers_0_signerId,
-    $body_signers_0_signer,
-    $body_signers_0_principal
-);
+body.signers.append(Signer())
+body.signers[0].signer_id = 'signerId4'
+body.signers[0].signer = Name()
+body.signers[0].signer.first_name = 'John'
+body.signers[0].signer.last_name = 'Doe'
+body.signers[0].principal = False
 
-$body_signers_1_signerId = 'signerId5';
-$body_signers_1_signer_firstName = 'John';
-$body_signers_1_signer_lastName = 'Doe';
-$body_signers_1_signer = new Models\Name(
-    $body_signers_1_signer_firstName,
-    $body_signers_1_signer_lastName
-);
-$body_signers_1_principal = true;
-$body_signers[1] = new Models\Signer(
-    $body_signers_1_signerId,
-    $body_signers_1_signer,
-    $body_signers_1_principal
-);
+body.signers.append(Signer())
+body.signers[1].signer_id = 'signerId5'
+body.signers[1].signer = Name()
+body.signers[1].signer.first_name = 'John'
+body.signers[1].signer.last_name = 'Doe'
+body.signers[1].principal = True
 
-$body_signers_2_signerId = 'signerId6';
-$body_signers_2_signer_firstName = 'John';
-$body_signers_2_signer_lastName = 'Doe';
-$body_signers_2_signer = new Models\Name(
-    $body_signers_2_signer_firstName,
-    $body_signers_2_signer_lastName
-);
-$body_signers_2_principal = false;
-$body_signers[2] = new Models\Signer(
-    $body_signers_2_signerId,
-    $body_signers_2_signer,
-    $body_signers_2_principal
-);
+body.signers.append(Signer())
+body.signers[2].signer_id = 'signerId6'
+body.signers[2].signer = Name()
+body.signers[2].signer.first_name = 'John'
+body.signers[2].signer.last_name = 'Doe'
+body.signers[2].principal = False
 
-$body_documentPacketData_scarecrowApplication_clientId = 'IDNA';
-$body_documentPacketData_scarecrowApplication_uniqueId = 'AcmeCorp1572566399123';
-$body_documentPacketData_scarecrowApplication_country = 'USA';
-$body_documentPacketData_scarecrowApplication_principal_name_firstName = 'John';
-$body_documentPacketData_scarecrowApplication_principal_name_lastName = 'Doe';
-$body_documentPacketData_scarecrowApplication_principal_name = new Models\Name(
-    $body_documentPacketData_scarecrowApplication_principal_name_firstName,
-    $body_documentPacketData_scarecrowApplication_principal_name_lastName
-);
-$body_documentPacketData_scarecrowApplication_principal_positions = ['key0' => false, 'key1' => true, 'key2' => false];
-$body_documentPacketData_scarecrowApplication_principal = new Models\Person(
-    $body_documentPacketData_scarecrowApplication_principal_name,
-    $body_documentPacketData_scarecrowApplication_principal_positions
-);
-$body_documentPacketData_scarecrowApplication_businessInfo_dbaName = 'Grimm\'s Bookstore';
-$body_documentPacketData_scarecrowApplication_businessInfo_dbaNameExtended = 'Grimm\'s Fairytales and Other Stories Bookstore';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_streetName = 'Baker Street';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_city = 'Atlanta';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_country = 'USA';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_country
-);
-$body_documentPacketData_scarecrowApplication_businessInfo_legalName = 'Barkers Dog Bakery';
-$body_documentPacketData_scarecrowApplication_businessInfo_legalNameExtended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC';
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses = [];
+body.document_packet_data = DocumentPacketData()
+body.document_packet_data.scarecrow_application = ScarecrowApplication()
+body.document_packet_data.scarecrow_application.client_id = 'IDNA'
+body.document_packet_data.scarecrow_application.unique_id = 'AcmeCorp1572566399123'
+body.document_packet_data.scarecrow_application.country = 'USA'
+body.document_packet_data.scarecrow_application.principal = Person()
+body.document_packet_data.scarecrow_application.principal.name = Name()
+body.document_packet_data.scarecrow_application.principal.name.first_name = 'John'
+body.document_packet_data.scarecrow_application.principal.name.last_name = 'Doe'
+body.document_packet_data.scarecrow_application.principal.positions = {'key0' : False, 'key1' : True, 'key2' : False } 
+body.document_packet_data.scarecrow_application.business_info = BusinessInfo()
+body.document_packet_data.scarecrow_application.business_info.dba_name = 'Grimm\'s Bookstore'
+body.document_packet_data.scarecrow_application.business_info.dba_name_extended = 'Grimm\'s Fairytales and Other Stories Bookstore'
+body.document_packet_data.scarecrow_application.business_info.business_address = Address()
+body.document_packet_data.scarecrow_application.business_info.business_address.street_name = 'Baker Street'
+body.document_packet_data.scarecrow_application.business_info.business_address.city = 'Atlanta'
+body.document_packet_data.scarecrow_application.business_info.business_address.country = 'USA'
+body.document_packet_data.scarecrow_application.business_info.legal_name = 'Barkers Dog Bakery'
+body.document_packet_data.scarecrow_application.business_info.legal_name_extended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC'
+body.document_packet_data.scarecrow_application.business_info.additional_addresses = Address()
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.street_name = None
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.city = None
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.country = None
+body.document_packet_data.scarecrow_application.business_info.ownership_type = OwnershipTypeEnum.LIMITED_PARTNERSHIP
+body.document_packet_data.scarecrow_application.business_info.product_description = 'Bakeries'
+body.document_packet_data.scarecrow_application.business_info.mcc_code = '7399E'
+body.document_packet_data.scarecrow_application.business_info.establishment_year = '2005'
+body.document_packet_data.scarecrow_application.business_info.current_ownership_years = '3'
+body.document_packet_data.scarecrow_application.business_info.current_ownership_months = '6'
+body.document_packet_data.scarecrow_application.business_info.communication_language = 'en'
+body.document_packet_data.scarecrow_application.business_info.pos_language = 'en'
+body.document_packet_data.scarecrow_application.financial_info = FinancialInfo()
+body.document_packet_data.scarecrow_application.financial_info.avg_sale_amount = '125'
+body.document_packet_data.scarecrow_application.financial_info.monthly_card_sales = '1000'
+body.document_packet_data.scarecrow_application.financial_info.card_present_acceptance_percent = '100'
+body.document_packet_data.scarecrow_application.financial_info.internet_acceptance_percent = '0'
+body.document_packet_data.scarecrow_application.financial_info.moto_acceptance_percent = '0'
+body.document_packet_data.scarecrow_application.sales_rep_code = '12345'
+body.document_packet_data.scarecrow_application.contact = Person()
+body.document_packet_data.scarecrow_application.contact.name = Name()
+body.document_packet_data.scarecrow_application.contact.name.first_name = 'John'
+body.document_packet_data.scarecrow_application.contact.name.last_name = 'Doe'
+body.document_packet_data.scarecrow_application.contact.positions = {'key0' : False, 'key1' : True } 
+body.document_packet_data.scarecrow_application.bank_accounts = BankingInfo()
+body.document_packet_data.scarecrow_application.bank_accounts.funding_method = envrr
+body.document_packet_data.scarecrow_application.bank_accounts.account_number = None
+body.document_packet_data.scarecrow_application.bank_accounts.sort_code = None
+body.document_packet_data.scarecrow_application.card_pricing = CardPricing()
+body.document_packet_data.scarecrow_application.card_pricing.pricing_method = PricingMethodEnum.TIERED_PRICING
+body.document_packet_data.scarecrow_application.card_pricing.pricing_category = PricingCategoryEnum.INTERNET
+body.document_packet_data.scarecrow_application.card_pricing.card_charges = []
 
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.document_packet_data.scarecrow_application.card_pricing.card_charges.append(CardCharge())
+body.document_packet_data.scarecrow_application.card_pricing.card_charges[0].card_type = CardTypeEnum.UK_DOMESTIC_MAESTRO
 
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.document_packet_data.scarecrow_application.parent_entity = 'parentEntity4'
+body.document_packet_data.language = 'language2'
+body.document_packet_data.vendor_info = ProviderInfo()
+body.document_packet_data.bank_account_details_map = BankAccountAdditionalInfo()
+body.document_packet_data.displayed_currency = 'displayedCurrency8'
 
-$body_documentPacketData_scarecrowApplication_businessInfo_ownershipType = Models\OwnershipTypeEnum::LIMITED_PARTNERSHIP;
-$body_documentPacketData_scarecrowApplication_businessInfo_productDescription = 'Bakeries';
-$body_documentPacketData_scarecrowApplication_businessInfo_mccCode = '7399E';
-$body_documentPacketData_scarecrowApplication_businessInfo_establishmentYear = '2005';
-$body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipYears = '3';
-$body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipMonths = '6';
-$body_documentPacketData_scarecrowApplication_businessInfo_communicationLanguage = 'en';
-$body_documentPacketData_scarecrowApplication_businessInfo_posLanguage = 'en';
-$body_documentPacketData_scarecrowApplication_businessInfo = new Models\BusinessInfo(
-    $body_documentPacketData_scarecrowApplication_businessInfo_dbaName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_dbaNameExtended,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress,
-    $body_documentPacketData_scarecrowApplication_businessInfo_legalName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_legalNameExtended,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses,
-    $body_documentPacketData_scarecrowApplication_businessInfo_ownershipType,
-    $body_documentPacketData_scarecrowApplication_businessInfo_productDescription,
-    $body_documentPacketData_scarecrowApplication_businessInfo_mccCode,
-    $body_documentPacketData_scarecrowApplication_businessInfo_establishmentYear,
-    $body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipYears,
-    $body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipMonths,
-    $body_documentPacketData_scarecrowApplication_businessInfo_communicationLanguage,
-    $body_documentPacketData_scarecrowApplication_businessInfo_posLanguage
-);
-$body_documentPacketData_scarecrowApplication_financialInfo_avgSaleAmount = '125';
-$body_documentPacketData_scarecrowApplication_financialInfo_monthlyCardSales = '1000';
-$body_documentPacketData_scarecrowApplication_financialInfo_cardPresentAcceptancePercent = '100';
-$body_documentPacketData_scarecrowApplication_financialInfo_internetAcceptancePercent = '0';
-$body_documentPacketData_scarecrowApplication_financialInfo_motoAcceptancePercent = '0';
-$body_documentPacketData_scarecrowApplication_financialInfo = new Models\FinancialInfo(
-    $body_documentPacketData_scarecrowApplication_financialInfo_avgSaleAmount,
-    $body_documentPacketData_scarecrowApplication_financialInfo_monthlyCardSales,
-    $body_documentPacketData_scarecrowApplication_financialInfo_cardPresentAcceptancePercent,
-    $body_documentPacketData_scarecrowApplication_financialInfo_internetAcceptancePercent,
-    $body_documentPacketData_scarecrowApplication_financialInfo_motoAcceptancePercent
-);
-$body_documentPacketData_scarecrowApplication_salesRepCode = '12345';
-$body_documentPacketData_scarecrowApplication_contact_name_firstName = 'John';
-$body_documentPacketData_scarecrowApplication_contact_name_lastName = 'Doe';
-$body_documentPacketData_scarecrowApplication_contact_name = new Models\Name(
-    $body_documentPacketData_scarecrowApplication_contact_name_firstName,
-    $body_documentPacketData_scarecrowApplication_contact_name_lastName
-);
-$body_documentPacketData_scarecrowApplication_contact_positions = ['key0' => false, 'key1' => true];
-$body_documentPacketData_scarecrowApplication_contact = new Models\Person(
-    $body_documentPacketData_scarecrowApplication_contact_name,
-    $body_documentPacketData_scarecrowApplication_contact_positions
-);
-$body_documentPacketData_scarecrowApplication_bankAccounts = [];
-
-$body_documentPacketData_scarecrowApplication_bankAccounts__fundingMethod = envrr;
-$body_documentPacketData_scarecrowApplication_bankAccounts__accountNumber = null;
-$body_documentPacketData_scarecrowApplication_bankAccounts__sortCode = null;
-$body_documentPacketData_scarecrowApplication_bankAccounts[''] = new Models\BankingInfo(
-    $body_documentPacketData_scarecrowApplication_bankAccounts__fundingMethod,
-    $body_documentPacketData_scarecrowApplication_bankAccounts__accountNumber,
-    $body_documentPacketData_scarecrowApplication_bankAccounts__sortCode
-);
-
-$body_documentPacketData_scarecrowApplication_cardPricing_pricingMethod = Models\PricingMethodEnum::TIERED_PRICING;
-$body_documentPacketData_scarecrowApplication_cardPricing_pricingCategory = Models\PricingCategoryEnum::INTERNET;
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges = [];
-
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges_0_cardType = Models\CardTypeEnum::UK_DOMESTIC_MAESTRO;
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges[0] = new Models\CardCharge(
-    $body_documentPacketData_scarecrowApplication_cardPricing_cardCharges_0_cardType
-);
-
-$body_documentPacketData_scarecrowApplication_cardPricing = new Models\CardPricing(
-    $body_documentPacketData_scarecrowApplication_cardPricing_pricingMethod,
-    $body_documentPacketData_scarecrowApplication_cardPricing_pricingCategory,
-    $body_documentPacketData_scarecrowApplication_cardPricing_cardCharges
-);
-$body_documentPacketData_scarecrowApplication_parentEntity = 'parentEntity4';
-$body_documentPacketData_scarecrowApplication = new Models\ScarecrowApplication(
-    $body_documentPacketData_scarecrowApplication_clientId,
-    $body_documentPacketData_scarecrowApplication_uniqueId,
-    $body_documentPacketData_scarecrowApplication_country,
-    $body_documentPacketData_scarecrowApplication_principal,
-    $body_documentPacketData_scarecrowApplication_businessInfo,
-    $body_documentPacketData_scarecrowApplication_financialInfo,
-    $body_documentPacketData_scarecrowApplication_salesRepCode,
-    $body_documentPacketData_scarecrowApplication_contact,
-    $body_documentPacketData_scarecrowApplication_bankAccounts,
-    $body_documentPacketData_scarecrowApplication_cardPricing,
-    $body_documentPacketData_scarecrowApplication_parentEntity
-);
-$body_documentPacketData_language = 'language2';
-$body_documentPacketData_vendorInfo = new Models\ProviderInfo;
-$body_documentPacketData_bankAccountDetailsMap = [];
-
-$body_documentPacketData_bankAccountDetailsMap[''] = new Models\BankAccountAdditionalInfo;
-
-$body_documentPacketData_bankAccountDetailsMap[''] = new Models\BankAccountAdditionalInfo;
-
-$body_documentPacketData_displayedCurrency = 'displayedCurrency8';
-$body_documentPacketData = new Models\DocumentPacketData(
-    $body_documentPacketData_scarecrowApplication,
-    $body_documentPacketData_language,
-    $body_documentPacketData_vendorInfo,
-    $body_documentPacketData_bankAccountDetailsMap,
-    $body_documentPacketData_displayedCurrency
-);
-$body = new Models\CreateDocumentPacketRequest(
-    $body_profileCode,
-    $body_signers,
-    $body_documentPacketData
-);
-
-$result = $sATIDAPIController->createDocumentPacket($body);
+result = satid_api_controller.create_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Credit Check
 
 Credit Check
 
-```php
-function creditCheck(int $versionNumber, ScarecrowApplication $body): CreditCheckResponse
+```python
+def credit_check(self,
+                version_number,
+                body)
 ```
 
 ## Parameters
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `versionNumber` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
+| `version_number` | `int` | Template, Required | **Constraints**: *Pattern*: `[1-4]` |
 | `body` | [`ScarecrowApplication`](../../doc/models/scarecrow-application.md) | Body, Required | - |
 
 ## Response Type
@@ -1619,190 +1269,84 @@ function creditCheck(int $versionNumber, ScarecrowApplication $body): CreditChec
 
 ## Example Usage
 
-```php
-$versionNumber = 66;
-$body_clientId = 'IDNA';
-$body_uniqueId = 'AcmeCorp1572566399123';
-$body_country = 'USA';
-$body_principal_name_firstName = 'John';
-$body_principal_name_lastName = 'Doe';
-$body_principal_name = new Models\Name(
-    $body_principal_name_firstName,
-    $body_principal_name_lastName
-);
-$body_principal_positions = ['key0' => false];
-$body_principal = new Models\Person(
-    $body_principal_name,
-    $body_principal_positions
-);
-$body_businessInfo_dbaName = 'Grimm\'s Bookstore';
-$body_businessInfo_dbaNameExtended = 'Grimm\'s Fairytales and Other Stories Bookstore';
-$body_businessInfo_businessAddress_streetName = 'Baker Street';
-$body_businessInfo_businessAddress_city = 'Atlanta';
-$body_businessInfo_businessAddress_country = 'USA';
-$body_businessInfo_businessAddress = new Models\Address(
-    $body_businessInfo_businessAddress_streetName,
-    $body_businessInfo_businessAddress_city,
-    $body_businessInfo_businessAddress_country
-);
-$body_businessInfo_legalName = 'Barkers Dog Bakery';
-$body_businessInfo_legalNameExtended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC';
-$body_businessInfo_additionalAddresses = [];
+```python
+version_number = 66
+body = ScarecrowApplication()
+body.client_id = 'IDNA'
+body.unique_id = 'AcmeCorp1572566399123'
+body.country = 'USA'
+body.principal = Person()
+body.principal.name = Name()
+body.principal.name.first_name = 'John'
+body.principal.name.last_name = 'Doe'
+body.principal.positions = {'key0' : False } 
+body.business_info = BusinessInfo()
+body.business_info.dba_name = 'Grimm\'s Bookstore'
+body.business_info.dba_name_extended = 'Grimm\'s Fairytales and Other Stories Bookstore'
+body.business_info.business_address = Address()
+body.business_info.business_address.street_name = 'Baker Street'
+body.business_info.business_address.city = 'Atlanta'
+body.business_info.business_address.country = 'USA'
+body.business_info.legal_name = 'Barkers Dog Bakery'
+body.business_info.legal_name_extended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC'
+body.business_info.additional_addresses = Address()
+body.business_info.additional_addresses.street_name = None
+body.business_info.additional_addresses.city = None
+body.business_info.additional_addresses.country = None
+body.business_info.ownership_type = OwnershipTypeEnum.PARTNERSHIP_LIMITED_BY_SHARES
+body.business_info.product_description = 'Bakeries'
+body.business_info.mcc_code = '7399E'
+body.business_info.establishment_year = '2005'
+body.business_info.current_ownership_years = '3'
+body.business_info.current_ownership_months = '6'
+body.business_info.communication_language = 'en'
+body.business_info.pos_language = 'en'
+body.financial_info = FinancialInfo()
+body.financial_info.avg_sale_amount = '125'
+body.financial_info.monthly_card_sales = '1000'
+body.financial_info.card_present_acceptance_percent = '100'
+body.financial_info.internet_acceptance_percent = '0'
+body.financial_info.moto_acceptance_percent = '0'
+body.sales_rep_code = '12345'
+body.contact = Person()
+body.contact.name = Name()
+body.contact.name.first_name = 'John'
+body.contact.name.last_name = 'Doe'
+body.contact.positions = {'key0' : False } 
+body.bank_accounts = BankingInfo()
+body.bank_accounts.funding_method = envrr
+body.bank_accounts.account_number = None
+body.bank_accounts.sort_code = None
+body.card_pricing = CardPricing()
+body.card_pricing.pricing_method = PricingMethodEnum.CLEAR_AND_SIMPLE
+body.card_pricing.pricing_category = PricingCategoryEnum.RETAIL
+body.card_pricing.card_charges = []
 
-$body_businessInfo_additionalAddresses__streetName = null;
-$body_businessInfo_additionalAddresses__city = null;
-$body_businessInfo_additionalAddresses__country = null;
-$body_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_businessInfo_additionalAddresses__streetName,
-    $body_businessInfo_additionalAddresses__city,
-    $body_businessInfo_additionalAddresses__country
-);
+body.card_pricing.card_charges.append(CardCharge())
+body.card_pricing.card_charges[0].card_type = CardTypeEnum.VISA_DEBIT
 
-$body_businessInfo_additionalAddresses__streetName = null;
-$body_businessInfo_additionalAddresses__city = null;
-$body_businessInfo_additionalAddresses__country = null;
-$body_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_businessInfo_additionalAddresses__streetName,
-    $body_businessInfo_additionalAddresses__city,
-    $body_businessInfo_additionalAddresses__country
-);
+body.card_pricing.card_charges.append(CardCharge())
+body.card_pricing.card_charges[1].card_type = CardTypeEnum.VPAY
 
-$body_businessInfo_additionalAddresses__streetName = null;
-$body_businessInfo_additionalAddresses__city = null;
-$body_businessInfo_additionalAddresses__country = null;
-$body_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_businessInfo_additionalAddresses__streetName,
-    $body_businessInfo_additionalAddresses__city,
-    $body_businessInfo_additionalAddresses__country
-);
+body.parent_entity = 'parentEntity8'
 
-$body_businessInfo_ownershipType = Models\OwnershipTypeEnum::PARTNERSHIP_LIMITED_BY_SHARES;
-$body_businessInfo_productDescription = 'Bakeries';
-$body_businessInfo_mccCode = '7399E';
-$body_businessInfo_establishmentYear = '2005';
-$body_businessInfo_currentOwnershipYears = '3';
-$body_businessInfo_currentOwnershipMonths = '6';
-$body_businessInfo_communicationLanguage = 'en';
-$body_businessInfo_posLanguage = 'en';
-$body_businessInfo = new Models\BusinessInfo(
-    $body_businessInfo_dbaName,
-    $body_businessInfo_dbaNameExtended,
-    $body_businessInfo_businessAddress,
-    $body_businessInfo_legalName,
-    $body_businessInfo_legalNameExtended,
-    $body_businessInfo_additionalAddresses,
-    $body_businessInfo_ownershipType,
-    $body_businessInfo_productDescription,
-    $body_businessInfo_mccCode,
-    $body_businessInfo_establishmentYear,
-    $body_businessInfo_currentOwnershipYears,
-    $body_businessInfo_currentOwnershipMonths,
-    $body_businessInfo_communicationLanguage,
-    $body_businessInfo_posLanguage
-);
-$body_financialInfo_avgSaleAmount = '125';
-$body_financialInfo_monthlyCardSales = '1000';
-$body_financialInfo_cardPresentAcceptancePercent = '100';
-$body_financialInfo_internetAcceptancePercent = '0';
-$body_financialInfo_motoAcceptancePercent = '0';
-$body_financialInfo = new Models\FinancialInfo(
-    $body_financialInfo_avgSaleAmount,
-    $body_financialInfo_monthlyCardSales,
-    $body_financialInfo_cardPresentAcceptancePercent,
-    $body_financialInfo_internetAcceptancePercent,
-    $body_financialInfo_motoAcceptancePercent
-);
-$body_salesRepCode = '12345';
-$body_contact_name_firstName = 'John';
-$body_contact_name_lastName = 'Doe';
-$body_contact_name = new Models\Name(
-    $body_contact_name_firstName,
-    $body_contact_name_lastName
-);
-$body_contact_positions = ['key0' => false];
-$body_contact = new Models\Person(
-    $body_contact_name,
-    $body_contact_positions
-);
-$body_bankAccounts = [];
-
-$body_bankAccounts__fundingMethod = envrr;
-$body_bankAccounts__accountNumber = null;
-$body_bankAccounts__sortCode = null;
-$body_bankAccounts[''] = new Models\BankingInfo(
-    $body_bankAccounts__fundingMethod,
-    $body_bankAccounts__accountNumber,
-    $body_bankAccounts__sortCode
-);
-
-$body_bankAccounts__fundingMethod = envrr;
-$body_bankAccounts__accountNumber = null;
-$body_bankAccounts__sortCode = null;
-$body_bankAccounts[''] = new Models\BankingInfo(
-    $body_bankAccounts__fundingMethod,
-    $body_bankAccounts__accountNumber,
-    $body_bankAccounts__sortCode
-);
-
-$body_bankAccounts__fundingMethod = envrr;
-$body_bankAccounts__accountNumber = null;
-$body_bankAccounts__sortCode = null;
-$body_bankAccounts[''] = new Models\BankingInfo(
-    $body_bankAccounts__fundingMethod,
-    $body_bankAccounts__accountNumber,
-    $body_bankAccounts__sortCode
-);
-
-$body_cardPricing_pricingMethod = Models\PricingMethodEnum::CLEAR_AND_SIMPLE;
-$body_cardPricing_pricingCategory = Models\PricingCategoryEnum::RETAIL;
-$body_cardPricing_cardCharges = [];
-
-$body_cardPricing_cardCharges_0_cardType = Models\CardTypeEnum::VISA_DEBIT;
-$body_cardPricing_cardCharges[0] = new Models\CardCharge(
-    $body_cardPricing_cardCharges_0_cardType
-);
-
-$body_cardPricing_cardCharges_1_cardType = Models\CardTypeEnum::VPAY;
-$body_cardPricing_cardCharges[1] = new Models\CardCharge(
-    $body_cardPricing_cardCharges_1_cardType
-);
-
-$body_cardPricing = new Models\CardPricing(
-    $body_cardPricing_pricingMethod,
-    $body_cardPricing_pricingCategory,
-    $body_cardPricing_cardCharges
-);
-$body_parentEntity = 'parentEntity8';
-$body = new Models\ScarecrowApplication(
-    $body_clientId,
-    $body_uniqueId,
-    $body_country,
-    $body_principal,
-    $body_businessInfo,
-    $body_financialInfo,
-    $body_salesRepCode,
-    $body_contact,
-    $body_bankAccounts,
-    $body_cardPricing,
-    $body_parentEntity
-);
-
-$result = $sATIDAPIController->creditCheck($versionNumber, $body);
+result = satid_api_controller.credit_check(version_number, body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Update Document Packet Data
 
 Update document packet
 
-```php
-function updateDocumentPacketData(UpdateDocumentPacketDataRequest $body): UpdateDocumentPacketDataResponse
+```python
+def update_document_packet_data(self,
+                               body)
 ```
 
 ## Parameters
@@ -1817,178 +1361,87 @@ function updateDocumentPacketData(UpdateDocumentPacketDataRequest $body): Update
 
 ## Example Usage
 
-```php
-$body_documentPacketId = 'documentPacketId2';
-$body_documentPacketData_scarecrowApplication_clientId = 'IDNA';
-$body_documentPacketData_scarecrowApplication_uniqueId = 'AcmeCorp1572566399123';
-$body_documentPacketData_scarecrowApplication_country = 'USA';
-$body_documentPacketData_scarecrowApplication_principal_name_firstName = 'John';
-$body_documentPacketData_scarecrowApplication_principal_name_lastName = 'Doe';
-$body_documentPacketData_scarecrowApplication_principal_name = new Models\Name(
-    $body_documentPacketData_scarecrowApplication_principal_name_firstName,
-    $body_documentPacketData_scarecrowApplication_principal_name_lastName
-);
-$body_documentPacketData_scarecrowApplication_principal_positions = ['key0' => false, 'key1' => true, 'key2' => false];
-$body_documentPacketData_scarecrowApplication_principal = new Models\Person(
-    $body_documentPacketData_scarecrowApplication_principal_name,
-    $body_documentPacketData_scarecrowApplication_principal_positions
-);
-$body_documentPacketData_scarecrowApplication_businessInfo_dbaName = 'Grimm\'s Bookstore';
-$body_documentPacketData_scarecrowApplication_businessInfo_dbaNameExtended = 'Grimm\'s Fairytales and Other Stories Bookstore';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_streetName = 'Baker Street';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_city = 'Atlanta';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_country = 'USA';
-$body_documentPacketData_scarecrowApplication_businessInfo_businessAddress = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress_country
-);
-$body_documentPacketData_scarecrowApplication_businessInfo_legalName = 'Barkers Dog Bakery';
-$body_documentPacketData_scarecrowApplication_businessInfo_legalNameExtended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC';
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses = [];
+```python
+body = UpdateDocumentPacketDataRequest()
+body.document_packet_id = 'documentPacketId2'
+body.document_packet_data = DocumentPacketData()
+body.document_packet_data.scarecrow_application = ScarecrowApplication()
+body.document_packet_data.scarecrow_application.client_id = 'IDNA'
+body.document_packet_data.scarecrow_application.unique_id = 'AcmeCorp1572566399123'
+body.document_packet_data.scarecrow_application.country = 'USA'
+body.document_packet_data.scarecrow_application.principal = Person()
+body.document_packet_data.scarecrow_application.principal.name = Name()
+body.document_packet_data.scarecrow_application.principal.name.first_name = 'John'
+body.document_packet_data.scarecrow_application.principal.name.last_name = 'Doe'
+body.document_packet_data.scarecrow_application.principal.positions = {'key0' : False, 'key1' : True, 'key2' : False } 
+body.document_packet_data.scarecrow_application.business_info = BusinessInfo()
+body.document_packet_data.scarecrow_application.business_info.dba_name = 'Grimm\'s Bookstore'
+body.document_packet_data.scarecrow_application.business_info.dba_name_extended = 'Grimm\'s Fairytales and Other Stories Bookstore'
+body.document_packet_data.scarecrow_application.business_info.business_address = Address()
+body.document_packet_data.scarecrow_application.business_info.business_address.street_name = 'Baker Street'
+body.document_packet_data.scarecrow_application.business_info.business_address.city = 'Atlanta'
+body.document_packet_data.scarecrow_application.business_info.business_address.country = 'USA'
+body.document_packet_data.scarecrow_application.business_info.legal_name = 'Barkers Dog Bakery'
+body.document_packet_data.scarecrow_application.business_info.legal_name_extended = 'Baking Better Biscuits for Your Favorite Barkers Dog Bakery LLC'
+body.document_packet_data.scarecrow_application.business_info.additional_addresses = Address()
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.street_name = None
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.city = None
+body.document_packet_data.scarecrow_application.business_info.additional_addresses.country = None
+body.document_packet_data.scarecrow_application.business_info.ownership_type = OwnershipTypeEnum.LIMITED_PARTNERSHIP
+body.document_packet_data.scarecrow_application.business_info.product_description = 'Bakeries'
+body.document_packet_data.scarecrow_application.business_info.mcc_code = '7399E'
+body.document_packet_data.scarecrow_application.business_info.establishment_year = '2005'
+body.document_packet_data.scarecrow_application.business_info.current_ownership_years = '3'
+body.document_packet_data.scarecrow_application.business_info.current_ownership_months = '6'
+body.document_packet_data.scarecrow_application.business_info.communication_language = 'en'
+body.document_packet_data.scarecrow_application.business_info.pos_language = 'en'
+body.document_packet_data.scarecrow_application.financial_info = FinancialInfo()
+body.document_packet_data.scarecrow_application.financial_info.avg_sale_amount = '125'
+body.document_packet_data.scarecrow_application.financial_info.monthly_card_sales = '1000'
+body.document_packet_data.scarecrow_application.financial_info.card_present_acceptance_percent = '100'
+body.document_packet_data.scarecrow_application.financial_info.internet_acceptance_percent = '0'
+body.document_packet_data.scarecrow_application.financial_info.moto_acceptance_percent = '0'
+body.document_packet_data.scarecrow_application.sales_rep_code = '12345'
+body.document_packet_data.scarecrow_application.contact = Person()
+body.document_packet_data.scarecrow_application.contact.name = Name()
+body.document_packet_data.scarecrow_application.contact.name.first_name = 'John'
+body.document_packet_data.scarecrow_application.contact.name.last_name = 'Doe'
+body.document_packet_data.scarecrow_application.contact.positions = {'key0' : False, 'key1' : True } 
+body.document_packet_data.scarecrow_application.bank_accounts = BankingInfo()
+body.document_packet_data.scarecrow_application.bank_accounts.funding_method = envrr
+body.document_packet_data.scarecrow_application.bank_accounts.account_number = None
+body.document_packet_data.scarecrow_application.bank_accounts.sort_code = None
+body.document_packet_data.scarecrow_application.card_pricing = CardPricing()
+body.document_packet_data.scarecrow_application.card_pricing.pricing_method = PricingMethodEnum.TIERED_PRICING
+body.document_packet_data.scarecrow_application.card_pricing.pricing_category = PricingCategoryEnum.INTERNET
+body.document_packet_data.scarecrow_application.card_pricing.card_charges = []
 
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.document_packet_data.scarecrow_application.card_pricing.card_charges.append(CardCharge())
+body.document_packet_data.scarecrow_application.card_pricing.card_charges[0].card_type = CardTypeEnum.UK_DOMESTIC_MAESTRO
 
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country = null;
-$body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses[''] = new Models\Address(
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__streetName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__city,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses__country
-);
+body.document_packet_data.scarecrow_application.parent_entity = 'parentEntity4'
+body.document_packet_data.language = 'language2'
+body.document_packet_data.vendor_info = ProviderInfo()
+body.document_packet_data.bank_account_details_map = BankAccountAdditionalInfo()
+body.document_packet_data.displayed_currency = 'displayedCurrency8'
 
-$body_documentPacketData_scarecrowApplication_businessInfo_ownershipType = Models\OwnershipTypeEnum::LIMITED_PARTNERSHIP;
-$body_documentPacketData_scarecrowApplication_businessInfo_productDescription = 'Bakeries';
-$body_documentPacketData_scarecrowApplication_businessInfo_mccCode = '7399E';
-$body_documentPacketData_scarecrowApplication_businessInfo_establishmentYear = '2005';
-$body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipYears = '3';
-$body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipMonths = '6';
-$body_documentPacketData_scarecrowApplication_businessInfo_communicationLanguage = 'en';
-$body_documentPacketData_scarecrowApplication_businessInfo_posLanguage = 'en';
-$body_documentPacketData_scarecrowApplication_businessInfo = new Models\BusinessInfo(
-    $body_documentPacketData_scarecrowApplication_businessInfo_dbaName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_dbaNameExtended,
-    $body_documentPacketData_scarecrowApplication_businessInfo_businessAddress,
-    $body_documentPacketData_scarecrowApplication_businessInfo_legalName,
-    $body_documentPacketData_scarecrowApplication_businessInfo_legalNameExtended,
-    $body_documentPacketData_scarecrowApplication_businessInfo_additionalAddresses,
-    $body_documentPacketData_scarecrowApplication_businessInfo_ownershipType,
-    $body_documentPacketData_scarecrowApplication_businessInfo_productDescription,
-    $body_documentPacketData_scarecrowApplication_businessInfo_mccCode,
-    $body_documentPacketData_scarecrowApplication_businessInfo_establishmentYear,
-    $body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipYears,
-    $body_documentPacketData_scarecrowApplication_businessInfo_currentOwnershipMonths,
-    $body_documentPacketData_scarecrowApplication_businessInfo_communicationLanguage,
-    $body_documentPacketData_scarecrowApplication_businessInfo_posLanguage
-);
-$body_documentPacketData_scarecrowApplication_financialInfo_avgSaleAmount = '125';
-$body_documentPacketData_scarecrowApplication_financialInfo_monthlyCardSales = '1000';
-$body_documentPacketData_scarecrowApplication_financialInfo_cardPresentAcceptancePercent = '100';
-$body_documentPacketData_scarecrowApplication_financialInfo_internetAcceptancePercent = '0';
-$body_documentPacketData_scarecrowApplication_financialInfo_motoAcceptancePercent = '0';
-$body_documentPacketData_scarecrowApplication_financialInfo = new Models\FinancialInfo(
-    $body_documentPacketData_scarecrowApplication_financialInfo_avgSaleAmount,
-    $body_documentPacketData_scarecrowApplication_financialInfo_monthlyCardSales,
-    $body_documentPacketData_scarecrowApplication_financialInfo_cardPresentAcceptancePercent,
-    $body_documentPacketData_scarecrowApplication_financialInfo_internetAcceptancePercent,
-    $body_documentPacketData_scarecrowApplication_financialInfo_motoAcceptancePercent
-);
-$body_documentPacketData_scarecrowApplication_salesRepCode = '12345';
-$body_documentPacketData_scarecrowApplication_contact_name_firstName = 'John';
-$body_documentPacketData_scarecrowApplication_contact_name_lastName = 'Doe';
-$body_documentPacketData_scarecrowApplication_contact_name = new Models\Name(
-    $body_documentPacketData_scarecrowApplication_contact_name_firstName,
-    $body_documentPacketData_scarecrowApplication_contact_name_lastName
-);
-$body_documentPacketData_scarecrowApplication_contact_positions = ['key0' => false, 'key1' => true];
-$body_documentPacketData_scarecrowApplication_contact = new Models\Person(
-    $body_documentPacketData_scarecrowApplication_contact_name,
-    $body_documentPacketData_scarecrowApplication_contact_positions
-);
-$body_documentPacketData_scarecrowApplication_bankAccounts = [];
-
-$body_documentPacketData_scarecrowApplication_bankAccounts__fundingMethod = envrr;
-$body_documentPacketData_scarecrowApplication_bankAccounts__accountNumber = null;
-$body_documentPacketData_scarecrowApplication_bankAccounts__sortCode = null;
-$body_documentPacketData_scarecrowApplication_bankAccounts[''] = new Models\BankingInfo(
-    $body_documentPacketData_scarecrowApplication_bankAccounts__fundingMethod,
-    $body_documentPacketData_scarecrowApplication_bankAccounts__accountNumber,
-    $body_documentPacketData_scarecrowApplication_bankAccounts__sortCode
-);
-
-$body_documentPacketData_scarecrowApplication_cardPricing_pricingMethod = Models\PricingMethodEnum::TIERED_PRICING;
-$body_documentPacketData_scarecrowApplication_cardPricing_pricingCategory = Models\PricingCategoryEnum::INTERNET;
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges = [];
-
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges_0_cardType = Models\CardTypeEnum::UK_DOMESTIC_MAESTRO;
-$body_documentPacketData_scarecrowApplication_cardPricing_cardCharges[0] = new Models\CardCharge(
-    $body_documentPacketData_scarecrowApplication_cardPricing_cardCharges_0_cardType
-);
-
-$body_documentPacketData_scarecrowApplication_cardPricing = new Models\CardPricing(
-    $body_documentPacketData_scarecrowApplication_cardPricing_pricingMethod,
-    $body_documentPacketData_scarecrowApplication_cardPricing_pricingCategory,
-    $body_documentPacketData_scarecrowApplication_cardPricing_cardCharges
-);
-$body_documentPacketData_scarecrowApplication_parentEntity = 'parentEntity4';
-$body_documentPacketData_scarecrowApplication = new Models\ScarecrowApplication(
-    $body_documentPacketData_scarecrowApplication_clientId,
-    $body_documentPacketData_scarecrowApplication_uniqueId,
-    $body_documentPacketData_scarecrowApplication_country,
-    $body_documentPacketData_scarecrowApplication_principal,
-    $body_documentPacketData_scarecrowApplication_businessInfo,
-    $body_documentPacketData_scarecrowApplication_financialInfo,
-    $body_documentPacketData_scarecrowApplication_salesRepCode,
-    $body_documentPacketData_scarecrowApplication_contact,
-    $body_documentPacketData_scarecrowApplication_bankAccounts,
-    $body_documentPacketData_scarecrowApplication_cardPricing,
-    $body_documentPacketData_scarecrowApplication_parentEntity
-);
-$body_documentPacketData_language = 'language2';
-$body_documentPacketData_vendorInfo = new Models\ProviderInfo;
-$body_documentPacketData_bankAccountDetailsMap = [];
-
-$body_documentPacketData_bankAccountDetailsMap[''] = new Models\BankAccountAdditionalInfo;
-
-$body_documentPacketData_bankAccountDetailsMap[''] = new Models\BankAccountAdditionalInfo;
-
-$body_documentPacketData_displayedCurrency = 'displayedCurrency8';
-$body_documentPacketData = new Models\DocumentPacketData(
-    $body_documentPacketData_scarecrowApplication,
-    $body_documentPacketData_language,
-    $body_documentPacketData_vendorInfo,
-    $body_documentPacketData_bankAccountDetailsMap,
-    $body_documentPacketData_displayedCurrency
-);
-$body = new Models\UpdateDocumentPacketDataRequest(
-    $body_documentPacketId,
-    $body_documentPacketData
-);
-
-$result = $sATIDAPIController->updateDocumentPacketData($body);
+result = satid_api_controller.update_document_packet_data(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Check Document Signing Status
 
 Check the signing status of one or more signer of a packet
 
-```php
-function checkDocumentSigningStatus(CheckDocumentSigningStatusRequest $body): CheckDocumentSigningStatusResponse
+```python
+def check_document_signing_status(self,
+                                 body)
 ```
 
 ## Parameters
@@ -2003,25 +1456,26 @@ function checkDocumentSigningStatus(CheckDocumentSigningStatusRequest $body): Ch
 
 ## Example Usage
 
-```php
-$body = new Models\CheckDocumentSigningStatusRequest;
+```python
+body = CheckDocumentSigningStatusRequest()
 
-$result = $sATIDAPIController->checkDocumentSigningStatus($body);
+result = satid_api_controller.check_document_signing_status(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Delete Document Packet
 
 Delete a Document Packet
 
-```php
-function deleteDocumentPacket(DeleteDocumentPacketRequest $body): DeleteDocumentPacketResponse
+```python
+def delete_document_packet(self,
+                          body)
 ```
 
 ## Parameters
@@ -2036,25 +1490,26 @@ function deleteDocumentPacket(DeleteDocumentPacketRequest $body): DeleteDocument
 
 ## Example Usage
 
-```php
-$body = new Models\DeleteDocumentPacketRequest;
+```python
+body = DeleteDocumentPacketRequest()
 
-$result = $sATIDAPIController->deleteDocumentPacket($body);
+result = satid_api_controller.delete_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Delete Group Document Packet
 
 Delete Group Document Packet
 
-```php
-function deleteGroupDocumentPacket(DeleteGroupDocumentPacketRequest $body): DeleteGroupDocumentPacketResponse
+```python
+def delete_group_document_packet(self,
+                                body)
 ```
 
 ## Parameters
@@ -2069,25 +1524,26 @@ function deleteGroupDocumentPacket(DeleteGroupDocumentPacketRequest $body): Dele
 
 ## Example Usage
 
-```php
-$body = new Models\DeleteGroupDocumentPacketRequest;
+```python
+body = DeleteGroupDocumentPacketRequest()
 
-$result = $sATIDAPIController->deleteGroupDocumentPacket($body);
+result = satid_api_controller.delete_group_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Update Document Packet
 
 Update Document Packet
 
-```php
-function updateDocumentPacket(UpdateDocumentPacketRequest $body): UpdateDocumentPacketResponse
+```python
+def update_document_packet(self,
+                          body)
 ```
 
 ## Parameters
@@ -2102,28 +1558,27 @@ function updateDocumentPacket(UpdateDocumentPacketRequest $body): UpdateDocument
 
 ## Example Usage
 
-```php
-$body_documentPacketId = 'documentPacketId2';
-$body = new Models\UpdateDocumentPacketRequest(
-    $body_documentPacketId
-);
+```python
+body = UpdateDocumentPacketRequest()
+body.document_packet_id = 'documentPacketId2'
 
-$result = $sATIDAPIController->updateDocumentPacket($body);
+result = satid_api_controller.update_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Execute Group Document Packet
 
 Execute Document Packet
 
-```php
-function executeGroupDocumentPacket(ExecuteGroupDocumentPacketRequest $body): ExecuteGroupDocumentPacketResponse
+```python
+def execute_group_document_packet(self,
+                                 body)
 ```
 
 ## Parameters
@@ -2138,28 +1593,27 @@ function executeGroupDocumentPacket(ExecuteGroupDocumentPacketRequest $body): Ex
 
 ## Example Usage
 
-```php
-$body_groupDocumentPacketId = 'groupDocumentPacketId4';
-$body = new Models\ExecuteGroupDocumentPacketRequest(
-    $body_groupDocumentPacketId
-);
+```python
+body = ExecuteGroupDocumentPacketRequest()
+body.group_document_packet_id = 'groupDocumentPacketId4'
 
-$result = $sATIDAPIController->executeGroupDocumentPacket($body);
+result = satid_api_controller.execute_group_document_packet(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Get Unsigned Document Content
 
 Get unsigned document packet singular document
 
-```php
-function getUnsignedDocumentContent(GetUnsignedDocumentRequest $body): GetDocumentResponse
+```python
+def get_unsigned_document_content(self,
+                                 body)
 ```
 
 ## Parameters
@@ -2174,25 +1628,26 @@ function getUnsignedDocumentContent(GetUnsignedDocumentRequest $body): GetDocume
 
 ## Example Usage
 
-```php
-$body = new Models\GetUnsignedDocumentRequest;
+```python
+body = GetUnsignedDocumentRequest()
 
-$result = $sATIDAPIController->getUnsignedDocumentContent($body);
+result = satid_api_controller.get_unsigned_document_content(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 
 
 # Get Unsigned Documents Packet Content
 
 Get unsigned document packet full content
 
-```php
-function getUnsignedDocumentsPacketContent(GetUnsignedDocumentsPacketRequest $body): GetDocumentsResponse
+```python
+def get_unsigned_documents_packet_content(self,
+                                         body)
 ```
 
 ## Parameters
@@ -2207,15 +1662,15 @@ function getUnsignedDocumentsPacketContent(GetUnsignedDocumentsPacketRequest $bo
 
 ## Example Usage
 
-```php
-$body = new Models\GetUnsignedDocumentsPacketRequest;
+```python
+body = GetUnsignedDocumentsPacketRequest()
 
-$result = $sATIDAPIController->getUnsignedDocumentsPacketContent($body);
+result = satid_api_controller.get_unsigned_documents_packet_content(body)
 ```
 
 ## Errors
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 401 | Unauthorized | `ApiException` |
+| 401 | Unauthorized | `APIException` |
 

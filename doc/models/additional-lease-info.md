@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `leaseDetailsMap` | [`?array<string,LeaseDetails>`](../../doc/models/lease-details.md) | Optional | - | getLeaseDetailsMap(): ?array | setLeaseDetailsMap(?array leaseDetailsMap): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `lease_details_map` | [`dict`](../../doc/models/lease-details.md) | Optional | - |
 
 ## Example (as JSON)
 

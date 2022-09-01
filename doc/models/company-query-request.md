@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `countryCode` | `?string` | Optional | - | getCountryCode(): ?string | setCountryCode(?string countryCode): void |
-| `registrationNumber` | `?string` | Optional | - | getRegistrationNumber(): ?string | setRegistrationNumber(?string registrationNumber): void |
-| `businessName` | `?string` | Optional | - | getBusinessName(): ?string | setBusinessName(?string businessName): void |
-| `postCode` | `?string` | Optional | - | getPostCode(): ?string | setPostCode(?string postCode): void |
-| `vatIDNumber` | `?string` | Optional | - | getVatIDNumber(): ?string | setVatIDNumber(?string vatIDNumber): void |
-| `ownershipType` | `?string` | Optional | - | getOwnershipType(): ?string | setOwnershipType(?string ownershipType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `country_code` | `string` | Optional | - |
+| `registration_number` | `string` | Optional | - |
+| `business_name` | `string` | Optional | - |
+| `post_code` | `string` | Optional | - |
+| `vat_id_number` | `string` | Optional | - |
+| `ownership_type` | `string` | Optional | - |
 
 ## Example (as JSON)
 

@@ -7,19 +7,19 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `signerId` | `string` | Required | The unique signer identifier | getSignerId(): string | setSignerId(string signerId): void |
-| `signer` | [`Name`](../../doc/models/name.md) | Required | - | getSigner(): Name | setSigner(Name signer): void |
-| `emailAddress` | `?string` | Optional | Email Address of signer | getEmailAddress(): ?string | setEmailAddress(?string emailAddress): void |
-| `principal` | `bool` | Required | Indicator for signer is principal for business entity | getPrincipal(): bool | setPrincipal(bool principal): void |
-| `signingCompleteUrl` | `?string` | Optional | The redirect URL for completed signing | getSigningCompleteUrl(): ?string | setSigningCompleteUrl(?string signingCompleteUrl): void |
-| `signingDeclineUrl` | `?string` | Optional | The redirect URL for declined signing | getSigningDeclineUrl(): ?string | setSigningDeclineUrl(?string signingDeclineUrl): void |
-| `signingExpiredUrl` | `?string` | Optional | The redirect URL for expired signing | getSigningExpiredUrl(): ?string | setSigningExpiredUrl(?string signingExpiredUrl): void |
-| `language` | `?string` | Optional | The signer's preferred language | getLanguage(): ?string | setLanguage(?string language): void |
-| `optInOut1` | `?bool` | Optional | Indicator for opt in/out for checkobox1 | getOptInOut1(): ?bool | setOptInOut1(?bool optInOut1): void |
-| `optInOut2` | `?bool` | Optional | Indicator for opt in/out for checkobox2 | getOptInOut2(): ?bool | setOptInOut2(?bool optInOut2): void |
-| `optInOut3` | `?bool` | Optional | Indicator for opt in/out for checkobox3 | getOptInOut3(): ?bool | setOptInOut3(?bool optInOut3): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `signer_id` | `string` | Required | The unique signer identifier |
+| `signer` | [`Name`](../../doc/models/name.md) | Required | - |
+| `email_address` | `string` | Optional | Email Address of signer |
+| `principal` | `bool` | Required | Indicator for signer is principal for business entity |
+| `signing_complete_url` | `string` | Optional | The redirect URL for completed signing |
+| `signing_decline_url` | `string` | Optional | The redirect URL for declined signing |
+| `signing_expired_url` | `string` | Optional | The redirect URL for expired signing |
+| `language` | `string` | Optional | The signer's preferred language |
+| `opt_in_out_1` | `bool` | Optional | Indicator for opt in/out for checkobox1 |
+| `opt_in_out_2` | `bool` | Optional | Indicator for opt in/out for checkobox2 |
+| `opt_in_out_3` | `bool` | Optional | Indicator for opt in/out for checkobox3 |
 
 ## Example (as JSON)
 

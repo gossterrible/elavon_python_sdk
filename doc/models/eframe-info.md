@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `schemeSelection` | `?string` | Optional | Equipment and Payment Networks Scheme Selection | getSchemeSelection(): ?string | setSchemeSelection(?string schemeSelection): void |
-| `posContract` | `?bool` | Optional | Flag indicating Terminal Girocard Application | getPosContract(): ?bool | setPosContract(?bool posContract): void |
-| `isGirocard` | `?bool` | Optional | Flag indicating Girocard Application | getIsGirocard(): ?bool | setIsGirocard(?bool isGirocard): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `scheme_selection` | `string` | Optional | Equipment and Payment Networks Scheme Selection |
+| `pos_contract` | `bool` | Optional | Flag indicating Terminal Girocard Application |
+| `is_girocard` | `bool` | Optional | Flag indicating Girocard Application |
 
 ## Example (as JSON)
 

@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `ecs` | [`?ElectronicCheckService`](../../doc/models/electronic-check-service.md) | Optional | - | getEcs(): ?ElectronicCheckService | setEcs(?ElectronicCheckService ecs): void |
-| `fanfare` | [`?Fanfare`](../../doc/models/fanfare.md) | Optional | - | getFanfare(): ?Fanfare | setFanfare(?Fanfare fanfare): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `ecs` | [`ElectronicCheckService`](../../doc/models/electronic-check-service.md) | Optional | - |
+| `fanfare` | [`Fanfare`](../../doc/models/fanfare.md) | Optional | - |
 
 ## Example (as JSON)
 

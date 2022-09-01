@@ -7,11 +7,11 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `responseId` | `?int` | Optional | - | getResponseId(): ?int | setResponseId(?int responseId): void |
-| `error` | `?string` | Optional | Error message from service | getError(): ?string | setError(?string error): void |
-| `documentPacketId` | `?string` | Optional | The unique identifier for the document packet | getDocumentPacketId(): ?string | setDocumentPacketId(?string documentPacketId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `response_id` | `int` | Optional | - |
+| `error` | `string` | Optional | Error message from service |
+| `document_packet_id` | `string` | Optional | The unique identifier for the document packet |
 
 ## Example (as JSON)
 

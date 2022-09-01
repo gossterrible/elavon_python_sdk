@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `companyId` | `?string` | Optional | - | getCompanyId(): ?string | setCompanyId(?string companyId): void |
-| `ownershipType` | `?string` | Optional | - | getOwnershipType(): ?string | setOwnershipType(?string ownershipType): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `company_id` | `string` | Optional | - |
+| `ownership_type` | `string` | Optional | - |
 
 ## Example (as JSON)
 

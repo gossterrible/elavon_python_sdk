@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `contentType` | [`?string (ContentTypeEnum)`](../../doc/models/content-type-enum.md) | Optional | - | getContentType(): ?string | setContentType(?string contentType): void |
-| `signType` | [`?string (SignTypeEnum)`](../../doc/models/sign-type-enum.md) | Optional | - | getSignType(): ?string | setSignType(?string signType): void |
-| `contextType` | [`?string (ContextTypeEnum)`](../../doc/models/context-type-enum.md) | Optional | - | getContextType(): ?string | setContextType(?string contextType): void |
-| `agreementSnippet` | `?bool` | Optional | - | getAgreementSnippet(): ?bool | setAgreementSnippet(?bool agreementSnippet): void |
-| `partnerDocumentDescriptions` | `?array<string,string>` | Optional | - | getPartnerDocumentDescriptions(): ?array | setPartnerDocumentDescriptions(?array partnerDocumentDescriptions): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `content_type` | [`ContentTypeEnum`](../../doc/models/content-type-enum.md) | Optional | - |
+| `sign_type` | [`SignTypeEnum`](../../doc/models/sign-type-enum.md) | Optional | - |
+| `context_type` | [`ContextTypeEnum`](../../doc/models/context-type-enum.md) | Optional | - |
+| `agreement_snippet` | `bool` | Optional | - |
+| `partner_document_descriptions` | `dict` | Optional | - |
 
 ## Example (as JSON)
 

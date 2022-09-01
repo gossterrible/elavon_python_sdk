@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `documentPacketId` | `string` | Required | The unique identifier for a document packet | getDocumentPacketId(): string | setDocumentPacketId(string documentPacketId): void |
-| `signerIds` | `string[]` | Required | List of users ids whos session needs refreshing | getSignerIds(): array | setSignerIds(array signerIds): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `document_packet_id` | `string` | Required | The unique identifier for a document packet |
+| `signer_ids` | `List of string` | Required | List of users ids whos session needs refreshing |
 
 ## Example (as JSON)
 

@@ -7,9 +7,9 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `channelCode` | `?string` | Optional | The unique identifier for the channel request is being executed under | getChannelCode(): ?string | setChannelCode(?string channelCode): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `channel_code` | `string` | Optional | The unique identifier for the channel request is being executed under |
 
 ## Example (as JSON)
 

@@ -14,15 +14,15 @@ Contact your Elavon representative for the VAR code(s).
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `equipmentItems` | [`EquipmentItem[]`](../../doc/models/equipment-item.md) | Required | Equipment item listing | getEquipmentItems(): array | setEquipmentItems(array equipmentItems): void |
-| `terminalServices` | [`?(TerminalService[])`](../../doc/models/terminal-service.md) | Optional | Terminal services to be applied to equipment items | getTerminalServices(): ?array | setTerminalServices(?array terminalServices): void |
-| `trainingType` | [`?string (TrainingTypeEnum)`](../../doc/models/training-type-enum.md) | Optional | [NA] Type of training to be given for equipment | getTrainingType(): ?string | setTrainingType(?string trainingType): void |
-| `shippingMethod` | [`?string (ShippingMethodEnum)`](../../doc/models/shipping-method-enum.md) | Optional | Shipping of equipment priority | getShippingMethod(): ?string | setShippingMethod(?string shippingMethod): void |
-| `network` | [`?string (NetworkEnum)`](../../doc/models/network-enum.md) | Optional | Network equipment will be connected to | getNetwork(): ?string | setNetwork(?string network): void |
-| `fuseboxInfo` | [`FuseboxInfo`](../../doc/models/fusebox-info.md) | Required | - | getFuseboxInfo(): FuseboxInfo | setFuseboxInfo(FuseboxInfo fuseboxInfo): void |
-| `anticipatedStartDate` | [`?DateComponents`](../../doc/models/date-components.md) | Optional | A container that holds the date (day, month, and year) | getAnticipatedStartDate(): ?DateComponents | setAnticipatedStartDate(?DateComponents anticipatedStartDate): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `equipment_items` | [`List of EquipmentItem`](../../doc/models/equipment-item.md) | Required | Equipment item listing |
+| `terminal_services` | [`List of TerminalService`](../../doc/models/terminal-service.md) | Optional | Terminal services to be applied to equipment items |
+| `training_type` | [`TrainingTypeEnum`](../../doc/models/training-type-enum.md) | Optional | [NA] Type of training to be given for equipment |
+| `shipping_method` | [`ShippingMethodEnum`](../../doc/models/shipping-method-enum.md) | Optional | Shipping of equipment priority |
+| `network` | [`NetworkEnum`](../../doc/models/network-enum.md) | Optional | Network equipment will be connected to |
+| `fusebox_info` | [`FuseboxInfo`](../../doc/models/fusebox-info.md) | Required | - |
+| `anticipated_start_date` | [`DateComponents`](../../doc/models/date-components.md) | Optional | A container that holds the date (day, month, and year) |
 
 ## Example (as JSON)
 

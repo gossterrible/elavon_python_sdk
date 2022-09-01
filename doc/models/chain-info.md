@@ -7,15 +7,15 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `chainNumber` | `string` | Required | Name of new chain to be set up<br>**Constraints**: *Minimum Length*: `0`, *Maximum Length*: `7` | getChainNumber(): string | setChainNumber(string chainNumber): void |
-| `chainName` | `string` | Required | Number of new chain to be set up | getChainName(): string | setChainName(string chainName): void |
-| `sendStatementToAddress` | [`string (SendStatementToAddressEnum)`](../../doc/models/send-statement-to-address-enum.md) | Required | Address that the new chain's statements will be sent to | getSendStatementToAddress(): string | setSendStatementToAddress(string sendStatementToAddress): void |
-| `statementMedia` | [`string (StatementMediaEnum)`](../../doc/models/statement-media-enum.md) | Required | Media type of chain's statements | getStatementMedia(): string | setStatementMedia(string statementMedia): void |
-| `address` | [`Address`](../../doc/models/address.md) | Required | - | getAddress(): Address | setAddress(Address address): void |
-| `chainLevelBilling` | `bool` | Required | Billing level of new chain | getChainLevelBilling(): bool | setChainLevelBilling(bool chainLevelBilling): void |
-| `bankAccounts` | [`array<string,BankingInfo>`](../../doc/models/banking-info.md) | Required | Chain's bank account information. The valid keys are as follows: BILLING, DEPOSIT, LEASE, CHARGEBACK | getBankAccounts(): array | setBankAccounts(array bankAccounts): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `chain_number` | `string` | Required | Name of new chain to be set up<br>**Constraints**: *Minimum Length*: `0`, *Maximum Length*: `7` |
+| `chain_name` | `string` | Required | Number of new chain to be set up |
+| `send_statement_to_address` | [`SendStatementToAddressEnum`](../../doc/models/send-statement-to-address-enum.md) | Required | Address that the new chain's statements will be sent to |
+| `statement_media` | [`StatementMediaEnum`](../../doc/models/statement-media-enum.md) | Required | Media type of chain's statements |
+| `address` | [`Address`](../../doc/models/address.md) | Required | - |
+| `chain_level_billing` | `bool` | Required | Billing level of new chain |
+| `bank_accounts` | [`dict`](../../doc/models/banking-info.md) | Required | Chain's bank account information. The valid keys are as follows: BILLING, DEPOSIT, LEASE, CHARGEBACK |
 
 ## Example (as JSON)
 

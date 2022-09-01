@@ -14,5 +14,5 @@ Type of message presented
 | `ERROR` |
 | `WARN` |
 | `INFO` |
-| `DEFAULT_` |
+| `DEFAULT` |
 

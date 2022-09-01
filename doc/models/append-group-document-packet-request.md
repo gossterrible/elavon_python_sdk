@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `groupDocumentPacketId` | `string` | Required | The unique identifier for the group document packet | getGroupDocumentPacketId(): string | setGroupDocumentPacketId(string groupDocumentPacketId): void |
-| `profileCode` | `string` | Required | The partner's profile code | getProfileCode(): string | setProfileCode(string profileCode): void |
-| `signers` | [`Signer[]`](../../doc/models/signer.md) | Required | The document signers | getSigners(): array | setSigners(array signers): void |
-| `documentPacketData` | [`DocumentPacketData`](../../doc/models/document-packet-data.md) | Required | - | getDocumentPacketData(): DocumentPacketData | setDocumentPacketData(DocumentPacketData documentPacketData): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `group_document_packet_id` | `string` | Required | The unique identifier for the group document packet |
+| `profile_code` | `string` | Required | The partner's profile code |
+| `signers` | [`List of Signer`](../../doc/models/signer.md) | Required | The document signers |
+| `document_packet_data` | [`DocumentPacketData`](../../doc/models/document-packet-data.md) | Required | - |
 
 ## Example (as JSON)
 

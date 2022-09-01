@@ -7,13 +7,13 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `numberOption` | [`?string (NumberOptionEnum)`](../../doc/models/number-option-enum.md) | Optional | Type of VAT id provieded if tax id type is VAT | getNumberOption(): ?string | setNumberOption(?string numberOption): void |
-| `number56B` | `?string` | Optional | VAT 56B number | getNumber56B(): ?string | setNumber56B(?string number56B): void |
-| `expiryDate56B` | [`?DateComponents`](../../doc/models/date-components.md) | Optional | A container that holds the date (day, month, and year) | getExpiryDate56B(): ?DateComponents | setExpiryDate56B(?DateComponents expiryDate56B): void |
-| `taxNumberType` | [`?string (TaxNumberTypeEnum)`](../../doc/models/tax-number-type-enum.md) | Optional | The Tax Number Type of the Business | getTaxNumberType(): ?string | setTaxNumberType(?string taxNumberType): void |
-| `taxNumber` | `?string` | Optional | The Tax Number Type of the Business | getTaxNumber(): ?string | setTaxNumber(?string taxNumber): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `number_option` | [`NumberOptionEnum`](../../doc/models/number-option-enum.md) | Optional | Type of VAT id provieded if tax id type is VAT |
+| `number_56_b` | `string` | Optional | VAT 56B number |
+| `expiry_date_56_b` | [`DateComponents`](../../doc/models/date-components.md) | Optional | A container that holds the date (day, month, and year) |
+| `tax_number_type` | [`TaxNumberTypeEnum`](../../doc/models/tax-number-type-enum.md) | Optional | The Tax Number Type of the Business |
+| `tax_number` | `string` | Optional | The Tax Number Type of the Business |
 
 ## Example (as JSON)
 

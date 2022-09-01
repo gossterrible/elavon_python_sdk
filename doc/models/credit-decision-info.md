@@ -7,10 +7,10 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `creditDecisionFlag` | `?bool` | Optional | - | getCreditDecisionFlag(): ?bool | setCreditDecisionFlag(?bool creditDecisionFlag): void |
-| `creditDecisionId` | `?string` | Optional | - | getCreditDecisionId(): ?string | setCreditDecisionId(?string creditDecisionId): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `credit_decision_flag` | `bool` | Optional | - |
+| `credit_decision_id` | `string` | Optional | - |
 
 ## Example (as JSON)
 

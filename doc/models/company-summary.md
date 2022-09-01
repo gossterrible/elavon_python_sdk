@@ -7,14 +7,14 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `companyId` | `?string` | Optional | - | getCompanyId(): ?string | setCompanyId(?string companyId): void |
-| `businessName` | `?string` | Optional | - | getBusinessName(): ?string | setBusinessName(?string businessName): void |
-| `country` | `?string` | Optional | - | getCountry(): ?string | setCountry(?string country): void |
-| `countryCode` | `?string` | Optional | - | getCountryCode(): ?string | setCountryCode(?string countryCode): void |
-| `companyRegistrationNumber` | `?string` | Optional | - | getCompanyRegistrationNumber(): ?string | setCompanyRegistrationNumber(?string companyRegistrationNumber): void |
-| `status` | `?string` | Optional | - | getStatus(): ?string | setStatus(?string status): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `company_id` | `string` | Optional | - |
+| `business_name` | `string` | Optional | - |
+| `country` | `string` | Optional | - |
+| `country_code` | `string` | Optional | - |
+| `company_registration_number` | `string` | Optional | - |
+| `status` | `string` | Optional | - |
 
 ## Example (as JSON)
 

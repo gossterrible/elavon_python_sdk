@@ -7,12 +7,12 @@
 
 ## Fields
 
-| Name | Type | Tags | Description | Getter | Setter |
-|  --- | --- | --- | --- | --- | --- |
-| `salesRepCode` | `string` | Required | Identifier of sales representative responsible for submission | getSalesRepCode(): string | setSalesRepCode(string salesRepCode): void |
-| `name` | `?string` | Optional | Name of the sales rep | getName(): ?string | setName(?string name): void |
-| `email` | `?string` | Optional | email of the sales rep | getEmail(): ?string | setEmail(?string email): void |
-| `submitted` | `?bool` | Optional | Flag if the app has been submitted | getSubmitted(): ?bool | setSubmitted(?bool submitted): void |
+| Name | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `sales_rep_code` | `string` | Required | Identifier of sales representative responsible for submission |
+| `name` | `string` | Optional | Name of the sales rep |
+| `email` | `string` | Optional | email of the sales rep |
+| `submitted` | `bool` | Optional | Flag if the app has been submitted |
 
 ## Example (as JSON)
 
