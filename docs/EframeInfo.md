@@ -1,0 +1,14 @@
+# EframeInfo
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**scheme_selection** | **str** | Equipment and Payment Networks Scheme Selection | [optional] 
+**pos_contract** | **bool** | Flag indicating Terminal Girocard Application | [optional] 
+**is_girocard** | **bool** | Flag indicating Girocard Application | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
